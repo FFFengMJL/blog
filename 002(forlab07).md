@@ -1,20 +1,61 @@
 ---
 layout: default
-title: 使用vmbox新建winXP虚拟机来打开辣个CPU模拟页面
+title: 使用vmbox新建WinXP虚拟机来打开辣个CPU模拟页面
 ---
 
-# 使用vmbox新建winXP来打开辣个CPU模拟页面
+# 使用 vmbox 新建 WinXP 来打开辣个 CPU 模拟页面
+
+前言：
+> 这次的软导作业是真的麻烦啊，不仅汇编语言要自己一条一条地学，而且还要要自己配置环境；这环境配置也是麻烦，老师只是提了句“可能需要安装虚拟机”，而具体操作起来又是一头雾水
+>
+>在宿舍大佬（没错，又是超哥，**超哥nb！**）的提示和帮助下，我成功通过安装 **WinXP 的虚拟机**和 **JRE1.6** 成功地打开并且运行了辣个页面，将这个经验分享出来，希望能够帮到大家。
+
+> Warning: <a href="https://ks0508.github.io/SE-project/QA1/QA1" target="_blank">学委的 Q & A </a>中有了更加简单的解决方案，但是这个解决方案是需要`先卸载自己的 Java `，`再安装 Jre1.6 `，否则会**报错**（超哥说的）。
 
 ## 目录
 
 1. <a href="#1">下载并安装vmbox</a>
 
-2. <a href="#2">下载Windows XP的光盘镜像与JRE 1.6</a>
 
-3. <a href="#3">新建WinXP虚拟机</a>
+图中第一个是 jre1.6 ，第二个是光盘镜像
 
-4. <a href="#4">安装JRE 1.6</a>
+5. <a href="#4">安装JRE 1.6</a>
 
-5. <a href="#5">打开网页</a>
+6. <a href="#5">打开网页</a>
 
-## 1. 下载并安装vmbox
+## 1. <a name="1">下载并安装 vmbox</a>
+
+![](images/002/vmboxdownload.png)
+
+* 好的习惯：百度/谷歌 *Oracle VM VirtualBox*
+* 坏的习惯：<a href="https://www.virtualbox.org/wiki/Downloads" target="_blank">点我</a>跳转到下载页面
+
+![](images/002/warning.png)
+
+选择好自己想要安装的文件夹，后不断下一步就行。上面那个不用担心，选择`是`就行。
+
+当你能够打开 vbox 并看到如下界面的时候，你就已经成功安装了vbox啦。
+
+![](images/002/vboxstart.png)
+
+## 2. <a name="2">下载Windows XP的光盘镜像与JRE 1.6</a>
+
+> 我的文件全是从超哥那里弄过来的：光盘镜像我不知道怎么弄；jre1.6 的话我从甲骨文（Oracle）那里下载似乎是要账号，但是我没有账号。。。所以。。。（超哥nb！
+
+我嫌度盘太慢，就把文件放到了谷歌云盘：<a href="https://drive.google.com/open?id=1FvoWeTK_Y4owMS4pzZBxLwpsxJoU0wG7" target="_blank">点我</a>跳转到下载页面
+
+![](images/002/wtnddl.png)
+
+## 3. <a href="#3">新建WinXP虚拟机</a>
+
+1. 打开 vbox，点击左上角的新建，填好**名称**（你想怎么填就怎么填），调好**类型**（`Microsoft Windows`）和**版本**（`Windows XP(32-bit)`）  
+![](images/002/classandversion.png)
+
+2. 分配内存（随便分啦，不过需要注意的是，分的**太多**会可能会导致你的**外部程序变慢**；分的**太少**可能会导致你的**虚拟机运行缓慢**）  
+![我有内存我自豪](images/002/memory.png)
+
+3. 创建虚拟硬盘。从这之后基本都是用默认的就行：  
+>`现在创建虚拟硬盘` -->`VDI (Virtual Box 磁盘映像)`-->`动态分配`-->`10G`（对于一个只用来开网页的XP来说够用了）
+
+4. 完成创建  
+![](images/002/finishcreat.png)
