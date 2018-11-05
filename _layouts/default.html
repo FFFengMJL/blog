@@ -14,16 +14,26 @@
       position: fixed;
       right: 50px;
       bottom: 150px;
-      background-color:rgb(252, 252, 79);
+      background-color: rgba(181,232,83,0);
       text-align: center;
       line-height: 100px;
       font-size: 20px;
       border-radius: 5px;/*圆角*/
       box-shadow: 2px;
       color: black;
+      user-select: none;
+      transition: .25s;
+      -moz-user-select: none;
+      user-select: none;
+      cursor: pointer;
+      border:1px solid #b5e853;
     }
     #BackToTop:active{
       box-shadow: 0 0 5px 5px rgba(0, 0, 0,.5) inset;/*前两个0是定位；后两个5px是阴影大小；rgba中的a是alpha通道，即透明度；inset指阴影向内*/
+    }
+    #BackToTop:hover{
+      background-color: #b5e853;
+      color: black;
     }
   </style>
   </head>
