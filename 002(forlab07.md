@@ -3,7 +3,7 @@ layout: default
 title: 使用vmbox新建WinXP虚拟机来打开辣个CPU模拟页面
 ---
 
-# 使用 vmbox 新建 WinXP 来打开辣个 CPU 模拟页面
+# 使用 vbox 新建 WinXP 来打开辣个 CPU 模拟页面
 
 前言：
 > 这次的软导作业是真的麻烦啊，不仅汇编语言要自己一条一条地学，而且还要要自己配置环境；这环境配置也是麻烦，老师只是提了句“可能需要安装虚拟机”，而具体操作起来又是一头雾水
@@ -14,7 +14,7 @@ title: 使用vmbox新建WinXP虚拟机来打开辣个CPU模拟页面
 
 ## 目录
 
-1. <a href="#1">下载并安装vmbox</a>
+1. <a href="#1">下载并安装vbox</a>
 
 2. <a href="#2">下载Windows XP的光盘镜像与JRE 1.6</a>
 
@@ -28,7 +28,7 @@ title: 使用vmbox新建WinXP虚拟机来打开辣个CPU模拟页面
 
 7. <a href="#7">打开网页</a>
 
-## 1. <a name="1">下载并安装 vmbox</a>
+## 1. <a name="1">下载并安装 vbox</a>
 
 
 * 好的习惯：百度/谷歌 *Oracle VM VirtualBox*
