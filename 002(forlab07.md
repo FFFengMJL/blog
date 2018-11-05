@@ -22,7 +22,7 @@ title: 使用vbox新建WinXP虚拟机来打开辣个CPU模拟页面
 
 4. <a href="#4">安装 Windows XP</a>
 
-5. <a href="#5">安装 vbox 的增强功能6</a>
+5. <a href="#5">安装 vbox 的增强功能</a>
 
 6. <a href="#6">安装 jre1.6</a>
 
@@ -93,7 +93,7 @@ title: 使用vbox新建WinXP虚拟机来打开辣个CPU模拟页面
 5. 安装完成，并确定能够上网  
 ![](images/002/finishinstall.png)
 
-## 5. <a name="5">安装 vbox 增强功能并开启拖放</a>
+## 5. <a name="5">安装 vbox 增强功能</a>
 
 1. 为了实现**文件共享**（其实就是把 Jre1.6 的安装包拖进去），操作其实很简单。。。。  
 ![](images/002/installauguma.png)
