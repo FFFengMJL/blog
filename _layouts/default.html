@@ -7,6 +7,24 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 
 {% seo %}
+  <style>
+    #BackToTop {
+      width: 100px;
+      height: 100px;
+      position: fixed;
+      right: 50px;
+      bottom: 150px;
+      background-color:rgb(252, 252, 79);
+      text-align: center;
+      line-height: 100px;
+      font-size: 20px;
+      border-radius: 5px;/*圆角*/
+      box-shadow: 2px;
+    }
+    #BackToTop:active{
+      box-shadow: 0 0 5px 5px rgba(0, 0, 0,.5) inset;/*前两个0是定位；后两个5px是阴影大小；rgba中的a是alpha通道，即透明度；inset指阴影向内*/
+    }
+  </style>
   </head>
 
   <body>
@@ -42,5 +60,15 @@
         ga('send', 'pageview');
       </script>
     {% endif %}
+
+    <div id="BackToTop">TOP</div>
+    <script>
+      document.getElementById("BackToTop").onclick = function () {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        })
+      }
+    </script>
   </body>
 </html>
