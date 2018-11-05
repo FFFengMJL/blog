@@ -16,23 +16,29 @@ title: 使用vmbox新建WinXP虚拟机来打开辣个CPU模拟页面
 
 1. <a href="#1">下载并安装vmbox</a>
 
+2. <a href="#2">下载Windows XP的光盘镜像与JRE 1.6</a>
 
-图中第一个是 jre1.6 ，第二个是光盘镜像
+3. <a href="#3">新建 WinXP 虚拟机</a>
 
-5. <a href="#4">安装JRE 1.6</a>
+4. <a href="#4">安装 Windows XP</a>
 
-6. <a href="#5">打开网页</a>
+5. <a href="#5">安装 vbox 的增强功能6</a>
+
+6. <a href="#6">安装 jre1.6</a>
+
+7. <a href="#7">打开网页</a>
 
 ## 1. <a name="1">下载并安装 vmbox</a>
 
-![](images/002/vmboxdownload.png)
 
 * 好的习惯：百度/谷歌 *Oracle VM VirtualBox*
 * 坏的习惯：<a href="https://www.virtualbox.org/wiki/Downloads" target="_blank">点我</a>跳转到下载页面
 
-![](images/002/warning.png)
+![](images/002/vmboxdownload.png)
 
-选择好自己想要安装的文件夹，后不断下一步就行。上面那个不用担心，选择`是`就行。
+选择好自己想要安装的文件夹，后不断下一步就行。下面那个不用担心，选择`是`就行。
+
+![](images/002/warning.png)
 
 当你能够打开 vbox 并看到如下界面的时候，你就已经成功安装了vbox啦。
 
@@ -44,9 +50,11 @@ title: 使用vmbox新建WinXP虚拟机来打开辣个CPU模拟页面
 
 我嫌度盘太慢，就把文件放到了谷歌云盘：<a href="https://drive.google.com/open?id=1FvoWeTK_Y4owMS4pzZBxLwpsxJoU0wG7" target="_blank">点我</a>跳转到下载页面
 
+图中第一个是 jre1.6 ，第二个是光盘镜像
+
 ![](images/002/wtnddl.png)
 
-## 3. <a href="#3">新建WinXP虚拟机</a>
+## 3. <a name="#3">新建WinXP虚拟机</a>
 
 1. 打开 vbox，点击左上角的新建，填好**名称**（你想怎么填就怎么填），调好**类型**（`Microsoft Windows`）和**版本**（`Windows XP(32-bit)`）  
 ![](images/002/classandversion.png)
@@ -59,3 +67,35 @@ title: 使用vmbox新建WinXP虚拟机来打开辣个CPU模拟页面
 
 4. 完成创建  
 ![](images/002/finishcreat.png)
+
+## 4. <a name="4">安装 Windows XP 操作系统</a>
+
+1. 载入光盘：启动刚刚创建的虚拟机，弹出如下界面，点击左边`文件夹按钮`，选择你刚刚下载的**光盘镜像**，点击`启动`。
+
+![](images/002/choseadisk.png)
+
+2. 正式开始安装：当你看到下图的复古的蓝底白字界面时，便正式开始安装了,一路确认下去，直到**磁盘格式化**
+
+![](images/002/startinstall.png)
+
+3. **格式化方式**的选择：一般来说，推荐是选择**NTFS文件系统**和**快**即可。
+
+![](images/002/choseformat.png)
+
+4. 产品密钥：**MRX3F-47B9T-2487J-KWKMF-RPWBY**
+
+![](images/002/key.png)
+
+然后疯狂下一步就行
+> 1. 记得自动更新选择**不启用**
+>
+> ![](images/002/noupdate.png)
+>
+> 2. 联机注册选择**不注册**
+>
+> ![](images/002/nosign.png)
+
+{:start="5"}
+5. 安装完成，并确定能够上网
+
+![](images/002/finishinstall.png)
