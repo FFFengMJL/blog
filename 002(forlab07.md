@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 使用vmbox新建WinXP虚拟机来打开辣个CPU模拟页面
+title: 使用vbox新建WinXP虚拟机来打开辣个CPU模拟页面
 ---
 
 # 使用 vbox 新建 WinXP 来打开辣个 CPU 模拟页面
