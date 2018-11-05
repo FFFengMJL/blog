@@ -120,7 +120,7 @@ title: 使用vbox新建WinXP虚拟机来打开辣个CPU模拟页面
 
 ## 7. <a name="7">进入网页</a>
 
-1. 从`开始`菜单栏打开**IE浏览器**，复制网址**<a href="http://www.science.smith.edu/~jcardell/Courses/CSC103/CPUsim/cpusim.html">http://www.science.smith.edu/~jcardell/Courses/CSC103/CPUsim/cpusim.html</a>** 到IE浏览器中并`回车`
+1. 从`开始`菜单栏打开**IE浏览器**，复制网址**<a href="http://www.science.smith.edu/~jcardell/Courses/CSC103/CPUsim/cpusim.html" style="word-break: break-word">http://www.science.smith.edu/~jcardell/Courses/CSC103/CPUsim/cpusim.html</a>** 到IE浏览器中并`回车`
 
 2. 对于提醒，全部选择`确定`。  
 ![](images/002/joininwebsite.png)
