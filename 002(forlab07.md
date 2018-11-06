@@ -67,13 +67,22 @@ title: 使用vbox新建WinXP虚拟机来打开辣个CPU模拟页面
 
 > 我的文件全是从****那里弄过来的：光盘镜像我不知道怎么弄；jre1.6 的话我从甲骨文（Oracle）那里下载似乎是要账号，但是我没有账号。。。所以。。。
 
-我嫌度盘太慢，就把文件放到了谷歌云盘：<a href="https://drive.google.com/open?id=1FvoWeTK_Y4owMS4pzZBxLwpsxJoU0wG7" target="_blank">点我</a>跳转到下载页面
+我嫌度盘太慢，就把文件放到了  
+1. 使用http服务器下载：<a href="http://172.18.40.173/" target="_blank">点我</a>打开下载页面，`虚拟机`文件夹中的两个文件就是，点击下载即可。  
+![](images/002/http01.png)  
+![](images/002/http02.png)
 
+> PS：这个网站是把我的电脑当作服务器的，只有**校内网**能用，而且我电脑关机的时候是没法用的，但是速度非常快。
+
+3. 使用 onedrive教育版 链接下载：<a href="https://mail2sysueducn-my.sharepoint.com/:f:/g/personal/mijlong_mail2_sysu_edu_cn/Ekqt-zs2T99GtVXF2rcZq20B-9qvidtDWFhu9DlrV9M84g?e=mx6QaV" target="_blank">点我</a>跳转下载页面  
+![](images/002/onedrive.png)
+
+3. 在班群的群文件中下载  
+![](images/002/dlXPfromqq.png)
+
+4. 谷歌云盘（其实也很慢：<a href="https://drive.google.com/open?id=1FvoWeTK_Y4owMS4pzZBxLwpsxJoU0wG7" target="_blank">点我</a>跳转到下载页面  
 图中第一个是 jre1.6 ，第二个是光盘镜像  
 ![](images/002/wtnddl.png)
-
-或者在班群的群文件中下载  
-![](images/002/dlXPfromqq.png)
 
 > 关于部分报错  
 ![](images/002/error.png)
