@@ -78,7 +78,7 @@ title: 使用vbox新建WinXP虚拟机来打开辣个CPU模拟页面
 > 关于部分报错  
 ![](images/002/error.png)
 >
-> 按照学委的说法：是因为用 winrar 软件把iso 软件解压了，所以下载下来的光盘镜像**请不要解压**  
+> 按照学委的说法：是因为用 winrar 软件把 iso 文件解压了，所以下载下来的光盘镜像**请不要解压**  
 ![](images/002/sol01.png)  
 ![](images/002/sol02.png)
 
