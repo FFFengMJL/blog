@@ -50,9 +50,11 @@ title: 使用vbox新建WinXP虚拟机来打开辣个CPU模拟页面
 
 我嫌度盘太慢，就把文件放到了谷歌云盘：<a href="https://drive.google.com/open?id=1FvoWeTK_Y4owMS4pzZBxLwpsxJoU0wG7" target="_blank">点我</a>跳转到下载页面
 
-图中第一个是 jre1.6 ，第二个是光盘镜像
-
+图中第一个是 jre1.6 ，第二个是光盘镜像  
 ![](images/002/wtnddl.png)
+
+或者在班群的群文件中下载  
+![](images/002/dlXPfromqq.png)
 
 ## 3. <a name="#3">新建WinXP虚拟机</a>
 
