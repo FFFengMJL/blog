@@ -97,7 +97,8 @@ title: 使用vbox新建WinXP虚拟机来打开辣个CPU模拟页面
 ![](images/002/choseadisk.png)
 
 2. 正式开始安装：当你看到下图的复古的蓝底白字界面时，便正式开始安装了,一路确认下去，直到**磁盘格式化**  
-![](images/002/startinstall.png)
+![](images/002/startinstall.png)  
+> 关于按`F8`等`FX`按键无效的问题：请试着按住 `Fn` 键再按 `F8` ，要想永久解决这个问题，请关闭 **Fn 锁**，详情请百度/google。
 
 3. **格式化方式**的选择：一般来说，推荐是选择**NTFS文件系统**和**快**即可。  
 ![](images/002/choseformat.png)
