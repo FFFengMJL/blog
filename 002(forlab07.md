@@ -142,6 +142,18 @@ title: 使用vbox新建WinXP虚拟机来打开辣个CPU模拟页面
 
 2. 正式安装：双击 .exe 文件，等待安装结束就好。
 
+> 关于出现安装错误的问题：  
+> ![](images/002/erroronjre.png)  
+>
+> 1. 删除原本的 jre1.6 ：`开始`菜单栏-->`控制面板`-->`添加/删除程序`-->`删除`java  
+> ![](images/002/deljre.png)
+>
+> 2. 下载 `jre-6u6-windows-i586-p.exe` ，下载链接：  
+> * <a href="http://172.18.40.173/" target="_blank">http://172.18.40.173/</a>  
+> * <a href="https://mail2sysueducn-my.sharepoint.com/:u:/g/personal/mijlong_mail2_sysu_edu_cn/Ect9c32kVdxNtCtubuorPmoB3oEB_J0ZRpj2oEBa1BZf7A?e=k5GBtb" target="_blank">Onedrive下载  </a>
+> * 群文件下载
+> * <a href="https://drive.google.com/open?id=1TjSKwVxW4ad7ZSL2RjdV0GvFbrzGJZBU" target="_blank">谷歌云盘</a>
+
 ## 7. <a name="7">进入网页</a>
 
 1. 从`开始`菜单栏打开**IE浏览器**，复制网址**<a href="http://www.science.smith.edu/~jcardell/Courses/CSC103/CPUsim/cpusim.html" style="word-break: break-word">http://www.science.smith.edu/~jcardell/Courses/CSC103/CPUsim/cpusim.html</a>** 到IE浏览器中并`回车`
