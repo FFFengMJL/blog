@@ -5,7 +5,7 @@ title: Python 作业捷径
 
 # Python 实验报告捷径（部分内容十分硬核）
 
-> 前言：关于这次作业，**负责任的神仙老学委**已经在他的<a href="https://ks0508.github.io/SE-project/QA2/QA2" target="_blank">学委的（关于 Python的） Q & A M</a>中写的很明白了，但是这次接触到的 Python 的所谓的**交互式编程**已经令人头晕了，更别说还有**辣么多**的函数文档要阅读了（当初按下 help(numpy) 的我追悔莫及），所以我试着写个捷径来帮助大家。
+> 前言：关于这次作业，**负责任的神仙老学委**已经在他的<a href="https://ks0508.github.io/SE-project/QA2/QA2" target="_blank">学委的（关于 Python的）Q & A</a>中写的很明白了，但是这次接触到的 Python 的所谓的**交互式编程**已经令人头晕了，更别说还有**辣么多**的函数文档要阅读了（当初按下 help(numpy) 的我追悔莫及），所以我试着写个捷径来帮助大家。
 
 ## 目录
 
