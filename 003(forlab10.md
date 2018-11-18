@@ -26,7 +26,7 @@ Q：既然学委的 Q & A 中都已经给了 WinPython，而其中的大量关�
 > A：学委给的 WinPython 固然适合**无脑操作**，集成了大量的科学计算库，并且还能够免去你以后走入 Python 开发这条路子后还要**安装其他库**的麻烦事儿；但是，这个 WinPython 安装之后可是要占 **2G** 的空间，对于我对这个 128G SSD 系统盘，安完 WinPython 之后 C 盘只剩下 **10G** 的人很不友好啊！！！！（所以你为什么不安到 D 盘去呢？）  
 ![only 10G](images/003/only10G.png)
 
-### 1. 安装 Python
+### 1. <a name="ipy">安装 Python</a>
 
 1. 官网：  
 前往 <a href="https://ks0508.github.io/SE-project/QA2/QA2" target="_blank">Python 官网</a>下载 Python（当然最好还是<a href="www.baidu.com" target="_blank">百度</a>/<a href="www.google.com" target="_blank">谷歌</a>搜索 Python 啦）  
@@ -59,7 +59,7 @@ Q：既然学委的 Q & A 中都已经给了 WinPython，而其中的大量关�
 * 继续`新建`，将`C:\Users\你的用户名\AppData\Local\Programs\Python\Python36\Scripts`输入，这是在为使用 pip 命令安装库做准备
 
 {:start="5"}
-### 2. 安装相关库
+### 2. <a name="im">安装相关库</a>
 
 1. 安装 sympy ：  
 在 cmd/powershell 输入：  
