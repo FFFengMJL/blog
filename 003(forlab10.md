@@ -49,7 +49,7 @@ Q：既然学委的 Q & A 中都已经给了 WinPython，而其中的大量关�
 * 打开`高级系统设置`
 ![高级系统设置](images/003/高级系统设置.png)  
 * 打开`环境变量`  
-![环境变量](images/003/环境变量png)  
+![环境变量](images/003/环境变量.png)  
 * 点击 `path` 后点击`编辑`  
 ![编辑](images/003/path.png)  
 * 点击`新建`，将` C:\Users\你的用户\AppData\Local\Programs\Python\Python36`输入  
