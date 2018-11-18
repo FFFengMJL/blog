@@ -239,7 +239,7 @@ tan(x)
 -log(cos(1))
 </pre>
 
-### 6. <a name="limit">极限</a：  
+### 6. <a name="limit">极限</a>：  
 <pre>
 # 两种方法都可以，篇幅限制只使用函数全部加载
 # limit(表达式,变量,极限点)
@@ -272,7 +272,7 @@ AccumBounds(-oo, oo)
 
 5. <a href="#mult">求矩阵相乘的积</a>
 
-### 1. <a name="crtmtrx>建立矩阵</a>：  
+### 1. <a name="crtmtrx">建立矩阵</a>：  
 <pre>
 >>>from numpy import * # 加载全部函数
 >>> A = matrix([[1,2,3], # 其他方法我我没了解
