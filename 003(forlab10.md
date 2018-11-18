@@ -24,7 +24,7 @@ title: Python 作业捷径
 
 Q：既然学委的 Q & A 中都已经给了 WinPython，而其中的大量关于科学计算的库可以让你成为“scientist 中的 scientist”（学委原话），那么我为什么还要去搞其他呢？  
 > A：学委给的 WinPython 固然适合**无脑操作**，集成了大量的科学计算库，并且还能够免去你以后走入 Python 开发这条路子后还要**安装其他库**的麻烦事儿；但是，这个 WinPython 安装之后可是要占 **2G** 的空间，对于我对这个 128G SSD 系统盘，安完 WinPython 之后 C 盘只剩下 **10G** 的人很不友好啊！！！！（所以你为什么不安到 D 盘去呢？）  
-![only 10G](iamges/003/only10G.png)
+![only 10G](images/003/only10G.png)
 
 ### 1. 安装 Python
 
