@@ -3,7 +3,7 @@ layout: default
 title: Python 作业捷径
 ---
 
-# Python 实验报告捷径
+# Python 实验报告捷径（部分内容十分硬核）
 
 > 前言：关于这次作业，**负责任的神仙老学委**已经在他的<a href="https://ks0508.github.io/SE-project/QA2/QA2" target="_blank">学委的（关于 Python的） Q & A M</a>中写的很明白了，但是这次接触到的 Python 的所谓的**交互式编程**已经令人头晕了，更别说还有**辣么多**的函数文档要阅读了（当初按下 help(numpy) 的我追悔莫及），所以我试着写个捷径来帮助大家。
 
@@ -37,19 +37,19 @@ Q：既然学委的 Q & A 中都已经给了 WinPython，而其中的大量关�
 ![](images/003/dlpy.png)
 
 3. 安装：双击你下载的 installer   
-* 如果你是第一次安装，那么全部默认就行，记得勾选 `add path` 就行
-* 如果是已经有一个python（我就是）,，选择 `Upgrade Now`，配置默认就行   
+* 如果你是第一次安装，那么全部默认就行，记得勾选 `add path` 就行（抱歉没图）
+* 如果是已经有一个python（我就是）,，选择 `Upgrade Now`   
 ![配置0](images/003/配置0.png)  
 ![installing](images/003/installing.png)
 
-4. 添加环境变量（第一次安装 Python /电脑原本没有 Python的不用看）：  
+4. 添加环境变量（第一次安装 Python/电脑原本没有 Python 的不用看）：  
 > 在我看来，这是最难的一步，我也不知道我为什么会在安装的时候没有默认把**启动路径添加path**，所以只能手动添加了，不过如果你们在安装的时候，看到安装界面有个 `add path` 请务必勾选上它  
 * 在`控制面板`中打开`系统`  
 ![控制面板-->系统](images/003/控制面板.png)  
 * 打开`高级系统设置`
 ![高级系统设置](images/003/高级系统设置.png)  
 * 打开`环境变量`  
-![环境变量](iamges/003/环境变量.png)  
+![环境变量](images/003/环境变量png)  
 * 点击 `path` 后点击`编辑`  
 ![编辑](images/003/path.png)  
 * 点击`新建`，将` C:\Users\你的用户\AppData\Local\Programs\Python\Python36`输入  
@@ -117,7 +117,7 @@ pip install matplotlib
 ### 1. <a name="defx">定义 x 等变量</a>：  
 <pre>
 # 使用方法一：只加载库
->>> import sympy #加载库，但使用必须加前缀，对命名空间无影响
+>>> import sympy # 加载库，但使用必须加前缀，对命名空间无影响
 >>> x = sympy.symbols('x')
 
 >>> x
@@ -171,7 +171,7 @@ tan(x)
 >>> sympy.Rational(3/2) * sympy.sin(x) 
 3*sin(x)/2
 
-# 方法二：加载库中的全部函数，会和 math 库中的三角函数冲突（目前已知是覆盖 math 的）
+# 方法二：加载库中的全部函数，会和 math 库中的三角函数冲突（目前已知是各司其职，即参数是数据就是 math. ,如果是 symbol 类型就变成 sympy.）
 >>> from sympy import *
 >>> x = symbols('x')
 
