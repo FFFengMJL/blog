@@ -18,7 +18,7 @@ title: Python 作业捷径
 {:start="2"}
 2. <a href="#sympy">我们常用的 sympy 中的函数</a>
 
-3. <a href="numpy">常用的 numpy 中的函数</a>
+3. <a href="#numpy">常用的 numpy 中的函数</a>
 
 ## 1. <a name="inst">安装 Python 及相关的库</a>
 
