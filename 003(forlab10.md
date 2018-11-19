@@ -29,7 +29,7 @@ Q：既然学委的 Q & A 中都已经给了 WinPython，而其中的大量关�
 ### 1. <a name="ipy">安装 Python</a>
 
 1. 官网：  
-前往 <a href="https://ks0508.github.io/SE-project/QA2/QA2" target="_blank">Python 官网</a>下载 Python（当然最好还是<a href="www.baidu.com" target="_blank">百度</a>/<a href="www.google.com" target="_blank">谷歌</a>搜索 Python 啦）  
+前往 <a href="https://www.python.org/" target="_blank">Python 官网</a>下载 Python（当然最好还是<a href="https://www.baidu.com" target="_blank">百度</a>/<a href="https://www.google.com" target="_blank">谷歌</a>搜索 Python 啦）  
 ![python 官网](images/003/pyweb.png)
 
 2. 下载：  
@@ -37,7 +37,8 @@ Q：既然学委的 Q & A 中都已经给了 WinPython，而其中的大量关�
 ![](images/003/dlpy.png)
 
 3. 安装：双击你下载的 installer   
-* 如果你是第一次安装，那么全部默认就行，记得勾选 `add path` 就行（抱歉没图）
+* 如果你是第一次安装，那么全部默认就行，记得勾选最下面的 `add python 3.7 to path` 就行  
+![](images/003/installpy.jpg)
 * 如果是已经有一个python（我就是）,，选择 `Upgrade Now`   
 ![配置0](images/003/配置0.png)  
 ![installing](images/003/installing.png)
