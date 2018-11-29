@@ -16,9 +16,9 @@ title: 使用vbox新建WinXP虚拟机来打开辣个CPU模拟页面
 
 1. <a href="#1">下载并安装vbox</a>
 
-2. <a href="#2">下载Windows XP的光盘镜像与JRE 1.6</a>
+2. <a href="#2">新建 WinXP 虚拟机</a>
 
-3. <a href="#3">新建 WinXP 虚拟机</a>
+3. <a href="#3">下载Windows XP的光盘镜像与JRE 1.6</a>
 
 4. <a href="#4">安装 Windows XP</a>
 
@@ -44,17 +44,12 @@ title: 使用vbox新建WinXP虚拟机来打开辣个CPU模拟页面
 
 ![](images/002/vboxstart.png)
 
-## 2. <a name="2">下载Windows XP的光盘镜像与JRE 1.6</a>
+> 关于虚拟化技术（也可能叫其他名字）：  
+> 1. 这个需要进入 **Bios** 界面（就是那个蓝底白字的复古界面），进入该界面的的方法为：`开机`-->`按某个按键`（这个取决于你是什么电脑，像*惠普的暗影精灵4*就是按 `F10`，详情百度）。  
+> PS：实测*小米游戏本*是没有**虚拟化技术**这个选项的。  
+> 2. 在 Bios 界面找到虚拟化技术一栏并选择开启（原谅我**没图**）。
 
-> 我的文件全是从****那里弄过来的：光盘镜像我不知道怎么弄；jre1.6 的话我从甲骨文（Oracle）那里下载似乎是要账号，但是我没有账号。。。所以。。。
-
-我嫌度盘太慢，就把文件放到了谷歌云盘：<a href="https://drive.google.com/open?id=1FvoWeTK_Y4owMS4pzZBxLwpsxJoU0wG7" target="_blank">点我</a>跳转到下载页面
-
-图中第一个是 jre1.6 ，第二个是光盘镜像
-
-![](images/002/wtnddl.png)
-
-## 3. <a name="#3">新建WinXP虚拟机</a>
+## 2. <a name="2">新建WinXP虚拟机</a>
 
 1. 打开 vbox，点击左上角的新建，填好**名称**（你想怎么填就怎么填），调好**类型**（`Microsoft Windows`）和**版本**（`Windows XP(32-bit)`）  
 ![](images/002/classandversion.png)
@@ -68,13 +63,42 @@ title: 使用vbox新建WinXP虚拟机来打开辣个CPU模拟页面
 4. 完成创建  
 ![](images/002/finishcreat.png)
 
+## 3. <a name="3">下载Windows XP的光盘镜像与JRE 1.6</a>
+
+> 我的文件全是从****那里弄过来的：光盘镜像我不知道怎么弄；jre1.6 的话我从甲骨文（Oracle）那里下载似乎是要账号，但是我没有账号。。。所以。。。
+
+我嫌度盘太慢，就把文件放到了  
+1. 使用http服务器下载：<a href="http://172.18.40.173/" target="_blank">点我</a>打开下载页面，`lab07`文件夹中的两个文件就是，点击下载即可。  
+![](images/002/http01.png)  
+![](images/002/http02.png)
+
+> PS：这个网站是把我的电脑当作服务器的，只有**校内网**能用，而且我电脑关机的时候是没法用的，但是速度非常快。
+
+3. 使用 onedrive教育版 链接下载：<a href="https://mail2sysueducn-my.sharepoint.com/:f:/g/personal/mijlong_mail2_sysu_edu_cn/Ekqt-zs2T99GtVXF2rcZq20B-9qvidtDWFhu9DlrV9M84g?e=mx6QaV" target="_blank">点我</a>跳转下载页面  
+![](images/002/onedrive.png)
+
+3. 在班群的群文件中下载  
+![](images/002/dlXPfromqq.png)
+
+4. 谷歌云盘（其实也很慢：<a href="https://drive.google.com/open?id=1FvoWeTK_Y4owMS4pzZBxLwpsxJoU0wG7" target="_blank">点我</a>跳转到下载页面  
+图中第一个是 jre1.6 ，第二个是光盘镜像  
+![](images/002/wtnddl.png)
+
+> 关于部分报错  
+![](images/002/error.png)
+>
+> 按照学委的说法：是因为用 winrar 软件把 iso 文件解压了，所以下载下来的光盘镜像**请不要解压**  
+![](images/002/sol01.png)  
+![](images/002/sol02.png)
+
 ## 4. <a name="4">安装 Windows XP 操作系统</a>
 
 1. 载入光盘：启动刚刚创建的虚拟机，弹出如下界面，点击左边`文件夹按钮`，选择你刚刚下载的**光盘镜像**，点击`启动`。  
 ![](images/002/choseadisk.png)
 
 2. 正式开始安装：当你看到下图的复古的蓝底白字界面时，便正式开始安装了,一路确认下去，直到**磁盘格式化**  
-![](images/002/startinstall.png)
+![](images/002/startinstall.png)  
+> 关于按`F8`等`FX`按键无效的问题：请试着按住 `Fn` 键再按 `F8` ，要想永久解决这个问题，请关闭 **Fn 锁**，详情请百度/google。
 
 3. **格式化方式**的选择：一般来说，推荐是选择**NTFS文件系统**和**快**即可。  
 ![](images/002/choseformat.png)
@@ -118,6 +142,20 @@ title: 使用vbox新建WinXP虚拟机来打开辣个CPU模拟页面
 
 2. 正式安装：双击 .exe 文件，等待安装结束就好。
 
+> 关于出现打开出现错误的问题：  
+> ![](images/002/erroronjre.png)  
+>
+> 1. 删除原本的 jre1.6 ：`开始`菜单栏-->`控制面板`-->`添加/删除程序`-->`删除`java  
+> ![](images/002/deljre.png)
+>
+> 2. 下载 `jre-6u6-windows-i586-p.exe` ，下载链接：  
+> * <a href="http://172.18.40.173/" target="_blank">http://172.18.40.173/</a>  
+> * <a href="https://mail2sysueducn-my.sharepoint.com/:u:/g/personal/mijlong_mail2_sysu_edu_cn/Ect9c32kVdxNtCtubuorPmoB3oEB_J0ZRpj2oEBa1BZf7A?e=k5GBtb" target="_blank">Onedrive下载  </a>
+> * 群文件下载
+> * <a href="https://drive.google.com/open?id=1TjSKwVxW4ad7ZSL2RjdV0GvFbrzGJZBU" target="_blank">谷歌云盘</a>
+>
+> 3. 重复<a href="#6">步骤6</a>
+
 ## 7. <a name="7">进入网页</a>
 
 1. 从`开始`菜单栏打开**IE浏览器**，复制网址**<a href="http://www.science.smith.edu/~jcardell/Courses/CSC103/CPUsim/cpusim.html" style="word-break: break-word">http://www.science.smith.edu/~jcardell/Courses/CSC103/CPUsim/cpusim.html</a>** 到IE浏览器中并`回车`
@@ -127,6 +165,20 @@ title: 使用vbox新建WinXP虚拟机来打开辣个CPU模拟页面
 
 3. 噔噔噔！  
 ![](images/002/finish.png)
+
+> 关于出现打开出现错误的问题：  
+> ![](images/002/erroronjre.png)  
+>
+> 1. 删除原本的 jre1.6 ：`开始`菜单栏-->`控制面板`-->`添加/删除程序`-->`删除`java  
+> ![](images/002/deljre.png)
+>
+> 2. 下载 `jre-6u6-windows-i586-p.exe` ，下载链接：  
+> * <a href="http://172.18.40.173/" target="_blank">http://172.18.40.173/</a>  
+> * <a href="https://mail2sysueducn-my.sharepoint.com/:u:/g/personal/mijlong_mail2_sysu_edu_cn/Ect9c32kVdxNtCtubuorPmoB3oEB_J0ZRpj2oEBa1BZf7A?e=k5GBtb" target="_blank">Onedrive下载  </a>
+> * 群文件下载
+> * <a href="https://drive.google.com/open?id=1TjSKwVxW4ad7ZSL2RjdV0GvFbrzGJZBU" target="_blank">谷歌云盘</a>
+>
+> 3. 重复<a href="#6">步骤6</a>
 
 
 
