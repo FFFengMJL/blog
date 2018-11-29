@@ -18,7 +18,7 @@ title: Ubuntu 18.04 安装指南
 
 #### 1. 清华大学开源镜像站（速度其实挺快）
 
-1. <a href="https://mirrors.tuna.tsinghua.edu.cn" target="_blank">点我跳转页面</a>   
+1. <a href="https://mirrors.tuna.tsinghua.edu.cn/" target="_blank">点我跳转页面</a>   
 ![](images/003/tuna.png)  
 2. 点击`获取下载链接`（即**图中位置**）  
 ![](images/003/dwfromtuna.png)
@@ -35,7 +35,7 @@ title: Ubuntu 18.04 安装指南
 
 ## <a name="creat"></a>2. 创建虚拟机
 
-1. 下载并安装 VBox ：具体操作可参考<a href="https://fffengmjl.github.io/blog/002(forlab07#1">我上一篇博客中的“创建虚拟机”</a>部分
+1. 下载并安装 VBox ：具体操作可参考<a href="https://fffengmjl.github.io/blog/002(forlab07#1" target="_blank">我上一篇博客中的“创建虚拟机”</a>部分
 
 2. 创建：打开 VBox 后，点击`新建`，输入**名称**，类型选择 `Linux` ，版本选择 `Ubuntu (64-bit)`  
 ![](images/004/creat.png)
