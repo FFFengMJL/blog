@@ -7,3 +7,5 @@
 2. <a href="002(forlab07">使用vbox新建winXP来打开*辣个CPU模拟界面*</a>
 
 3. <a href="003(forlab10">硬核安装 Python 以及 numpy 和 sympy 中的常用函数</a>
+
+4. <a href="004(forlab15">硬核的 Ubuntu 18.04 虚拟机安装指引 *Unfinished*</a>
