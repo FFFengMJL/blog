@@ -18,7 +18,7 @@ title: Ubuntu 18.04 安装指南
 
 #### 1. 清华大学开源镜像站（速度其实挺快）
 
-1. <a href="https://mirrors.tuna.tsinghua.edu.cn/#" target="_blank">点我跳转页面</a>   
+1. <a href="https://mirrors.tuna.tsinghua.edu.cn" target="_blank">点我跳转页面</a>   
 ![](images/003/tuna.png)  
 2. 点击`获取下载链接`（即**图中位置**）  
 ![](images/003/dwfromtuna.png)
