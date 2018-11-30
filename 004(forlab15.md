@@ -28,14 +28,14 @@ title: Ubuntu 18.04 安装指南
 #### 2. 校园网（各种意义上容易爆炸）
 
 点击下载链接直接下载（四个中至**少有一个**、**最多有两个**是能用的）：  
-* <a href="http://172.18.40.92/ubuntu-18.04.1-desktop-amd64.iso">下载链接 1</a >
+* <a href="http://172.18.40.92/ubuntu-18.04.1-desktop-amd64.iso">下载链接1：nginx</a >
 * <a href="http://172.18.40.92:8080/ubuntu-18.04.1-desktop-amd64.iso">下载链接 2</a>
 * 下载链接 3
 * 下载链接 4
 
 ## <a name="creat"></a>2. 创建虚拟机
 
-1. 下载并安装 VBox ：具体操作可参考<a href="https://fffengmjl.github.io/blog/002(forlab07#1" target="_blank">我上一篇博客中的“创建虚拟机”</a>部分
+1. 下载并安装 VBox ：具体操作可参考<a href="https://fffengmjl.github.io/blog/002(forlab07#1" target="_blank">我上上一篇博客中的“创建虚拟机”</a>部分
 
 2. 创建：打开 VBox 后，点击`新建`，输入**名称**，类型选择 `Linux` ，版本选择 `Ubuntu (64-bit)`  
 ![](images/004/creat.png)
@@ -59,3 +59,63 @@ title: Ubuntu 18.04 安装指南
 ![](images/004/finishcreat.png)
 
 ## 3. 安装 Ubuntu 18.04
+
+1. 启动：选中**新建的 Ubuntu 虚拟机**，点击启动  
+![](images/004/openvm.png)
+
+2. 添加 iso 文件：**导入**你下载的 iso 文件，点击下一步，等待加载完成  
+![](images/004/addiso.png)
+
+3. 正式开始安装：选择语言（**简中在倒数第三，繁中在倒数第二**，不过你想硬核选择其他语言我也没办法）  
+![](images/004/chooselang.png)
+
+4. 键盘布局：我自己是默认的`汉语`-`汉语`，然后点击`继续`  
+![](images/004/kb.png)
+
+5. 软件更新：**默认**就好  
+![](images/004/chooseupdate.png)
+
+6. 清空磁盘选择：依然是**默认**就好，遇到提示选择`继续`  
+![](images/004/cleardisk.png)  
+![](images/004/cldkwa.png)
+
+7. 地区选择：这个好像与**时间/时区**有关，所以嘛。。。。  
+![](images/004/chooseplace.png)
+
+8. 您是谁：喜闻乐见**取名**桥段  
+![](images/004/name.png)
+
+9. 等待  
+![](images/004/waiting.png)
+
+10. 点击`现在重启`
+
+11. 完成系统的安装（**新特性**这些全部点击`前进`跳过就好）  
+![](images/004/finishinstalling.png)
+
+> 1. 更新：跳过新特性之后，你发现桌面有一个提示，提示你更新软件，由于**软件源在墙外**，多半会更新失败，所以可以选择**不更新**  
+> 2. 验证上网：左上角就是大名鼎鼎的 **Firefox （火狐）浏览器**，打开它，输入百度/谷歌（或者其他网站）的网址，验证能否上网（一般来说是可以直接上的
+
+## 4. 配置相关文件
+
+#### 1. 安装增强功能
+
+1. 具体可以参考<a href="https://fffengmjl.github.io/blog/002(forlab07#5" target="_blank">我上上一篇博客中的“安装 vbox 的增强功能”</a>部分
+
+2. 弹出来的窗口，选择`运行`  
+![](images/004/installaugument.png)
+
+3. 弹出一个终端，展示安装过程  
+![](images/004/pleaseinstallgcc.png)
+> 按照终端的信息来看，似乎是没有安装 **gcc** ，不过看样子<del>它会自动帮我们安装</del>，实锤了，并没有  
+
+4. 安装 gcc ：打开**终端** --> 输入如下命令 --> 按下`Y`  
+<code>
+sudo apt install gcc
+</code>
+![](images/004/installgcc.png)  
+等待安装完成  
+![](images/004/installinggcc.png)  
+
+5. 点开桌面上的**VBox Gas**，点击右上角的运行  
+![](images/004/openGAS.png)
