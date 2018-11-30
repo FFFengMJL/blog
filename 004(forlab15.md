@@ -14,6 +14,10 @@ title: Ubuntu 18.04 安装指南
 
 4. <a href="#config">配置（软件源）</a>
 
+* <a href="#augument">安装增强功能</a>
+
+* <a href="#code">安装打码软件</a>
+
 ## <a name="dw"></a>1. 下载
 
 #### 1. 清华大学开源镜像站（速度其实挺快）
@@ -98,24 +102,60 @@ title: Ubuntu 18.04 安装指南
 
 ## <a name="config"></a>4. 配置相关文件
 
-#### 1. 安装增强功能
+### <a name="augument"></a>1. 安装增强功能
 
-1. 具体可以参考<a href="https://fffengmjl.github.io/blog/002(forlab07#5" target="_blank">我上上一篇博客中的“安装 vbox 的增强功能”</a>部分
+1. 可以参考<a href="https://fffengmjl.github.io/blog/002(forlab07#5" target="_blank">我上上一篇博客中的“安装 vbox 的增强功能”</a>部分，但是还有有很多不同
 
-2. 弹出来的窗口，选择`运行`  
+2. 在点击`安装增强功能`后，弹出来的窗口，选择`运行`  
 ![](images/004/installaugument.png)
 
 3. 弹出一个终端，展示安装过程  
 ![](images/004/pleaseinstallgcc.png)
 > 按照终端的信息来看，似乎是没有安装 **gcc** ，不过看样子<del>它会自动帮我们安装</del>，实锤了，并没有  
 
-4. 安装 gcc ：打开**终端** --> 输入如下命令 --> 按下`Y`  
-<code>
-sudo apt install gcc
-</code>
-![](images/004/installgcc.png)  
-等待安装完成  
-![](images/004/installinggcc.png)  
+4. 安装相关环境：打开**终端** --> 输入`sudo apt install build-essential` --> 输入`Y`  
+![](images/004/installbuild.png)  
 
 5. 点开桌面上的**VBox Gas**，点击右上角的运行  
-![](images/004/openGAS.png)
+![](images/004/openGAS.png)  
+等待安装完成  
+![](images/004/installingGAS.png)
+
+6. 重启虚拟机  
+![](images/004/restart.png)
+
+7. 开启共享**剪切板**和**拖放**：参考<a href="https://fffengmjl.github.io/blog/002(forlab07#5" target="_blank">我上上一篇博客中的“安装 vbox 的增强功能”</a>部分  
+> 我自己安装的时候发现剪切板是可以共用了，但是**拖放**却不能实现，暂时不知道什么原因，*待补全*
+
+### <a name="code"></a>2. 安装打码软件
+
+> Q：为什不安装 dev c++ ？  
+> A：那玩意儿的 Linux 版本太老了，不像在 Windows 平台那样还有人维护更新，所以选用比较支持 Linux 系统的 codeblocks，当然，**vscode + 终端的编译+运行**更好了（ vscode 界面下可以打开 terminal （即终端）  
+> ![](images/004/openterminal.png)
+
+#### 1. 安装 codeblocks
+
+1. 命令式安装：在终端输入`sudo apt install codeblocks`，输入`Y`  
+![](images/004/installcb.png)
+
+2. 在 **Ubuntu 软件**安装：打开 **Ubuntu 软件** --> 搜索 --> 输入名称 --> 安装  
+![](images/004/installcodeb.png)
+
+3. 打开 codeblocks：点击左下角的按钮，（在下栏的**全部**中）找到对应软件，`单击`便可打开  
+![](images/004/opencb.png)  
+> 加入收藏夹（左边的那一栏）：右键软件图标 --> 添加到收藏夹  
+> ![](images/004/addcbtofa.png)
+
+#### 1. 安装 vscode
+
+> vscode 的软件源一开始并没有加入电脑中，**没法用命令直接安装**，所以选择直接去官网下载
+
+1. 下载：点击官网链接跳转页面，下载 **.deb** 后缀的文件  
+![](images/004/dwvscode.png)  
+![](images/004/instvs.png)
+
+2. 安装：先**打开**这个文件（见第一张图），然后**安装**（见第二张图）  
+![](images/004/installvscode.png)  
+![](images/004/installvscode_real.png)
+
+3. 打开：与 codeblocks 同理
