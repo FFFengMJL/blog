@@ -4,6 +4,11 @@ title: Ubuntu 18.04 安装指南
 ---
 # Ubuntu 18.04 安装指南
 
+前言：  
+> 关于这个（或者说是下次作业），估计大家都已经知道要使用 **Linux 系统**来完成了。何况，聪哥一直都推荐我们使用 Linux 系统进行编程，还发给了我们一个 Ubuntu 14.04 的镜像，虽然他的那个会有**花屏**现象。  
+> 为了帮助广大群众，勤勤恳恳老学委自己配置了 **Ubuntu 14.04 的镜像**供大家下载、解压、导入即用，还有贴心的 <a href="https://ks0508.github.io/SE-project/QA3/QA3" target="_blank">Q & A</a> 给大家指引。  
+> 但是呢，本着<del>不作死不会死的精神</del>一题多解的精神，也是为了方便大家使用跟上时代的新版本（毕竟14.04是14年发布的），我折腾我自己写了这个 **Ubuntu 18.04** （18年发布）的安装指引，顺带也达成了成就“在 Ubuntu 里面开 Ubuntu”（笑）
+
 ## 目录
 
 1. <a href="#dw">下载</a>
@@ -159,3 +164,6 @@ title: Ubuntu 18.04 安装指南
 ![](images/004/installvscode_real.png)
 
 3. 打开：与 codeblocks 同理
+
+> 至此，大部分的东西已经安装完毕，大家便可愉快地在 Ubuntu 18.04 上打码了，最后附上一张我**在 Ubuntu 里开 Ubuntu** 的图（笑）  
+> ![](images/004/UbuntuinUbuntu.png)
