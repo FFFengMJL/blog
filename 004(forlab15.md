@@ -9,6 +9,9 @@ title: Ubuntu 18.04 安装指南
 > 为了帮助广大群众，勤勤恳恳老学委自己配置了 **Ubuntu 14.04 的镜像**供大家下载、解压、导入即用，还有贴心的 <a href="https://ks0508.github.io/SE-project/QA3/QA3" target="_blank">Q & A</a> 给大家指引。  
 > 但是呢，本着<del>不作死不会死的精神</del>一题多解的精神，也是为了方便大家使用跟上时代的新版本（毕竟14.04是14年发布的），我折腾我自己写了这个 **Ubuntu 18.04** （18年发布）的安装指引，顺带也达成了成就“在 Ubuntu 里面开 Ubuntu”（笑）
 
+> 注：Ubuntu 18.04 安装完加上基本配置完成后，占用空间 6.9G  
+> ![](images/004/大小.png)
+
 ## 目录
 
 1. <a href="#dw">下载</a>
@@ -139,14 +142,16 @@ title: Ubuntu 18.04 安装指南
 > ![](images/004/openterminal.png)
 
 #### 1. 安装 codeblocks
-
+##### 1. 安装：
 1. 命令式安装：在终端输入`sudo apt install codeblocks`，输入`Y`  
 ![](images/004/installcb.png)
 
 2. 在 **Ubuntu 软件**安装：打开 **Ubuntu 软件** --> 搜索 --> 输入名称 --> 安装  
 ![](images/004/installcodeb.png)
 
-3. 打开 codeblocks：点击左下角的按钮，（在下栏的**全部**中）找到对应软件，`单击`便可打开  
+##### 2. 打开与收藏
+
+打开 codeblocks：点击左下角的按钮，（在下栏的**全部**中）找到对应软件，`单击`便可打开  
 ![](images/004/opencb.png)  
 > 加入收藏夹（左边的那一栏）：右键软件图标 --> 添加到收藏夹  
 > ![](images/004/addcbtofa.png)
