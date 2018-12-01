@@ -8,4 +8,4 @@
 
 3. <a href="003(forlab10">硬核安装 Python 以及 numpy 和 sympy 中的常用函数</a>
 
-4. <a href="004(forlab15">硬核的 Ubuntu 18.04 虚拟机安装指引 *Unfinished*</a>
+4. <a href="004(forlab15">没那么硬核的 Ubuntu 18.04 虚拟机安装指引</a>
