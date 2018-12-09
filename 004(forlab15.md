@@ -42,8 +42,6 @@ title: Ubuntu 18.04 安装指南
 点击下载链接直接下载（四个中至**少有一个**、**最多有两个**是能用的）：  
 * <a href="http://172.18.40.92/ubuntu-18.04.1-desktop-amd64.iso">下载链接1：nginx</a >
 * <a href="http://172.18.40.92:8000/ubuntu-18.04.1-desktop-amd64.iso">下载链接 2</a>
-* 下载链接 3
-* 下载链接 4
 
 ## <a name="creat"></a>2. 创建虚拟机
 
@@ -156,7 +154,7 @@ title: Ubuntu 18.04 安装指南
 > 加入收藏夹（左边的那一栏）：右键软件图标 --> 添加到收藏夹  
 > ![](images/004/addcbtofa.png)
 
-#### 1. 安装 vscode
+#### 2. 安装 vscode
 
 > vscode 的软件源一开始并没有加入电脑中，**没法用命令直接安装**，所以选择直接去官网下载
 
@@ -169,6 +167,10 @@ title: Ubuntu 18.04 安装指南
 ![](images/004/installvscode_real.png)
 
 3. 打开：与 codeblocks 同理
+
+#### 3. 安装 sublimetext（网站暂时打不开，鸽了
+
+## 结语
 
 > 至此，大部分的东西已经安装完毕，大家便可愉快地在 Ubuntu 18.04 上打码了，最后附上一张我**在 Ubuntu 里开 Ubuntu** 的图（笑）  
 > ![](images/004/UbuntuinUbuntu.png)
