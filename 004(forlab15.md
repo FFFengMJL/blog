@@ -41,7 +41,7 @@ title: Ubuntu 18.04 安装指南
 
 点击下载链接直接下载（四个中至**少有一个**、**最多有两个**是能用的）：  
 * <a href="http://172.18.40.92/ubuntu-18.04.1-desktop-amd64.iso">下载链接1：nginx</a >
-* <a href="http://172.18.40.92:8080/ubuntu-18.04.1-desktop-amd64.iso">下载链接 2</a>
+* <a href="http://172.18.40.92:8000/ubuntu-18.04.1-desktop-amd64.iso">下载链接 2</a>
 * 下载链接 3
 * 下载链接 4
 
