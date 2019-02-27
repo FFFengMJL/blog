@@ -26,8 +26,8 @@ title: 程序设计
 ### 2019.2.27
 
 1. 将 mode_1.cpp 更名为 text_handle_ver_1.cpp  
-2. 创建了 <a href="text_handle_ver_2.cpp">text_handle_ver_2.cpp</a>  
-3. 加入样例 <a href="input.txt">input.txt</a> 
+2. 创建了 <a href="https://github.com/FFFengMJL/blog/blob/master/work/svg/text_handle_ver_2.cpp" target="_blank">text_handle_ver_2.cpp</a>  
+3. 加入样例 <a href="https://github.com/FFFengMJL/blog/blob/master/work/svg/input.txt#L1" target="_blank">input.txt</a> 
 
 <pre>
 关于 text_handle_ver_2.cpp :
