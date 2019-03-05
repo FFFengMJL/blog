@@ -25,7 +25,6 @@ ver_2 与 ver_1 的区别：
 */
 
 #include<iostream>
-#include<string.h>
 #include<string>
 using namespace std;
 
