@@ -14,44 +14,49 @@
     2. svg 生成
 
 思路：
-    1. 计算 title 与 words 的字符长度，选择最长的，公式计算之后成为文本框的长度
+    1. 在处理文本的同时，计算 title 与 words 的字符长度，选择最长的，公式计算之后成为文本框的长度
     2. 该版本的 svg 生成打算严格按照分级来显示，即不像老师那样以叶子节点的水平坐标来划分
     3. 图片长宽大小固定->避免计算
-    4. 暂时不考虑线的生成
+    4. 考虑放弃直线，改用折线
     
 吐槽：
-    好丑啊。。。。连线也不好连
+    好丑啊。。。。连线也不好连->暂时使用折线看看
+    勉强够看，连线冲突问题已经解决
 */
 
 #include<iostream>
-#include<fstream>//用于进行文件输出
 #include<string>
+#include<fstream>
 using namespace std;
 
-//二维类数组的使用是过于浪费资源，需要改进
-//什么？你问我为什么不用链表？我不会啊5555
-const int max_len = 5;//tar 二维类数组最大 len
-const int max_level = 10;//tar 二维类数组最大 level
+const int max_len = 20;//tar 二维类数组最大 len
+const int max_level = 20;//tar 二维类数组最大 level
 const int letter_px = 6;//每个字符长度
 const int letter_add = 18;//每个边框增加的长度
 const int border = 1;//边框
 const int next_lv_distance = 100;//距离下一个 level 的距离
-const int next_horizon_distance = 50;//距离下一个序列的水平距离
+const int next_horizon_distance = 60;//距离下一个序列的水平距离
 const string color_1 = "#67C23A";//title fill 的颜色
 const string color_2 = "#FFFFFF";//words fill 的颜色
 const string color_border = "#000000";//边框的颜色
 const string color_title = "#FFFFFF";//title 文本的颜色
 const string color_words = "#000000";//words 文本的颜色
+const string color_line = "#000000";//折线颜色
 const string fill_opacity = "0.9";//填充程度
-const double rect_height = 18;//矩形长度
+const string font_family = "consolas";//字体选择
+const double rect_height = 20;//矩形长度
 const double rect_stroke = 1;//边框大小
-const double pic_width = 1000;//图片宽度
-const double pic_height = 1000;//图片大小
+const double line_width = 2;//线的宽度
+const double line_vector = 4;//线的偏移量
+const double move_px = 20;//偏移量
 const int font_size = 12;//字体大小
-const double title_pos[2] = {5, 13};//title 的相对定位
-const double words_pos[2] = {5, 32};//words 的相对定位
+const double title_pos[2] = {5, 14};//title 的相对定位
+const double words_pos[2] = {5, 34};//words 的相对定位
+double pic_width;//图片宽度
+double pic_height;//图片大小
 
-
+//二维类数组的使用是过于浪费资源，需要改进
+//什么？你问我为什么不用链表？我不会啊5555
 //使用类进行类结构体储存数据
 class Target
 {
@@ -78,21 +83,6 @@ public:
     {
         this->pos[0] = a.pos[0] + a.width + next_horizon_distance;
         this->pos[1] = b.pos[1] + next_lv_distance;
-    }
-
-    void print()//输出，现在基本没用
-    {
-        if(this->title.length())//存在 title 则输出 title
-        {
-            cout << this->title << ' ';
-        }
-        if(this->words.length())//存在 words 则输出 words
-        {
-            cout << this->words << ' ';
-        }
-        cout << this->blg << endl;//输出从属的上一 level
-        cout << this->pos[0] <<' ' << this->pos[1] <<endl;
-        cout << "矩形宽度" << this->width << endl;
     }
 };
 
@@ -161,17 +151,12 @@ void In(Target tar[][max_level], string text)
 
 int main()
 {
-    /*
     //创建字符串，用于读取整行
     string text;
 
     //读取整行
     getline(cin, text);
-    */
 
-    //测试用字符串
-    string text = "(SBARQ (SBARQ (WHNP (WP What)) (SQ (VBZ is) (NP (NP (DT the) (NX (JJ total) (NN amount))) (IN of) (PRN (NP (NN money)) (VP (VBN spent) (PP (IN by) (NP (NNP Lucas) (NNP Mancini)))))))) (. ?))";
-    
     //创建类数组，第一个数字代表序列，第二个代表等级
     Target tar[max_len][max_level];
 
@@ -192,12 +177,17 @@ int main()
                 }
                 else if(lv && t == 0)//如果 lv 大于1,但是序列是第一个
                 {
-                    tar[t][lv].postion(tar[0][lv-1], tar[0][lv-1]);
+                    tar[t][lv].postion(tar[0][lv - 1], tar[0][lv - 1]);
                     tar[t][lv].pos[0] = 0;//避免奇怪位移
                 }
+                //动态获取图片长宽
+                pic_width = pic_width > (tar[t][lv].pos[0] + tar[t][lv].width) ? pic_width : (tar[t][lv].pos[0] + tar[t][lv].width);
+                pic_height = lv;
             }
         }
     }
+    pic_height = (pic_height + 1) * next_lv_distance;//图片真正的高度
+
     //文件开始产生
     ofstream savefile("001.html");//创建文件以及句柄
     savefile << "<svg xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\""
@@ -243,6 +233,8 @@ int main()
                          << title_pos[1]
                          << "\" fill=\""
                          << color_title
+                         << "\" font-family=\""
+                         << font_family
                          << "\">"
                          << tar[t][lv].title
                          << "</text>" << endl;
@@ -252,40 +244,74 @@ int main()
                 {
                     //创建 words 的 <rect> 标签
                     savefile << "\t\t<rect x=\"0\" y=\""
-                         << rect_height
-                         << "\" height=\""
-                         << rect_height
-                         << "\" fill=\""
-                         << color_2 
-                         << "\" fill-opacity=\""
-                         << fill_opacity
-                         << "\" stroke=\""
-                         << color_border
-                         << "\" stroke-width=\""
-                         << border
-                         << "\" width=\""
-                         << tar[t][lv].width
-                         <<"\"></rect>" << endl;
+                             << rect_height
+                             << "\" height=\""
+                             << rect_height
+                             << "\" fill=\""
+                             << color_2 
+                             << "\" fill-opacity=\""
+                             << fill_opacity
+                             << "\" stroke=\""
+                             << color_border
+                             << "\" stroke-width=\""
+                             << border
+                             << "\" width=\""
+                             << tar[t][lv].width
+                             <<"\"></rect>" << endl;
                     
                     //创建 words 的 <text> 标签
                     savefile << "\t\t<text font-size=\""
-                         << font_size
-                         << "\" x=\""
-                         << words_pos[0]
-                         << "\" y=\""
-                         << words_pos[1]
-                         << "\" fill=\""
-                         << color_words
-                         << "\">"
-                         << tar[t][lv].words
-                         << "</text>" << endl;
+                             << font_size
+                             << "\" x=\""
+                             << words_pos[0]
+                             << "\" y=\""
+                             << words_pos[1]
+                             << "\" fill=\""
+                             << color_words
+                             << "\" font-family=\""
+                             << font_family
+                             << "\">"
+                             << tar[t][lv].words
+                             << "</text>" << endl;
                 }
 
                 //结束 group 标签
-                savefile << "\t</g>" << endl;
+                savefile << "\t</g>" << endl << endl;
+            }
+
+            //开始生成折线
+            if(lv && tar[t][lv].title.length())
+            {
+                savefile << "\t<path d=\"M " 
+                        //第一个点
+                         << tar[t][lv].pos[0] + tar[t][lv].width / 2
+                         << " "
+                         << tar[t][lv].pos[1]
+                         << " L "
+                        //第二个点
+                         << tar[t][lv].pos[0] + tar[t][lv].width / 2
+                         << " "
+                         << (tar[0][lv - 1].pos[1] + rect_height + tar[t][lv].pos[1]) / 2 + move_px
+                         << " L "
+                        //第三个点
+                         << tar[tar[t][lv].blg][lv - 1].pos[0] + tar[tar[t][lv].blg][lv - 1].width / 2
+                         << " "
+                         << (tar[0][lv - 1].pos[1] + rect_height + tar[t][lv].pos[1]) / 2 - move_px
+                         << " L "
+                        //第四个点
+                         << tar[tar[t][lv].blg][lv - 1].pos[0] + tar[tar[t][lv].blg][lv - 1].width / 2
+                         << " "
+                         << tar[tar[t][lv].blg][lv - 1].pos[1] + rect_height
+                         << "\" stroke=\""
+                         << color_line
+                         << "\"stroke-width=\""
+                         << line_width
+                         << "\" fill=\"none\" />" << endl <<endl;
             }
         }
     }
     savefile << "</svg>" << endl;
-    savefile.close();
+    savefile.close();//结束创建并关闭文件
+
+    return 0;
 }
