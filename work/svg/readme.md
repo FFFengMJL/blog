@@ -25,7 +25,7 @@ title: 程序设计
 
 ### 2019.3.5
 1. 暂时停止对模块一：文本处理 的开发与更新（摸鱼
-2. 创建了 <a href="https://guthub.com/FFFengMJL/blog/blob/master/work/svg/pos_ver_1.cpp" target="_blank">pos_ver_1.cpp</a> ，可用于生成相应的 .html 文件（图
+2. 创建了 <a href="https://github.com/FFFengMJL/blog/blob/master/work/svg/pos_ver_1.cpp" target="_blank">pos_ver_1.cpp</a> ，可用于生成相应的 .html 文件（图
 
 <pre>
 关于 pos_ver_1.cpp:
