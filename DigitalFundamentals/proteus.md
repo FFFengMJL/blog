@@ -15,8 +15,8 @@ title: 简明 proteus 安装教程
 
 ## <a name="download"></a>1. 下载
 
-1. 方法一：<a href="http://172.18.40.173/%e6%95%b0%e7%94%b5%e8%b5%84%e6%96%99/Proteus.zip">点击下载1</a> <a href="http://172.26.70.204/%E6%95%B0%E7%94%B5%E8%B5%84%E6%96%99/Proteus.zip">点击下载2</a>
-2. 方法二：打开<a href="172.18.40.173" target="_blank">这个网址</a> 或者 <a href="http://172.26.70.204/" target="_blank">这个网址</a>，选择 `学习资料` > `数电资料` 点击 proteus.zip 进行下载 
+1. 方法一：<a href="http://172.18.40.173/%e6%95%b0%e7%94%b5%e8%b5%84%e6%96%99/Proteus.zip">点击下载1</a> <a href="http://172.18.41.183/%E6%95%B0%E7%94%B5%E8%B5%84%E6%96%99/Proteus.zip">点击下载2</a>
+2. 方法二：打开<a href="172.18.40.173" target="_blank">这个网址</a> 或者 <a href="http://172.18.41.183/" target="_blank">这个网址</a>，选择 `学习资料` > `数电资料` 点击 proteus.zip 进行下载 
 ![](../images/DF/proteusInstall/download.png)  
 3. 方法三：数电实验群文件  
 > 前两个下载方法本质上都是一样的
