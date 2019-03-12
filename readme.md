@@ -19,3 +19,7 @@
 ## 项目
 
 1. <a href="work/svg/readme"> svg 项目</a>
+
+## 数电
+
+1. <a href="DigitalFuncdamentals/proteus"> Proteus 的安装 </a>
