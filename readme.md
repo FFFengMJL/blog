@@ -22,4 +22,4 @@
 
 ## 数电
 
-1. <a href="DigitalFuncdamentals/proteus"> Proteus 的安装 </a>
+1. <a href="DigitalFundamentals/proteus"> Proteus 的安装 </a>
