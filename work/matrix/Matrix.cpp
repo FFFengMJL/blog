@@ -2,6 +2,7 @@
 #include<iomanip>
 #include<string.h>
 #include<stdio.h>
+#include<cmath>
 using namespace std;
 
 int pow_n1(int times)
@@ -103,59 +104,6 @@ public:
 	}
 
     //Matrix equaltion
-	Matrix & operator = (const Matrix & right)
-	{
-        delete [] this->values;
-		this->rows = right.rows;
-		this->columns = right.columns;
-		this->values = new double [this->rows * this->columns];
-    	memcpy(this->values, right.values, this->rows * this->columns * sizeof(this->values));
-        return * this;
-	}
-
-    //Addtion between 2 Matrixs
-    Matrix operator + (const Matrix & matrix2) const
-    {
-        Matrix node(this->rows, this->columns);
-        for(int i = 0; i < this->rows * this->columns; i ++)
-        {
-            node.values[i] = this->values[i] + matrix2.values[i];
-        }
-        return node;
-    }
-
-    //Addtion between Matrix and value
-    Matrix operator + (double value)
-    {
-        Matrix node(this->rows, this->columns);
-        for(int i = 0; i < this->rows * this->columns; i ++)
-        {
-            node.values[i] = this->values[i] + value;
-        }
-        return node;
-    }
-
-    //Subtraction between 2 Matrix
-    Matrix operator - (const Matrix & matrix2) const
-    {
-        Matrix node(this->rows, this->columns);
-        for(int i = 0; i < this->rows * this->columns; i ++)
-        {
-            node.values[i] = this->values[i] - matrix2.values[i];
-        }
-        return node;
-    }
-
-    //Subtraction between Matrix and value
-    Matrix operator - (double value)
-    {
-        Matrix node(this->rows, this->columns);
-        for(int i = 0; i < this->rows * this->columns; i ++)
-        {
-            node.values[i] = this->values[i] - value;
-        }
-        return node;
-    }
 
     //Concatenate 2 Matrix by Rows
     Matrix concatenateRows(const Matrix & matrix2) const
@@ -219,8 +167,9 @@ public:
         }
         return node;
     }
-
+/*
     //Return the Determinant of this Matrix
+    //some problems
     double Determinant()
     {
         if(this->rows == 1)
@@ -257,11 +206,225 @@ public:
         }
         return res;
     }
+*/
 
+    //find max element
+    Matrix max()
+    {
+        int col = (this->rows == 1) ? 1 : this->columns;
+        Matrix node(1, col);
+        int max = 0;
+        if(node.columns == 1)
+        {
+            for(int i = 0; i < this->rows * this->columns; i ++)
+            {
+                max = this->values[max] > this->values[i] ? max : i;
+            }
+            node.values[0] = this->values[max];
+        }
+        else
+        {
+            for(int i = 0; i < node.columns; i ++)
+            {
+                for(int t = 0; t < this->rows; t ++)
+                {
+                    node.values[i] = node.values[i] > this->values[t * this->columns + i] ? node.values[i] : this->values[t * this->columns + i];
+                }
+            }
+        }
+        return node;
+    }
+
+    Matrix min()
+    {
+        int col = (this->rows == 1) ? 1 : this->columns;
+        Matrix node(1, col);
+        int min = 0;
+        if(node.columns == 1)
+        {
+            for(int i = 0; i < this->rows * this->columns; i ++)
+            {
+                min = this->values[min] < this->values[i] ? min : i;
+            }
+            node.values[0] = this->values[min];
+        }
+        else
+        {
+            for(int i = 0; i < node.columns; i ++)
+            {
+                node.values[i] = this->values[i];
+                for(int t = 0; t < this->rows; t ++)
+                {
+                    node.values[i] = node.values[i] < this->values[t * this->columns + i] ? node.values[i] : this->values[t * this->columns + i];
+                }
+            }
+        }
+        return node;
+    }
+
+    Matrix sum()
+    {
+        int col = this->rows == 1 ? 1 : this->columns;
+        Matrix node(1, col);
+        if(node.columns == 1)
+        {
+            for(int i = 0; i < this->columns; i ++)
+            {
+                node.values[0] += this->values[i];
+            }
+        }
+        else
+        {
+            for(int i = 0; i < node.columns; i ++)
+            {
+                for(int t = 0; t < this->rows; t ++)
+                {
+                    node.values[i] += this->values[t * this->columns + i];
+                }
+            }
+        }
+        return node;
+    }
+
+	Matrix pow(double exponent)
+    {
+        Matrix node(this->rows, this->columns);
+        for(int i = 0; i < this->rows * this->columns; i ++)
+        {
+            node->values[i] = std::pow(this->values[i], exponent);
+        }
+        return node;
+    }
+
+    Matrix exp()
+    {
+        Matrix node(this->rows, this->columns);
+        for(int i = 0; i < this->rows * this->columns; i ++)
+        {
+            this->values[i] = std::exp(this->values[i]);
+        }
+        return node;
+    }
+
+    Matrix log()
+    {
+        Matrix node(this->rows, this->columns);
+        for(int i = 0; i < this->rows * this->columns; i ++)
+        {
+            this->values[i] = std::log(this->values[i]);
+        }
+        return * this;
+    }
+
+    Matrix abs()
+    {
+        Matrix node(this->rows, this->columns);
+        for(int i = 0; i < this->rows * this->columns; i ++)
+        {
+            this->values[i] = std::abs(this->values[i]);
+        }
+        return * this;
+    }
+
+
+	Matrix & operator = (const Matrix & right)
+	{
+        delete [] this->values;
+		this->rows = right.rows;
+		this->columns = right.columns;
+		this->values = new double [this->rows * this->columns];
+    	memcpy(this->values, right.values, this->rows * this->columns * sizeof(this->values));
+        return * this;
+	}
+
+    //Addtion between 2 Matrixs
+    Matrix operator + (const Matrix & matrix2) const
+    {
+        Matrix node(this->rows, this->columns);
+        for(int i = 0; i < this->rows * this->columns; i ++)
+        {
+            node.values[i] = this->values[i] + matrix2.values[i];
+        }
+        return node;
+    }
+
+    //Addtion between Matrix and value
+    Matrix operator + (double value)
+    {
+        Matrix node(this->rows, this->columns);
+        for(int i = 0; i < this->rows * this->columns; i ++)
+        {
+            node.values[i] = this->values[i] + value;
+        }
+        return node;
+    }
+
+    //Subtraction between 2 Matrix
+    Matrix operator - (const Matrix & matrix2) const
+    {
+        Matrix node(this->rows, this->columns);
+        for(int i = 0; i < this->rows * this->columns; i ++)
+        {
+            node.values[i] = this->values[i] - matrix2.values[i];
+        }
+        return node;
+    }
+
+    //Subtraction between Matrix and value
+    Matrix operator - (double value)
+    {
+        Matrix node(this->rows, this->columns);
+        for(int i = 0; i < this->rows * this->columns; i ++)
+        {
+            node.values[i] = this->values[i] - value;
+        }
+        return node;
+    }
+
+    Matrix operator * (const Matrix & matrix2) const
+    {
+        Matrix node(this->rows, matrix2.columns);
+        for(int i = 0; i < node.rows * node.columns; i ++)
+        {
+            for(int t = 0; t < this->columns; t ++)
+            {
+                node.values[i] += this->values[i / node.rows * this->columns + t] * matrix2.values[t * matrix2.columns + i % node.rows];
+            }
+        }
+        return node;
+    }
+
+    Matrix operator * (double value) const
+    {
+        for(int i = 0; i < this->rows * this->columns; i ++)
+        {
+            this->values[i] *= value;
+        }
+        return * this;
+    }
 };
 
 
 int main()
 {
-    return 0;
+    int rows = 4; 
+    int columns = 5; 
+    double values[1000] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}; 
+    //double value[1000] = {20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+    Matrix matrix(rows, columns, values);
+    double exponent = 2; 
+
+    matrix.print(); 
+    cout << endl; 
+    matrix.pow(exponent).print(); 
+    cout << endl; 
+
+    matrix.exp().print(); 
+    cout << endl; 
+
+    matrix.log().print(); 
+    cout << endl; 
+    matrix.abs().print(); 
+    cout << endl; 
+
 }
