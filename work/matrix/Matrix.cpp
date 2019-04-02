@@ -3,20 +3,10 @@
 #include<string.h>
 #include<stdio.h>
 #include<cmath>
+#include<vector>
 using namespace std;
 
-int pow_n1(int times)
-{
-    if(times % 2)
-    {
-        return -1;
-    }
-    else
-    {
-        return 1;
-    }
-}
-
+template <typename E>
 class Matrix
 {
 private:
@@ -30,7 +20,7 @@ public:
     {
         this->rows = rows;
         this->columns = column;
-        this->values = new double [rows * column];
+        this->values = new E [rows * column];
         for(int i = 0; i < rows * column; i ++)
         {
             values[i] = 0;
@@ -38,20 +28,44 @@ public:
     }
 
     // initializes all elements in the matrix to the given values. 
-    Matrix(int rows, int column, double values[])
+    Matrix(int rows, int column, E values[])
     {
         this->rows = rows;
         this->columns = column;
-        this->values = new double [rows * column];
-        memcpy(this->values, values, rows * column * sizeof(this->values));
+        this->values = new E [rows * column];
+        for(int i = 0;i < rows * column; i ++)
+        {
+            this->values[i] = values[i];
+        }
     }
 
-    Matrix(const Matrix & matrix2)
+    Matrix(const Matrix & from)
     {
-		this->rows = matrix2.rows;
-		this->columns = matrix2.columns;
-		this->values = new double [this->rows * this->columns];
-		memcpy(this->values, matrix2.values, this->rows * this->columns * sizeof(this->values));
+        this->rows = from.rows;
+        this->columns = from.columns;
+        if(this->rows * this->columns)
+        {
+            this->values = new E [this->rows * this->columns];
+            for(int i = 0; i < this->rows * this->columns; i ++)
+            {
+                this->values[i] = from.values[i];
+            }
+        }
+    }
+
+    Matrix(int rows, int cols, const vector<E> values)
+    {
+        this->rows = rows;
+        this->columns = cols;
+        if(this->rows * this->columns)
+        {
+            this->values = new E [this->rows * this->columns];
+            for(int i = 0; i < this->rows * this->columns; i ++)
+            {
+                this->values[i] = values[i];
+            }
+        }
+
     }
 
     //A destructor.
@@ -71,6 +85,11 @@ public:
             }
             cout << endl;
         }
+    }
+
+    E & get(int row, int col)
+    {
+        return this->values[(row - 1) * this->columns + col - 1];
     }
 
     //returns a row matrix for the given row.
@@ -98,7 +117,7 @@ public:
     }
 
     //pull a value into a specific place
-	void set(int row, int column, double value)
+	void set(int row, int column, E value)
 	{
 		this->values[(row - 1) * this->columns + column - 1] = value;
 	}
@@ -167,48 +186,7 @@ public:
         }
         return node;
     }
-/*
-    //Return the Determinant of this Matrix
-    //some problems
-    double Determinant()
-    {
-        if(this->rows == 1)
-        {
-            return this->values[0];
-        }
 
-        double res = 0;
-        for(int i = 0; i < this->rows; i ++)
-        {
-            if(this->values[i] == 0)
-            {
-                //i ++;
-                continue;
-            }
-            //用数组储存余子式
-            double yuzishi[(this->rows - 1) * (this->rows - 1)];
-
-            //获取余子式的数组
-            for(int t = 1, k = 0; t < this->rows; t ++)
-            {
-                for(int j = 0; j < this->rows; j ++)
-                {
-                    if(j == i)//跳过当前的列
-                    {
-                        continue;
-                    }
-                    yuzishi[k ++] = this->values[t * this->rows + j];                  
-                }
-            }
-            Matrix node(this->rows - 1, yuzishi);
-            node.print();
-            res += pow_n1(i) * node.Determinant() * this->values[i];
-        }
-        return res;
-    }
-*/
-
-    //find max element
     Matrix max()
     {
         int col = (this->rows == 1) ? 1 : this->columns;
@@ -286,7 +264,7 @@ public:
         return node;
     }
 
-	Matrix pow(double exponent)
+	Matrix pow(E exponent)
     {
         Matrix node(this->rows, this->columns);
         for(int i = 0; i < this->rows * this->columns; i ++)
@@ -301,7 +279,7 @@ public:
         Matrix node(this->rows, this->columns);
         for(int i = 0; i < this->rows * this->columns; i ++)
         {
-            this->values[i] = std::exp(this->values[i]);
+            node->values[i] = std::exp(this->values[i]);
         }
         return node;
     }
@@ -311,9 +289,9 @@ public:
         Matrix node(this->rows, this->columns);
         for(int i = 0; i < this->rows * this->columns; i ++)
         {
-            this->values[i] = std::log(this->values[i]);
+            node.values[i] = std::log(this->values[i]);
         }
-        return * this;
+        return node;
     }
 
     Matrix abs()
@@ -321,9 +299,9 @@ public:
         Matrix node(this->rows, this->columns);
         for(int i = 0; i < this->rows * this->columns; i ++)
         {
-            this->values[i] = std::abs(this->values[i]);
+            node.values[i] = std::abs(this->values[i]);
         }
-        return * this;
+        return node;
     }
 
 
@@ -332,7 +310,7 @@ public:
         delete [] this->values;
 		this->rows = right.rows;
 		this->columns = right.columns;
-		this->values = new double [this->rows * this->columns];
+		this->values = new E [this->rows * this->columns];
     	memcpy(this->values, right.values, this->rows * this->columns * sizeof(this->values));
         return * this;
 	}
@@ -396,12 +374,54 @@ public:
 
     Matrix operator * (double value) const
     {
+        Matrix node(this->rows, this->columns);
         for(int i = 0; i < this->rows * this->columns; i ++)
         {
-            this->values[i] *= value;
+            node.values[i] = this->values[i] * value;
         }
-        return * this;
+        return node;
     }
+
+/*
+    //Return the Determinant of this Matrix
+    //some problems
+    double Determinant()
+    {
+        if(this->rows == 1)
+        {
+            return this->values[0];
+        }
+
+        double res = 0;
+        for(int i = 0; i < this->rows; i ++)
+        {
+            if(this->values[i] == 0)
+            {
+                //i ++;
+                continue;
+            }
+            //用数组储存余子式
+            double yuzishi[(this->rows - 1) * (this->rows - 1)];
+
+            //获取余子式的数组
+            for(int t = 1, k = 0; t < this->rows; t ++)
+            {
+                for(int j = 0; j < this->rows; j ++)
+                {
+                    if(j == i)//跳过当前的列
+                    {
+                        continue;
+                    }
+                    yuzishi[k ++] = this->values[t * this->rows + j];                  
+                }
+            }
+            Matrix node(this->rows - 1, yuzishi);
+            node.print();
+            res += pow_n1(i) * node.Determinant() * this->values[i];
+        }
+        return res;
+    }
+*/
 };
 
 
