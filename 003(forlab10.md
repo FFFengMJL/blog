@@ -64,14 +64,14 @@ Q：既然学委的 Q & A 中都已经给了 WinPython，而其中的大量关�
 
 1. 安装 sympy ：  
 在 cmd/powershell 输入：  
-<pre>
+```python
 python -m pip install --upgrade pip
-</pre>  
+```  
 来更新 pip （原本的pip **太老了**）  
 否则当你输入
-<pre>
+```python
 pip install sympy
-</pre>  
+```  
 就会出现如下提示：  
 ![](images/003/warning.png)  
 输入上述 pip install 命令，开始下载和安装sympy  
@@ -79,24 +79,24 @@ pip install sympy
 
 2. 安装numpy:  
 新开一个（你也可以等这个安装完） cmd/powershell ，输入命令：  
-<pre>
+```python
 pip install numpy
-</pre>  
+```  
 开始下载安装 numpy 库  
 ![pip安装numpy](images/003/installnumpy.png)  
 > 安装时该窗口不要做任何操作，直到安装完成  
 > ![](images/003/installnumpy2.png)
 
 3. 安装 scipy （非必要）:  
-<pre>
+```python
 pip install scipy
-</pre>  
+```  
 ![](images/003/installscipy.png)
 
 4. 安装 matplotlib （非必要）：  
-<pre>
+```python
 pip install matplotlib
-</pre>
+```
 ![](images/003/matplotlib.png)
 
 ## 2. <a name="sympy">我们常用的 sympy 中的函数</a>
@@ -116,7 +116,7 @@ pip install matplotlib
 6. <a href="#limit">极限</a>
 
 ### 1. <a name="defx">定义 x 等变量</a>：  
-<pre>
+```python
 # 使用方法一：只加载库
 >>> import sympy # 加载库，但使用必须加前缀，对命名空间无影响
 >>> x = sympy.symbols('x')
@@ -132,10 +132,10 @@ x**3
 
 >>> x
 x
-</pre>
+```
 
 ### 2. <a name="tri">三角函数（反三角函数我没找到</a>：  
-<pre>
+```python
 # 方法一：只加载库
 >>> import sympy
 >>> x = sympy.symbols('x') # 定义变量
@@ -157,10 +157,10 @@ sin(x)
 cos(x)
 >>> tan(x) # tan()
 tan(x)
-</pre>
+```
 
 ### 3. <a name="ra">分数</a>：  
-<pre>
+```python
 # 方法一：只加载库
 >>> import sympy
 >>> x = sympy.symbols('x') # 定义变量
@@ -182,10 +182,10 @@ tan(x)
 >>> Rational(cos(x)/2) # 报错，我暂时不知道为什么
 >>> Rational(3/2) * sin(x) 
 3*sin(x)/2
-</pre>
+```
 
 ### 4. <a name="diff">求导</a>：  
-<pre>
+```python
 # 方法一：只加载库
 >>> import sympy
 >>> x = sympy.symbols('x') # 定义变量
@@ -205,10 +205,10 @@ tan(x)
 
 >>> diff(cos(x))
 -sin(x)
-</pre>
+```
 
 ### 5. <a name="inte">积分</a>  
-<pre>
+```python
 # 两种方法都可以使用，篇幅限制只使用加载库
 >>> import sympy
 >>> x = sympy.symbols('x') # 定义变量
@@ -238,10 +238,10 @@ sin(1)
 tan(x)
 >>> sympy.integrate(expr2,(x,0,1))
 -log(cos(1))
-</pre>
+```
 
 ### 6. <a name="limit">极限</a>：  
-<pre>
+```python
 # 两种方法都可以，篇幅限制只使用函数全部加载
 # limit(表达式,变量,极限点)
 >>> from sympy import *
@@ -255,7 +255,7 @@ tan(x)
 
 >>> limit(tan(x),x,+oo)
 AccumBounds(-oo, oo)
-</pre>
+```
 
 ## 3. <a name="numpy">我们常用的 numpy 中的函数</a>
 
@@ -274,7 +274,7 @@ AccumBounds(-oo, oo)
 5. <a href="#mult">求矩阵相乘的积</a>
 
 ### 1. <a name="crtmtrx">建立矩阵</a>：  
-<pre>
+```python
 >>>from numpy import * # 加载全部函数
 >>> A = matrix([[1,2,3], # 其他方法我我没了解
 ... [5,7,8],
@@ -283,10 +283,10 @@ AccumBounds(-oo, oo)
 matrix([[1, 2, 3],
         [5, 7, 8],
         [3, 5, 6]])
-</pre>
+```
 
 ### 2. <a name="shape">求矩阵大小</a>：  
-<pre>
+```python
 >>> A # 用上面的 A
 matrix([[1, 2, 3],
         [5, 7, 8],
@@ -298,10 +298,10 @@ matrix([[1, 2, 3],
 # 方法二
 >>> shape(A)
 (3, 3)
-</pre>
+```
 
 ### 3. <a name="tp">求矩阵的转置</a>：  
-<pre>
+```python
 >>> A # 用上面的 A
 matrix([[1, 2, 3],
         [5, 7, 8],
@@ -322,10 +322,10 @@ matrix([[1, 5, 3],
 matrix([[1, 5, 3],
         [2, 7, 5],
         [3, 8, 6]])
-</pre>
+```
 
 ### 4. <a name="I">求矩阵的逆</a>：  
-<pre>
+```python
 >>> A # 用上面的 A
 matrix([[1, 2, 3],
         [5, 7, 8],
@@ -341,10 +341,10 @@ matrix([[ 1. ,  1.5, -2.5],
 matrix([[ 1. ,  1.5, -2.5],
         [-3. , -1.5,  3.5],
         [ 2. ,  0.5, -1.5]])
-</pre>
+```
 
 ### 5. <a name="mult">求矩阵相乘的积</a>：  
-<pre>
+```python
 >>> A # 用上面的 A
 matrix([[1, 2, 3],
         [5, 7, 8],
@@ -365,5 +365,5 @@ matrix([[ 20,  31,  37],
 matrix([[ 20,  31,  37],
         [ 64,  99, 119],
         [ 46,  71,  85]])
-</pre>
+```
 
