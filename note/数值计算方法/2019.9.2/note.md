@@ -10,13 +10,13 @@
 
 $\hat{p}$ 被称作**近似**（***approximate***）  
 $$
-\frac{|p - \hat{p}}{|p|} < \frac{10^{1 - d}}{2}
+\frac{|p - \hat{p}|}{|p|} < \frac{10^{1 - d}}{2}
 \text{其中 $d$ 是 $\hat{p}$ the largest nonnegative integer }
 $$
 
 ## Big Oh $O(h^n)$ Order of Approximation
 
-> 纯粹的数学，并不实际；实际的数学，并不实际。 --爱因斯坦
+> 纯粹的数学，并不实际；实际的数学，并不纯粹。 --爱因斯坦
 
 - 定义
 
@@ -25,7 +25,7 @@ $$
 \text{, for sufficiently small $h$}
 $$
 
-$p(h)$ approxiamtes $f(h)$: $f(h) = p(h) + \bf{O} (h^n)$
+$p(h)$ approxiamtes $f(h)$: $f(h) = p(h) + {\bf{O}} (h^n)$
 
 - 相关运算
 
@@ -33,7 +33,7 @@ $$
 {\bf{O}} (h^n) · {\bf{O}} (h^m) = {\bf{O}} (h^{m+n})
 $$
 
-假设 $f(h) = p(h) + \bf{O}(h^n)$ 、 $g(h) = q(h) + {\bf{O}} (h^m)$ 并且 $r = \text{min} \lbrace m, n \rbrace$，那么
+假设 $f(h) = p(h) +{ \bf{O}} (h^n)$ 、 $g(h) = q(h) + {\bf{O}} (h^m)$ 并且 $r = \text{min} \lbrace m, n \rbrace$，那么
 
 $$
 f(h) + g(h) = p(h) + q(h) + {\bf{O}} (h^r) \\
