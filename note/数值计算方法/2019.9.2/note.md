@@ -22,19 +22,19 @@ $$
 
 $$
 \frac{|f(h) - p(h)|}{|h^n|} \leq M
-\text{for sufficiently small $h$}
+\text{, for sufficiently small $h$}
 $$
 
-$p(h)$ approxiamtes $f(h)$: $f(h) = p(h) + \bf{O}(h^n)$
+$p(h)$ approxiamtes $f(h)$: $f(h) = p(h) + \bf{O} (h^n)$
 
 2. 相关运算
 
-假设 $f(h) = p(h) + \bf{O}(h^n)$ 、 $g(h) = q(h) + \bf{O}(h^m)$ $r = \text{min} {m, n}$，那么
+假设 $f(h) = p(h) + \bf{O}(h^n)$ 、 $g(h) = q(h) + {\bf{O}} (h^m)$ $r = \text{min} {m, n}$，那么
 
 $$
-f(h) + g(h) = p(h) + q(h) + \bf{O}(h^r) \\
-f(h)g(h) = p(h))q(h) + \bf{O}(h^r) \\
-\frac{f(h)}{g(h)} = \frac{p(h)}{q(h)} + \bf{O} (h^r)
+f(h) + g(h) = p(h) + q(h) + {\bf{O}} (h^r) \\
+f(h)g(h) = p(h))q(h) + {\bf{O}}(h^r) \\
+\frac{f(h)}{g(h)} = \frac{p(h)}{q(h)} + {\bf{O}} (h^r)
 $$
 
 > $C$ 代表 *Continous* 例如，$C^{n+1}[a, b]$
