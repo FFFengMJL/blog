@@ -42,6 +42,20 @@ $$
 & \frac{f(h)}{g(h)} = \frac{p(h)}{q(h)} + {\bf{O}} (h^r) \tag{3}
 $$
 
+$$
+\left.
+& f(h) + g(h) = p(h) + q(h) + {\bf{O}} (h^r) \\
+& f(h)g(h) = p(h))q(h) + {\bf{O}}(h^r) \\
+& \frac{f(h)}{g(h)} = \frac{p(h)}{q(h)} + {\bf{O}} (h^r)
+$$
+
+$$
+f(h) + g(h) = p(h) + q(h) + {\bf{O}} (h^r) \tag{1} \\
+f(h)g(h) = p(h))q(h) + {\bf{O}}(h^r) \tag{2} \\
+\frac{f(h)}{g(h)} = \frac{p(h)}{q(h)} + {\bf{O}} (h^r) \tag{3}
+$$
+
+
 > $C$ 代表 *Continous*，即连续（区间），例如：$C^{n+1}[a, b]$
 
 - 泰勒展开
