@@ -30,14 +30,14 @@ $p(h)$ approxiamtes $f(h)$: $f(h) = p(h) + \bf{O} (h^n)$
 - 相关运算
 
 $$
-{\bf{O}} (h^n) \dot {\bf{O}} (h^m) = {\bf{O}} (h^{m+n})
+{\bf{O}} (h^n) \cdot {\bf{O}} (h^m) = {\bf{O}} (h^{m+n})
 $$
 
 假设 $f(h) = p(h) + \bf{O}(h^n)$ 、 $g(h) = q(h) + {\bf{O}} (h^m)$ $r = \text{min} \left{ m, n \right}$，那么
 
 $$
 f(h) + g(h) = p(h) + q(h) + {\bf{O}} (h^r) \tag 1 \\
-f(h)g(h) = p(h))q(h) + {\bf{O}}(h^r) tag 2 \\
+f(h)g(h) = p(h))q(h) + {\bf{O}}(h^r) \tag 2 \\
 \frac{f(h)}{g(h)} = \frac{p(h)}{q(h)} + {\bf{O}} (h^r) \tag 3
 $$
 
