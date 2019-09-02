@@ -36,7 +36,7 @@ $$
 假设 $f(h) = p(h) + \bf{O}(h^n)$ 、 $g(h) = q(h) + {\bf{O}} (h^m)$ 并且 $r = \text{min} \lbrace m, n \rbrace$，那么
 
 $$
-\left
+\left.
 f(h) + g(h) = p(h) + q(h) + {\bf{O}} (h^r) \\
 f(h)g(h) = p(h))q(h) + {\bf{O}}(h^r) \\
 \frac{f(h)}{g(h)} = \frac{p(h)}{q(h)} + {\bf{O}} (h^r)
