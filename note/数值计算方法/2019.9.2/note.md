@@ -33,7 +33,7 @@ $$
 {\bf{O}} (h^n) · {\bf{O}} (h^m) = {\bf{O}} (h^{m+n})
 $$
 
-假设 $f(h) = p(h) + \bf{O}(h^n)$ 、 $g(h) = q(h) + {\bf{O}} (h^m)$ $r = \text{min} \left{ m, n \right}$，那么
+假设 $f(h) = p(h) + \bf{O}(h^n)$ 、 $g(h) = q(h) + {\bf{O}} (h^m)$ 并且 $r = \text{min} \left\{ m, n \right\}$，那么
 
 $$
 \left
