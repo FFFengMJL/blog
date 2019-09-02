@@ -5,45 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
 
-{% seo %}
-  <style>
-    p
-    {
-      word-break: break-word;
-    }
-    pre 
-    {
-      word-wrap: break-word;
-      white-space: pre-wrap;
-    }
-    #BackToTop:hover 
-    {
-      background-color: #b5e853;
-      color: black;
-    }
-    #BackToTop 
-    {
-    width: 50px;
-    height: 40px;
-    position: fixed;
-    right: 50px;
-    bottom: 30px;
-    background-color: rgba(181,232,83,0);
-    text-align: center;
-    line-height: 40px;
-    font-size: 15px;
-    border-radius: 5px;
-    box-shadow: 2px;
-    color: rgba(181,232,83,1);
-    user-select: none;
-    transition: .25s;
-    -moz-user-select: none;
-    user-select: none;
-    cursor: pointer;
-    border: 1px solid #b5e853;
-    }
-  </style>
+    {% seo %}
+    <style>
+      p
+      {
+        word-break: break-word;
+      }
+      pre 
+      {
+        word-wrap: break-word;
+        white-space: pre-wrap;
+      }
+      #BackToTop:hover 
+      {
+        background-color: #b5e853;
+        color: black;
+      }
+      #BackToTop 
+      {
+      width: 50px;
+      height: 40px;
+      position: fixed;
+      right: 50px;
+      bottom: 30px;
+      background-color: rgba(181,232,83,0);
+      text-align: center;
+      line-height: 40px;
+      font-size: 15px;
+      border-radius: 5px;
+      box-shadow: 2px;
+      color: rgba(181,232,83,1);
+      user-select: none;
+      transition: .25s;
+      -moz-user-select: none;
+      user-select: none;
+      cursor: pointer;
+      border: 1px solid #b5e853;
+      }
+    </style>
   </head>
 
   <body>
