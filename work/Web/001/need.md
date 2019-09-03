@@ -10,22 +10,22 @@
 
 - Appearance and Behavior Details
   - head
-    - foreground color: $\color{#A4A400}{(red=164, green=164, blue=0) or #A4A400}$
-    - background color: $\color{#F0F0F0}{(red=240, green=240, blue=240) or #F0F0F0}$
-    - font families: ${\Century Gothic{Century Gothic}}, {\Futura{Futura}}, {\Verdana{Verdana}}, or any {\sans-serif{sans-serif}}$
+    - foreground color: (red=164, green=164, blue=0) or #A4A400
+    - background color: (red=240, green=240, blue=240) or #F0F0F0
+    - font families: Century Gothic, Futura}, Verdana, or any sans-serif
     - body
       - main heading: aligned to the center
       - other heading: left-aligned
     - font
-      - main heading: 22pt $\color{bold}{bold}$
+      - main heading: 22pt bold
       - other heading: 18pt normal font
     - line: $\underline{underline}$
   - body
-    - background color: $\color{white}{white}$
-    - foreground color: $\color{#404040}{(red=64, green=64, blue=64) or #404040}$
+    - background color: white
+    - foreground color: (red=64, green=64, blue=64) or #404040
     - font-size: 11pt
-    - font-family: ${\Georgia{Georgia}}, {\serif{serif}}$
-    - link: $\color{#A4A400}{color (red=164, green=164, blue=0) or #A4A400}$
+    - font-family: Georgia, serif
+    - link: color (red=164, green=164, blue=0) or #A4A400
     - title: **Grandma's Lemon Meringue Pie**
     - directions (步骤):
       - font: **strong**
