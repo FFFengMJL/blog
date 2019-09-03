@@ -38,7 +38,7 @@
       - 2 W3C: have links
     - Links
       - Home: index.html
-      - Search for other lemon meringue pie recipes" text, should link to the following web page: https://www.google.com.hk/search?q=lemon+meringue+pie+recipe
+      - Search for other lemon meringue pie recipes" text, should link to the following web page: <https://www.google.com.hk/search?q=lemon+meringue+pie+recipe>
     - other: All other decisions about styling on the page are left to the web browser. Any styles mentioned previously that are the same as browser defaults do not have to be explicitly included in your CSS stylesheet. The screenshot in this document was taken on Windows XP using Firefox 2.0, which may differ slightly from the appearance on your system.
 - Extra Features (2 required)
   - background:
