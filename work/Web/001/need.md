@@ -31,7 +31,7 @@
       - font: **strong**
     - qoutation:
       - font: *italic*
-      - background color: $\color{#FFFFC8}{(red=255, green=255, blue=200) or #FFFFC8}$
+      - background color: red=255, green=255, blue=200) or #FFFFC8
       - other: indented blocks
     - images
       - pies
