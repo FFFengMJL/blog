@@ -51,3 +51,5 @@
   - Wide headings: Widen all headings on the page by placing 0.2em of horizontal spacing between neighboring letters in all headings.
   - Borderless image links: Get rid of the yellow borders around the W3C images at the bottom of the page.
   - Other: Do you have an extra feature you'd like to add to your page that isn't listed here? Ask us on the course message board and we'll let you know if it is okay to substitute for one of the above.
+
+![已完成内容](/blog/work/Web/001/pie.html)
