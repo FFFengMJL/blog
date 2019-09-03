@@ -10,13 +10,13 @@
 
 4. <a href="004(forlab15">没那么硬核的 Ubuntu 18.04 虚拟机安装指引</a>
 
+## 当我无聊的时候我在干什么
+
+- [随性而记](./data/000)
+- [作业](./data/homework)
+
+
 ## 笔记
-
-### C++ 程序设计
-
-1. <a href="note/CPUmanagement">CPU 进程管理</a>
-2. <a href="note/Network_and_WWW">网络</a>
-3. <a href="note/SEreview">软件工程综述</a>
 
 ### Web 2.0
 
@@ -38,6 +38,12 @@
 
 - [2018.8.28：第一节课](/blog/note/数据结构/2019.8.28)
 
+### C++ 程序设计
+
+1. <a href="note/CPUmanagement">CPU 进程管理</a>
+2. <a href="note/Network_and_WWW">网络</a>
+3. <a href="note/SEreview">软件工程综述</a>
+
 ## 项目
 
 1. <a href="work/svg/readme"> svg 项目</a>
@@ -49,7 +55,3 @@
 ## 志愿相关资料
 
 - <a href="gaokao/2019年">2019年广东ssl报考相关参考</a>
-
-## 当我无聊的时候我在干什么
-
-- [随性而记](/blog/data/000)
