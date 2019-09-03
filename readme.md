@@ -51,7 +51,7 @@
 
 #### Web 2.0
 
-- <a href="./work/Web/001/pie,html>" target="_blank">第二周</a>
+- <a href="./work/Web/001/pie.html>" target="_blank">第二周</a>
 
 ## 数电
 
