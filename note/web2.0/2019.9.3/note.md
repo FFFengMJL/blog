@@ -114,7 +114,7 @@ HTML coding convention: HTML 的结构是一棵**树**
 <p>SS courses are <!-- NOT --> a lot of fun!</p>
 
 ```html
-<!DOCTPYE html>
+<!DOCTYPE html>
 <html>
     <head>
         Information about the page
