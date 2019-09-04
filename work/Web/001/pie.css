@@ -5,6 +5,7 @@ h1, h2 {
     /* align-content: center; */
     font-weight: bold;
     font-size: 22pt;
+    letter-spacing: 0.2em;
     text-align: center;
     text-decoration: underline;
 }
@@ -16,13 +17,20 @@ h2 {
 }
 body {
     background-color: white;
+    background-image: url("http://courses.cs.washington.edu/courses/cse190m/09sp/homework/1/silverware.jpg");
+    background-attachment: fixed;
+    background-repeat: repeat;
     color: #101010;
     font-size: 11pt;
     font-family: "Georgia", serif;
 }
 a {
     color: #A4A400;
+    border-width: 0cm;
 }
 blockquote {
     background-color: #FFFFCB;
+}
+ul {
+    list-style-image: url(http://courses.cs.washington.edu/courses/cse190m/09sp/homework/1/pie_icon.gif)
 }
