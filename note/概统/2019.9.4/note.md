@@ -16,7 +16,7 @@
 补充：线性规律
 
 1. If $y_1 = x_1 +c, y_2 = x_2 + c, \cdots, y_n = x_n + c$, then $s_y^2 = s_x^2$
-2. If $y_1 = cx_1, \cdots, y_n = cx_n$, then $s_y^2 = c^2s_x^2, s_y = | c |s_x$
+2. If $y_1 = cx_1, \cdots, y_n = cx_n$, then $s_y^2 = c^2 s_x^2 \text{, and } s_y = \left| c \right| s_x$
 
 ### Boxplot
 
