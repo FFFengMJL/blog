@@ -19,7 +19,7 @@ int main()
     while (1) {
         cin >> data;
         if (data == 0) break;
-        if(data < 0) cout << "Not a true data, please input again" << endl;
+        if (data < 0) cout << "Not a true data, please input again" << endl;
         else cout << cale(data) << endl;
     }
     return 0;
