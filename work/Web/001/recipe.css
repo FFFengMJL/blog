@@ -15,6 +15,7 @@ h2 {
     font-weight: normal;
     text-align: left;
 }
+/* body 添加图片背景 */
 body {
     background-color: white;
     background-image: url("http://courses.cs.washington.edu/courses/cse190m/09sp/homework/1/silverware.jpg");
