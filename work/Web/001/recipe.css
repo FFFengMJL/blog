@@ -37,6 +37,7 @@ ul {
     list-style-image: url(http://courses.cs.washington.edu/courses/cse190m/09sp/homework/1/pie_icon.gif)
 }
 hr {
-    border-color: #D3D3D3;
-    border-width: 2pt;
+    border-style: solid;
+    border-color: #CBCBCB;
+    border-width: 2px;
 }
