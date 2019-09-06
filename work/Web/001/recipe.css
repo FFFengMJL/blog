@@ -32,6 +32,7 @@ a {
 blockquote {
     background-color: #FFFFCB;
 }
+/* 将无序列表的样式改成 pie_icon.gif */
 ul {
     list-style-image: url(http://courses.cs.washington.edu/courses/cse190m/09sp/homework/1/pie_icon.gif)
 }
