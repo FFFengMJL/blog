@@ -1,0 +1,14 @@
+# Fdb version 3
+["pdflatex"] 1567947266 "d:/blog/test.tex" "d:/blog/test.pdf" "test" 1567947266
+  "d:/blog/test.aux" 1567947266 9 a94a2480d3289e625eea47cd1b285758 ""
+  "d:/blog/test.tex" 1567947264 54 03345006838cdd0619af7453c359ba28 ""
+  "d:/texlive/2019/texmf-dist/web2c/texmf.cnf" 1566817340 39543 a0bd1f17d0daea30a3905c0b020d0959 ""
+  "d:/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt" 1566820298 4261111 0d8d2822cc8944e5e36bd259af2faea6 ""
+  "d:/texlive/2019/texmf.cnf" 1566820160 673 2e5aa3ac564c6f70f54d6752d765c05d ""
+  "test.aux" 0 -1 0 "pdflatex"
+  "test.tex" 1567947264 54 03345006838cdd0619af7453c359ba28 ""
+  (generated)
+  "test.aux"
+  "test.log"
+  "d:/blog/test.pdf"
+  "d:/blog/test.log"

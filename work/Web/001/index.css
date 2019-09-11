@@ -1,5 +1,5 @@
 /* 米家龙 18342075 */
-/* make style for pie.html */
+/* make style for index.html */
 h1, h2 {
     color: #A4A400;
     background-color: #F0F0F0;
@@ -18,15 +18,16 @@ h2 {
 /* body 添加图片背景 */
 body {
     background-color: white;
-    background-image: url("http://courses.cs.washington.edu/courses/cse190m/09sp/homework/1/silverware.jpg");
+    background-image: url("https://wx3.sinaimg.cn/mw690/6aad15e7gy1g6plid5xcrj20u01i3k3c.jpg");
     background-attachment: fixed;
     background-repeat: repeat;
     color: #404040;
-    font-size: 11pt;
+    font-size: 35pt;
     font-family: "Georgia", "Garamond", serif;
+    text-align: center;
 }
 a {
-    color: #A4A400;
+    color: rgb(187, 36, 201);
     border-width: 0cm;
 }
 blockquote {

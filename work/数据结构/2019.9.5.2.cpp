@@ -1,9 +1,11 @@
 #include <iostream>
 #include <fstream>
+#include <stack>
 using namespace std;
 
 int main()
 {
+    stack <int> a;
     int num = 0, n = 0, data, sum = 0;
     ifstream file;
     file.open("test.txt", ios::in);

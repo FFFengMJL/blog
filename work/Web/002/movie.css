@@ -1,0 +1,53 @@
+body {
+    /* 设置背景灯相关元素，同时 padding 和 margin 为0 */
+    background-image: url("http://hcp.sysu.edu.cn/wiki/download/attachments/32833570/background.png?version=1&modificationDate=1268939512000&api=v2");
+    background-repeat: repeat;
+    background-attachment: fixed;
+    font-size: 8pt;
+    font-family: "Verdana", "Tahoma", sans-serif;
+    margin: 0%;
+    padding: 0%;
+/* The overall page body has no margin or padding, so its contents stretch to the very edge of the browser window. */
+}
+/* 电影名称 */
+h1 {
+    font-size: 24pt;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Tahoma", "Verdana", sans-serif;
+}
+#HeadBanner {
+    background-image: url(http://hcp.sysu.edu.cn/wiki/download/attachments/32833570/bannerbackground.png?version=1&modificationDate=1268939512000&api=v2);
+    background-repeat: repeat-x;
+}
+#HeadBanner img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#MainBody {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 4px  gray solid;
+}
+.left-sec {
+    width: 550px;
+}
+/* 32%的背景 */
+#rating {
+    background-image: url(http://hcp.sysu.edu.cn/wiki/download/attachments/32833570/rottenbackground.png?version=1&modificationDate=1268939585000&api=v2);
+    background-repeat: repeat-x;
+}
+/* #rating img {
+} */
+#sec-1 {
+    color: red;
+    font-size: 48pt;
+    font-weight: bold;
+}
+#sec-2 {
+    color: white;
+    font-size: 8pt;
+    vertical-align: bottom;
+}
