@@ -1,0 +1,7 @@
+target/*
+bin/*
+.settings/*
+.vscode/*
+*.jar
+*.class
+/target/
