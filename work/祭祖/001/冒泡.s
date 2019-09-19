@@ -36,7 +36,7 @@ swap:                       # swap(a, b)
 print:                      # print(array[i] + '\n')
     la      $a2, data       # gain address of word
     la		$a1, change     # gain address of change
-    add     $s3, $0, 10
+    add     $s3, $0, 10    
 loop3:                      # loop for print
     beqz    $s3, exit
     sub     $s3, $s3, 1
