@@ -66,20 +66,20 @@ button {
   background: #4a5f83;
   padding: 0px;
   border:0px;
-  box-shadow: 0px 0px 0px 1px white;
+  box-shadow: 0px 0px 0px 1px #1a2331;
   outline: none;
   vertical-align: middle;
 }
 
 button:hover {
-  background: #3a475d;
+  background: #1a2331;
+  box-shadow: none;
   /* font-size: 52.5px; */
 }
 
 button:active {
-  box-shadow: inset 0px 0px 5px 3px white, 0px 0px 0px 1px white;
+  box-shadow: inset 0px 0px 5px 3px black;
   /* box-shadow: 0px 0px 0px 1px white; */
-
   font-size: 50px;
 }
 
