@@ -43,7 +43,7 @@ html, body{
 }
 
 .line {
-  width: 406px;
+  width: 410px;
   height: 97px;
   margin-top: 7px;
   margin-left: 28px;
@@ -53,7 +53,7 @@ html, body{
 button {
   width: 90px;
   height: 90px;
-  margin-left: 5px;
+  margin-left: 4px;
   margin-right: 1px;
   /* margin: 1px; */
   border-radius: 50%;
