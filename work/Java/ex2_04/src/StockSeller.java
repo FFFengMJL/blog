@@ -1,6 +1,3 @@
-import java.util.Collections;
-import java.util.Vector;
-
 public class StockSeller {
     private int [] prices;
 
@@ -26,22 +23,20 @@ public class StockSeller {
     }
 
     public int MaxProfit3() {
-        Vector<Integer> res = new Vector<Integer>();
-        res.add(0);
-        int temp = 0;
-        for (int i = 1; i < this.prices.length; i++) {
-            if (this.prices[i - 1] > this.prices[i]) {
-                res.add(temp);
-                temp = 0;
-            }
-            else temp += this.prices[i] - this.prices[i - 1];
+        if (this.prices.length == 0) {
+            return 0;
         }
-        res.add(temp);
-        res.sort(Collections.reverseOrder());
-        return res.elementAt(0) + res.elementAt(1);
+        int dp1 = 0;
+        int dp2 = 0;
+        int min1 = this.prices[0];
+        int min2 = this.prices[0];
+        for (int i = 1; i < this.prices.length; i++) {
+            min1 = Math.min(this.prices[i] - 0, min1);
+            dp1 = Math.max(dp1, this.prices[i] - min1);
+
+            min2 = Math.min(this.prices[i] - dp1, min2);
+            dp2 = Math.max(dp2, this.prices[i] - min2);
+        }
+        return dp2;
     }
 }
-//        Prices: An Integer Array, the ith number means the stock price of the ith day.
-//         StockSeller：The constructor, in which initiates the stock prices.
-//         MaxProfit1：Design an algorithm to find the maximum profit, only permitted to complete at
-//        most one transaction. Note that you cannot sell a stock before you buy.

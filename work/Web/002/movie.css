@@ -91,21 +91,23 @@ dt{
 #rating {
     background-image: url(http://hcp.sysu.edu.cn/wiki/download/attachments/32833570/rottenbackground.png?version=1&modificationDate=1268939585000&api=v2);
     background-repeat: repeat-x;
+    height: 83px;
 }
 #rating img {
-    height: 83px;
+    float: left;
 }
 /* 32% 字体部分% */
 #sec-1 {
     color: red;
     font-size: 48pt;
     font-weight: bold;
+    line-height: 140%;
 }
 /* 32% 右边的白色字体 */
 #sec-2 {
     color: white;
     font-size: 8pt;
-    vertical-align: bottom;
+    /* vertical-align: bottom; */
 }
 
 /* 左半评论 */
@@ -141,6 +143,10 @@ dt{
 }
 .review {
     margin-bottom: 3em; 
+}
+/* 撑高度，解决bug */
+.author {
+    overflow: hidden;
 }
 
 /* 1 - 88 */

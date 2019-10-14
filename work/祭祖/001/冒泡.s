@@ -15,7 +15,7 @@
 main:    
     add     $s0, $0, 10     # i = 10
 loop1:
-    beqz    $s0, print      # i == 0
+    beqz    $s0, print      # i == 10
     sub     $s0, $s0, 1     # i--
     add     $s1, $0, 0      # j = 0
     la      $a2, data       # gain address of data
