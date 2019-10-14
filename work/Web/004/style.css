@@ -11,6 +11,7 @@ html, body{
   padding: 0px;
   overflow: hidden;
   background: #2f2f2f;
+  font-family: monospace;
 }
 
 #calculator {
@@ -23,24 +24,22 @@ html, body{
   margin-top: 45px;
   /* margin-bottom: 876px;; */
   border-radius: 17px;
-  background: #4a5f83;
+  background: #1d1d1d;
   overflow: hidden;
   box-shadow: 8px 8px 20px 5px black;
 }
 
 #screen {
-  width: 398px;
+  width: 400px;
   height: 204px;
   position: relative;
   margin-left: auto;
   margin-right: auto;
   border-radius: 17px;;
   margin-top: 56px;
-  margin-bottom: 40px;
-  display: block;
-  background: #ffffff;
-  border-radius: 17px;;
-
+  margin-bottom: 30px;
+  border-radius: 0px;
+  border-bottom: 1px solid #454545;
 }
 
 .line {
@@ -59,32 +58,31 @@ button {
   /* margin: 1px; */
   border-radius: 50%;
   font-size: 55px;
-  font-weight: bold;
   text-align: center;
   vertical-align: middle;
   color: #e2e0e1;
-  background: #4a5f83;
+  background: #1d1d1d;
   padding: 0px;
   border:0px;
-  box-shadow: 0px 0px 0px 1px #1a2331;
+  box-shadow: 0px 0px 0px 1px #6f6f6f;
   outline: none;
   vertical-align: middle;
 }
 
 button:hover {
-  background: #1a2331;
-  box-shadow: none;
+  background: #646464;
   /* font-size: 52.5px; */
 }
 
 button:active {
-  box-shadow: inset 0px 0px 10px 8px black;
+  background: #7c7c7c;
+  /* box-shadow: inset 0px 0px 10px 8px rgb(27, 27, 27); */
   /* box-shadow: 0px 0px 0px 1px white; */
   font-size: 50px;
 }
 
 .symb {
   color: #e2e0e1;
-  background: #3d62a3;
+  background: #2f2f2f;
   box-shadow: none;
 }
