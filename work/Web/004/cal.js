@@ -3,6 +3,7 @@ var down = "0"; // 显示下面的数字
 var ROUND = 4;
 var hist = false;
 var pair_left = 0;
+var dot = false;
 
 // alert("未完成");
 document.getElementById("input").innerText = "0";
@@ -44,17 +45,22 @@ Array.from(document.getElementsByTagName("button")).forEach(function(button) {
                 else down = down.substr(0, down.length - 1);
             }
             else if (s == ".") {
+                // if (dot); // 如果小数点已经存在，就不在有效
+                // else {
                 if (hist) {
                     down = "0.";
                     hist = false;
                 }
                 else if (isNum(down.charAt(down.length - 1))) down = down + s;
                 else down = down + "0.";
+                //     dot = true;
+                // }
             }
             else if (s == "C") {
                 hist = false;
                 down = "0";
                 up = "0";
+                // dot = false;
                 document.getElementById("input").innerText = up;
             }
             else if (cls == "symb" &&  isSymbol(s)) {
@@ -97,6 +103,10 @@ Array.from(document.getElementsByTagName("button")).forEach(function(button) {
                 pair_left = 0;
             } catch (e) {
                 console.error(e);
+                up = "0";
+                down = "0";
+                document.getElementById("output").innerText = down;
+                document.getElementById("input").innerText = up;
                 alert("输入有误");
             }
         }
