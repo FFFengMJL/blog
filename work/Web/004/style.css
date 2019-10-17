@@ -86,3 +86,24 @@ button:active {
   background: #2f2f2f;
   box-shadow: none;
 }
+
+span {
+  display: block;
+  text-align: right;
+  color: #e2e0e1;
+  font-weight: bold;
+}
+
+#scrPos {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+#output {
+  font-size: 65px;
+}
+
+#input {
+  font-size: 45px;
+}
