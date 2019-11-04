@@ -1,11 +1,15 @@
-public class Shape {
-    private String color;
-    private boolean filled;
+public abstract class Shape {
+    protected String color;
+    protected boolean filled;
 
     public Shape() {
         color = "red";
         filled = true;
     }
+
+    public abstract double getArea();
+
+    public abstract double getPerimeter();
 
     public Shape(String color, boolean filled) {
         this.color = color;

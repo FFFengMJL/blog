@@ -39,7 +39,7 @@ public class Rectangle extends Shape {
     }
 
     public double getPerimeter() {
-        return width + length + Math.sqrt(width * width + length * length);
+        return 2 * (length + width);
     }
 
     @Override
