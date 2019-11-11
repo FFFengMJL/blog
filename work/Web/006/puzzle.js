@@ -1,5 +1,6 @@
 function initial(gameMap, hidden, blockSize, borderSize, topPx, win) {
     var map = document.getElementById("map");
+    map.style.backgroundImage = "url(\"./panda.jpg\")";
     for (var i = 0; i < 4; i++){
         for (var j = 0; j < 4; j++) {
             var block = document.createElement("div");
@@ -9,6 +10,7 @@ function initial(gameMap, hidden, blockSize, borderSize, topPx, win) {
             block.style.left = j * (blockSize + borderSize) + topPx + "px";
             block.style.top = i * (blockSize + borderSize) + topPx + "px";
             block.style.backgroundImage = "url(./panda.jpg)";
+            block.style.backgroundSize = "365px 365px";
             block.style.backgroundPositionX = "-" + block.style.left;
             block.style.backgroundPositionY = "-" + block.style.top;
             // block.style.visibility = "hidden";
@@ -17,7 +19,7 @@ function initial(gameMap, hidden, blockSize, borderSize, topPx, win) {
             block.mapId = block.id;
             block.addEventListener("click", function(event) {
                 // console.log("addEventListener");
-                if (win == true) return;
+                if (win == true || hidden.id == -1) return;
                 if (this.style.visibility == "hidden") return;
                 var blocks = document.getElementsByClassName("block");
                 if (surroundHidden(this.id, hidden.id)) {
@@ -88,11 +90,11 @@ function solvability(order, size){ // 判断能够还原
 }
 
 
-// function getRandomInt(min, max) { // 获得随机整数
-//     min = Math.ceil(min);
-//     max = Math.floor(max);
-//     return Math.floor(Math.random() * (max - min)) + min; //不含最大值，含最小值
-// }
+function getRandomInt(min, max) { // 获得随机整数
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min; //不含最大值，含最小值
+}
 
 function surroundHidden(id, hiddenId) {
     // console.log("surroundHidden");
@@ -120,40 +122,87 @@ function newGameMap(num) {
 
 function start(hidden, gameMap, blockSize, borderSize, topPx) {
     var btn = document.getElementById("restart");
+    var blocks = document.getElementsByClassName("block");
     btn.addEventListener("click", function(event) {
-        var blocks = document.getElementsByClassName("block");
-        btn.innerText = "重新开始";
-        gameMap.win = false;
-        Array.from(blocks).forEach(function(block) {
-            block.style.visibility = "visible";
-        });
-        gameMap.pos.shuffle();
-        randomSelect(gameMap, hidden);
-        while(solvability(gameMap.pos, 4) != true) {
+        if (btn.innerText == "开始游戏") {
+            btn.innerText = "停止游戏";
+            gameMap.win = false;
             Array.from(blocks).forEach(function(block) {
                 block.style.visibility = "visible";
             });
             gameMap.pos.shuffle();
             randomSelect(gameMap, hidden);
-            }
-        for (var i = 0; i < gameMap.pos.length; i++) {
-            blocks[gameMap.pos[i]].mapId = i;
-            blocks[gameMap.pos[i]].style.left = Math.floor(i / 4) * (blockSize + borderSize) + topPx + "px";
-            blocks[gameMap.pos[i]].style.top = i % 4 * (blockSize + borderSize) + topPx + "px";
+            while(solvability(gameMap.pos, 4) != true) {
+                Array.from(blocks).forEach(function(block) {
+                    block.style.visibility = "visible";
+                });
+                gameMap.pos.shuffle();
+                randomSelect(gameMap, hidden);
+                }
+            for (var i = 0; i < gameMap.pos.length; i++) {
+                blocks[gameMap.pos[i]].mapId = i;
+                blocks[gameMap.pos[i]].style.left = Math.floor(i / 4) * (blockSize + borderSize) + topPx + "px";
+                blocks[gameMap.pos[i]].style.top = i % 4 * (blockSize + borderSize) + topPx + "px";
+            }    
+        }
+        else if (btn.innerText == "停止游戏") {
+            btn.innerText = "开始游戏"
+            gameMap.pos = newGameMap(16);
+            hidden.id = -1;
+            Array.from(blocks).forEach(function(block) {
+                var thisX = block.id % 4
+                var thisY = Math.floor(block.id / 4);
+                block.style.left = thisX * (blockSize + borderSize) + topPx + "px";
+                block.style.top = thisY * (blockSize + borderSize) + topPx + "px";
+                block.style.visibility = "visible"    
+            });
         }
     })
 }
 
+function changeMap(bgList, hidden, gameMap) {
+    var oldMap = document.getElementById("map");
+    var blocks = document.getElementsByClassName("block");
+    document.getElementById("changeMap").addEventListener("click", function(event) {
+        if (hidden.id != -1) {
+            alert("请先停止游戏");
+            return;
+        }
+        gameMap.bgId = (gameMap.bgId + 1) % bgList.length;
+        oldMap.style.backgroundImage = "url(" + bgList[gameMap.bgId] + ")";
+        Array.from(blocks).forEach(function(block) {
+            block.style.backgroundImage = "url(" + bgList[gameMap.bgId] + ")";
+        });
+        console.log(bgList[gameMap.bgId])
+    });
+
+    document.getElementById("pic").addEventListener("mousemove", function(event) {
+        if (hidden.id == -1) return;
+        Array.from(blocks).forEach(function(block) {
+            block.style.opacity = "0.3";
+        });
+    });
+    document.getElementById("pic").addEventListener("mouseout", function(event) {
+        if (hidden.id == -1) return;
+        Array.from(blocks).forEach(function(block) {
+            block.style.opacity = "1";
+        });
+    });
+
+}
+
 
 function main() {
-    var gameMap = {pos:newGameMap(16), win:true};
-    var hidden = {id:0};
+    var gameMap = {pos:newGameMap(16), win:true, bgId:0};
+    var hidden = {id:-1};
     var blockSize = 87;
     var borderSize = 2;
     var topPx = 5.5;
+    var bgList = ["./panda.jpg", "./cba.jpg", "./you.jpg", "./cat.jpg", "./kkdy.jpg", "./ya.jpg"]
 
     initial(gameMap, hidden, blockSize, borderSize, topPx);
     start(hidden, gameMap, blockSize, borderSize, topPx);
+    changeMap(bgList, hidden, gameMap);
 }
 
 main();
