@@ -1,6 +1,7 @@
 a = document.createElement("script");
 a.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.js";
 document.body.appendChild(a);
+a = document.createElement("script");
 a.src = "https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.js";document.body.appendChild(a);
 
 function initial () {
