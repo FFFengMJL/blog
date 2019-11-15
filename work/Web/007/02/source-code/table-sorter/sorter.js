@@ -1,3 +1,8 @@
+a = document.createElement("script");
+a.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.js";
+document.body.appendChild(a);
+a.src = "https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.js";document.body.appendChild(a);
+
 function initial () {
     // test = "▼";
     test = $("<span class = \"sort\"><span>").text("▲");
@@ -35,7 +40,7 @@ function rebuild(obj, tarList) {
     for (var i = 0; i < tarList.length; i++) {
         var tr = $("<tr></tr>").text("");
         for (var j = 0; j < tarList[i].length; j++) {
-            var td = $("<td></td>").text(tarList[i][j]);
+            var td = $("<td></td>").html(tarList[i][j]);
             tr.append(td);
         }
         obj.parents("table").children("tbody").append(tr);
