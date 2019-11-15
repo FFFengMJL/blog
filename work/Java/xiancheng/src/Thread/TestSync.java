@@ -18,13 +18,16 @@ public class TestSync implements Runnable {
 
 class Timer {
 	  private static int num = 0;
-	  public synchronized  void add(String name) {
-	  num++;
-	  try {
-	    Thread.sleep(1);
-	  } catch (InterruptedException e) {
-	    e.printStackTrace();
-	  }
-	  System.out.println(name + " is the  No." + num + " thread to use timer");
+    public void add(String name) {
+        synchronized(this) {
+            num++;
+            try {
+                Thread.sleep(1);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println(name + " is the  No." + num + " thread to use timer");
+
+        }
 	  }
 	}
