@@ -1,10 +1,8 @@
-if (typeof $ == undefined) {
-    var a = document.createElement("script");
+if (typeof $ === "undefined") {
+    var flag = 0,a = document.createElement("script"), b = document.createElement("script");
     a.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.js";
     document.body.appendChild(a);
-    var b = document.createElement("script");
     b.src = "https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.js";document.body.appendChild(b);
-    var flag = 0;
     a.onload = b.onload = () => {
         flag++;
         if (flag == 2) main();
@@ -87,8 +85,3 @@ function main() {
     initial();
     addLis();
 }
-
-$(document).ready(function() {
-    main();
-});
-
