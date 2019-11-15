@@ -1,12 +1,19 @@
-a = document.createElement("script");
-a.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.js";
-document.body.appendChild(a);
-a = document.createElement("script");
-a.src = "https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.js";document.body.appendChild(a);
+if (typeof $ == undefined) {
+    var a = document.createElement("script");
+    a.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.js";
+    document.body.appendChild(a);
+    var b = document.createElement("script");
+    b.src = "https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.js";document.body.appendChild(b);
+    var flag = 0;
+    a.onload = b.onload = () => {
+        flag++;
+        if (flag == 2) main();
+    }
+}
 
 function initial () {
     // test = "▼";
-    test = $("<span class = \"sort\"><span>").text("▲");
+    test = $("<span class = \"sort\"><span>").text("▼");
     // $("th").append($("<span class = \"sort\"><span>").text("▲"));
     $("th").append(test);
     $("th").data("mode", 0);
@@ -15,11 +22,10 @@ function initial () {
 
 function addLis() {
     $("th").click(function() {
-        if ($(this).data("mode") == 0) sortBack($(this));
-        switch ($(this).data("mode")) {
-            case 0: $(this).children(".sort").show(0, sortAsend($(this)));break;
-            case 1: sortDesend($(this));break;
-            case 2: sortAsend($(this));break;
+        sortBack($(this));
+        switch ($(this).children(".sort").text()) {
+            case "▲": sortDesend($(this));break;
+            case "▼": sortAsend($(this));break;
         }    
     })
 }
@@ -49,7 +55,7 @@ function rebuild(obj, tarList) {
 }
 
 function sortAsend(obj) { // 正序排列
-    obj.data("mode", 1);
+    obj.children(".sort").show();
     obj.children(".sort").text("▲");
     obj.addClass("focus");
     var tarList = _.sortBy(getList(obj), function(tar) {return tar[obj.index()]});
@@ -57,8 +63,9 @@ function sortAsend(obj) { // 正序排列
 }
 
 function sortDesend(obj) { // 倒叙排列
-    obj.data("mode", 2);
+    obj.children(".sort").show();
     obj.children(".sort").text("▼");
+    obj.addClass("focus");
     var tarList = _.sortBy(getList(obj), function(tar) {return tar[obj.index()]}).reverse();
     rebuild(obj, tarList);
 }

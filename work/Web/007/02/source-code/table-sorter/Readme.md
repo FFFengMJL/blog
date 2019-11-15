@@ -5,5 +5,5 @@
 
 具体代码：
 ```Javascript
-a = document.createElement("script");a.src = "https://fffengmjl.github.io/blog/work/Web/007/02/source-code/table-sorter/sorter.js";document.body.appendChild(a);main();
+var t = document.createElement("script");t.src = "https://fffengmjl.github.io/blog/work/Web/007/02/source-code/table-sorter/sorter.js";document.body.appendChild(t);t.onload = () => main();
 ```
