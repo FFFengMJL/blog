@@ -1,36 +1,45 @@
+if (typeof $ === "undefined") {
+    var flag = 0,a = document.createElement("script"), b = document.createElement("script");
+    a.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.js";
+    document.body.appendChild(a);
+    b.src = "https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.js";document.body.appendChild(b);
+    a.onload = b.onload = () => {
+        flag++;
+        if (flag == 2) main();
+    }
+}
+
+function checkCheat(event, status) {
+    console.log(status);
+    if (status.startArea[0][0] <= event.offsetX && event.offsetX <= status.startArea[0][1] && status.startArea[1][0] <= event.offsetY && event.offsetY <= status.startArea[1][1])  status.startStatus = true;
+    if (status.endArea[0][0] <= event.offsetX && event.offsetX <= status.endArea[0][1] && status.endArea[1][0] <= event.offsetY && event.offsetY <= status.endArea[1][1]) {
+        if (!status.startStatus) $("#warning").text(status.cheat);
+        else $("#warning").text("You Win");
+    }
+}
+
+function moveCheck(event,status) {
+
+    console.log(status);
+    if (poom(event.offsetX, event.offsetY) && !status.startStatus) {
+        $("#tar").css("background-color", "red");
+        $("#warning").text("You Lose!");
+        status.lose = true;
+    }
+    else $("#tar").css("background-color", "#eeeeee");
+    if (!status.lose) checkCheat(event, status);
+}
+
+function mouseOut(status) {
+    status.startStatus = status.lose = false;
+    $("#warning").text(status.startString);
+    $("#tar").css("background-color", "#eeeeee");
+}
+
 function maze() {
-    var mazemap = document.getElementById("tar")
-    var warning = document.getElementById("warning");
-    var outmap = false; // 代表是否出了地图，如果出了为 true，回到则为false
-    var lose = false;
-    var startString = "Move your mouse over the \"S\" to begin";
-    var cheat = "Don't cheat, you should start form the 'S' and move to the 'E' inside the maze!";
-    var startStatus = false;
-    var startArea = [[1, 42], [206, 246]];
-    var endArea = [[459, 500], [206, 246]];
-    // document.getElementById("tar").onmousemove = function() {
-    mazemap.addEventListener("mousemove",function(event) {
-        if (poom(event.offsetX, event.offsetY) && !startStatus) {
-            this.style.backgroundColor = "red";
-            warning.innerText = "You Lose!";
-            lose = true;
-        }
-        else this.style.backgroundColor = "#eeeeee";
-        if (!lose) {
-            if (startArea[0][0] <= event.offsetX && event.offsetX <= startArea[0][1] && startArea[1][0] <= event.offsetY && event.offsetY <= startArea[1][1])  
-                startStatus = true;
-            if (endArea[0][0] <= event.offsetX && event.offsetX <= endArea[0][1] && endArea[1][0] <= event.offsetY && event.offsetY <= endArea[1][1]) {
-                if (!startStatus) warning.innerText = cheat;
-                else warning.innerText =  "You Win";
-            }
-        }
-    });
-    mazemap.addEventListener("mouseout", function(event) {
-        startStatus = lose = false;
-        warning.innerText = startString;
-        this.style.backgroundColor = "#eeeeee";
-    });
-    // }
+    let status = {outmap : false, startString : "Move your mouse over the \"S\" to begin", cheat : "Don\'t cheat, you should start form the \'S\' and move to the \'E\' inside the maze!", startStatus : false, startArea : [[1, 42], [206, 246]], endArea : [[459, 500], [206, 246]]};
+    $("#tar").on("mousemove", function(event) {moveCheck(event, status);});
+    $("#tar").on("mouseout", function() {mouseOut(status);});
 }
 
 function poom(x, y) {
@@ -43,4 +52,6 @@ function poom(x, y) {
     return false;
 }
 
-maze();
+function main() {
+    maze();
+}

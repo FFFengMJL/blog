@@ -1,22 +1,31 @@
-function initial() { //初始化
-    var map = document.getElementById("map");
-    for (var i = 0; i < 60; i++) {
-        var radio = document.createElement("input");
-        radio.setAttribute("type", "radio");
-        radio.setAttribute("class", "hole");
-        radio.setAttribute("name", "hole");
-        radio.isChecked = false;
-        radio.value = i;
-        radio.addEventListener("click", function(event) { // 添加监听器
-            console.log(this.isChecked);
-            if (document.getElementById("game").innerText === "Stop Game" && scoreChange(this.isChecked)) {
-                randomSelect();
-                this.isChecked = false;
-            }
-            else event.preventDefault();
-        });
-        map.appendChild(radio);
+if (typeof $ === "undefined") {
+    var flag = 0,a = document.createElement("script"), b = document.createElement("script");
+    a.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.js";
+    document.body.appendChild(a);
+    b.src = "https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.js";document.body.appendChild(b);
+    a.onload = b.onload = () => {
+        flag++;
+        if (flag == 2) main();
     }
+}
+
+function addLis(obj, event) {
+    if ($("#game").text() === "Stop Game" && scoreChange(obj.data("isChecked"))) {
+        randomSelect();
+        obj.data("isChecked", false);
+    }
+    else event.preventDefault();
+}
+
+function createRadio(i) {
+    let radio = $("<input type=\"radio\" class=\"hole\" name=\"hole\">")
+    radio.data({isChecked : false, value : i});
+    radio.click(function(event) { addLis($(this), event) });
+    $("#map").append(radio);
+}
+
+function initial() { //初始化
+    for (var i = 0; i < 60; i++) createRadio(i);
 }
 
 function getRandomInt(min, max) { // 获得随机整数
@@ -26,68 +35,60 @@ function getRandomInt(min, max) { // 获得随机整数
 }
 
 function randomSelect() { // 随机选择一个非当前洞
-    var radios = document.getElementsByName("hole");
     var num = getRandomInt(0, 60);
-    while (radios[num].isChecked == true) num = getRandomInt(0, 60);
-    radios[num].checked = true;
-    radios[num].isChecked = true;
+    while ($(".hole").eq(num).data("isChecked") == true) num = getRandomInt(0, 60);
+    $(".hole").eq(num).data({isChecked : true});
+    $(".hole").eq(num).prop("checked", true);
 }
 
 function scoreChange(a) { // 判断是否打地鼠
-    var score =  document.getElementById("score");
     if (a === true) { // 打到地鼠了
-        score.value++;
+        $("#score").val(parseInt($("#score").val()) + 1);
         return true;
     }
-    else if (score.value > 0) score.value--; // 没打到
+    else if (parseInt($("#score").val()) > 0) $("#score").val(parseInt($("#score").val()) - 1); // 没打到
     return false;
 }
 
 function radioClear() { // 清除地图
-    var radios = document.getElementsByName("hole");
-    for (var i = 0; i < radios.length; i++) {
-        radios[i].checked = radios[i].isChecked = false;
-    }
+    $(".hole").data({isChecked : false});
+    $(".hole").prop("checked", false);
+}
+
+function timeRun(obj, clear) {
+    $("score").val("0");
+    randomSelect();
+    obj.text("Stop Game");
+    clear.sign = setTimeout(function() {timeSub(clear);}, 1000);
+}
+
+function timeEnd(obj, clear) {
+    clearTimeout(clear.sign);
+    obj.text("Start Game");
+    $("#time").val("30");
+    radioClear();
 }
 
 
 function mole() { // 主函数
-    var clear = {};
-    var score = document.getElementById("score");
-    document.getElementById("game").onclick = function() {
-        if (this.innerText === "Start Game") {
-            score.value = 0;
-            randomSelect();
-            this.innerText = "Stop Game"
-            clear.sign = setTimeout(function() {
-                timeSub(clear);
-            }, 1000);
-        }
-        else {
-            clearTimeout(clear.sign);
-            this.innerText = "Start Game";
-            document.getElementById("time").value = 30;
-            radioClear();
-        }
-    }
+    let clear = {};
+    $("#game").click(function() {
+        if ($(this).text() === "Start Game") timeRun($(this), clear);
+        else timeEnd($(this), clear);
+    });
 }
 
-// time counter
 function timeSub(clear) {
-    var game = document.getElementById("time");
-    game.value--;
-    console.log(game.value);
-    if (game.value != 0)
-        clear.sign = setTimeout(function() {
-            timeSub(clear);
-        }, 1000);
+    $("#time").val(parseInt($("#time").val() - 1));
+    if (parseInt($("#time").val) != 0) clear.sign = setTimeout(function() {timeSub(clear)}, 1000);
     else {
-        document.getElementById("game").innerText = "Start Game";
-        document.getElementById("time").value = 30;
+        $("#game").text("Start Game");
+        $("#time").val("30");
         radioClear();
     }
 }
 
-
-initial();
-mole();
+function main() {
+    initial();
+    mole();
+}
