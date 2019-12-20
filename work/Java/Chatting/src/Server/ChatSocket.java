@@ -1,9 +1,6 @@
 package Server;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.Socket;
 
 public class ChatSocket  extends Thread{
@@ -17,10 +14,11 @@ public class ChatSocket  extends Thread{
     public void sendMessage(String message) {
         try {
             socket.getOutputStream().write(message.getBytes("UTF-8"));
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
+//            PrintWriter pr = new PrintWriter(socket.getOutputStream());
+//            pr.write(message, 0, message.length() + 1);
         } catch (IOException e) {
             e.printStackTrace();
+            return;
         }
     }
 
@@ -29,12 +27,15 @@ public class ChatSocket  extends Thread{
             BufferedReader br = new BufferedReader(
                     new InputStreamReader(socket.getInputStream(), "UTF-8")
             );
-            while (br.readLine() != null) {
-                System.out.println(br.readLine());
-                ChatManager.getChatManager().publish(this,                                                                                                br.readLine());
+            String input = null;
+            while ((input = br.readLine()) != null) {
+                ChatManager.getChatManager().publish(this, input);
+                System.out.println(input);
             }
+            br.close();
         } catch (IOException e) {
             e.printStackTrace();
+            return;
         }
     }
 }

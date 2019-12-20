@@ -8,8 +8,6 @@ import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 
 public class ClientEnd extends Thread {
     private static String url = "http://cloud.sysu.rwong.tech";
@@ -20,90 +18,13 @@ public class ClientEnd extends Thread {
     public int getPort() {return this.port;}
     public OkHttpClient getClient() {return this.client;}
 
-    public boolean signUp(String username, String password) throws Exception {
-//        final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
-//        JSONObject json = new JSONObject();
-//        json.put("username", username);
-//        json.put("password", password);
-//        Request request = new Request.Builder()
-//                .url(this.url + ':' + this.port + "/user/sign_up")
-//                .post(RequestBody.create(JSON, json.toString()))
-//                .build();
-//
-//        Response response = client.newCall(request).execute();
-//        if (!response.isSuccessful()) throw new IOException("Unexpected Code " + response);
-//        System.out.println(response.code());
-//        switch (response.code()) {
-//            case 200: return true;
-//            case 400: return false;
-//            case 500: throw new IOException("后端错误");
-//        }
-//        return false;
-        Boolean status = new Boolean(false);
-        LogIn logIn = new LogIn(this, username, password,status);
-        logIn.start();
-        logIn.join();
-        return status.booleanValue();
-    }
-
-    public boolean signIn(String username, String password, String email) throws Exception {
-        final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
-        JSONObject json = new JSONObject();
-        json.put("username", username);
-        json.put("password", password);
-        json.put("email", email);
+    public void logOut(CallBackFunc callBackFunc) throws Exception {
         Request request = new Request.Builder()
-                .url(this.url + ':' + this.port + "/user/sign_in")
-                .post(RequestBody.create(JSON, json.toString()))
+                .url(this.url + ':' + this.port + "/user/log_out")
+                .post(RequestBody.create(MediaType.parse("application/json"), ""))
                 .build();
 
-        Response response = client.newCall(request).execute();
-        if (!response.isSuccessful()) throw new IOException("Unexpected Code " + response);
-        System.out.println(response.code());
-        switch (response.code()) {
-            case 200: return true;
-            case 400: return false;
-            case 500: throw new IOException("后端错误");
-        }
-        return false;
-    }
-
-    public JSONArray getFileList(String path) throws Exception {
-        final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
-        Request request = new Request.Builder()
-                .url(this.url + ':' + this.port + "/index/" + path)
-                .build();
-        Response response = client.newCall(request).execute();
-        if (!response.isSuccessful()) throw new IOException("Unexpected Code " + response);
-        return com.alibaba.fastjson.JSON.parseArray(response.body().string());
-    }
-
-    public JSONObject getFileDetails(int fileId) throws Exception {
-        final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
-        Request request = new Request.Builder()
-                .url(this.url + ':' + this.port + "/files/" + fileId)
-                .build();
-        Response response = client.newCall(request).execute();
-        if (!response.isSuccessful()) throw new IOException("Unexpected Code " + response);
-        return JSONObject.parseObject(response.body().string());
-    }
-
-    public boolean delFile(int fileId) throws Exception {
-        final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
-        Request request = new Request.Builder()
-                .url(this.url + ':' + this.port + "/files/" + fileId)
-                .delete(new FormBody.Builder().build())
-                .build();
-        Response response = client.newCall(request).execute();
-        if (!response.isSuccessful()) throw new IOException("Unexpected Code " + response);
-        return response.code() == 200;
-    }
-
-    public void download(int fileId, Method method) throws Exception {
-        Request request = new Request.Builder()
-                .url(this.url + ':' + this.port + "/download/" + fileId)
-                .build();
-        client.newCall(request).enqueue(new Callback () {
+        client.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(@NotNull Call call, @NotNull IOException e) {
                 e.printStackTrace();
@@ -111,20 +32,192 @@ public class ClientEnd extends Thread {
 
             @Override
             public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
-                if (!response.isSuccessful()) throw new IOException("Unexpected code " + response);
                 try {
-                    method.invoke(JSONObject.parse(response.body().string()));
-                } catch (IllegalAccessException e) {
+                    System.out.println(response.code());
+                    callBackFunc.done(new CallBackFunArg(true, null, null));
+                } catch (Exception e) {
                     e.printStackTrace();
-                } catch (InvocationTargetException e) {
+                }
+            }
+        });
+
+    }
+
+    public void signIn(String username, String password, CallBackFunc callBackFunc) throws Exception {
+        final MediaType JSON = MediaType.parse("application/json");
+        JSONObject json = new JSONObject();
+        json.put("username", username);
+        json.put("password", password);
+        Request request = new Request.Builder()
+                .url(this.url + ':' + this.port + "/user/sign_in")
+                .post(RequestBody.create(JSON, json.toString()))
+                .build();
+
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onFailure(@NotNull Call call, @NotNull IOException e) {
+                e.printStackTrace();
+            }
+
+            @Override
+            public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
+                switch (response.code()) {
+                    case 200:
+                        try {
+                            callBackFunc.done(new CallBackFunArg(true, null, null));
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        break;
+                    case 400:
+                        try {
+                            callBackFunc.done(new CallBackFunArg(false, null, null));
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        break;
+                    case 500: throw new IOException("后端错误");
+                    default: throw new IOException("我也不知道什么问题: " + response.code());
+                }
+            }
+        });
+
+    }
+
+    public void signUp(String username, String password, String email, String name, CallBackFunc callBackFunc) throws Exception {
+        final MediaType JSON = MediaType.parse("application/json");
+        JSONObject json = new JSONObject();
+        json.put("username", username);
+        json.put("password", password);
+        json.put("email", email);
+        json.put("name", name);
+        Request request = new Request.Builder()
+                .url(this.url + ':' + this.port + "/user/sign_up")
+                .post(RequestBody.create(JSON, json.toString()))
+                .build();
+        System.out.println("准备注册");
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onFailure(@NotNull Call call, @NotNull IOException e) {
+                e.printStackTrace();
+            }
+
+            @Override
+            public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
+                switch (response.code()) {
+                    case 200:
+                        try {
+                            callBackFunc.done(new CallBackFunArg(true, null, null));
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        } break;
+                    case 400:
+                        try {
+                            callBackFunc.done(new CallBackFunArg(false, null, null));
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        } break;
+                    case 500: throw new IOException(("后端错误"));
+                    default: throw new IOException("我也不知道什么问题: " + response.code());
+                }
+            }
+        });
+
+    }
+
+    public void getFileList(String path, CallBackFunc callBackFunc) throws Exception {
+        final MediaType JSON = MediaType.parse("application/json");
+        Request request = new Request.Builder()
+                .url(this.url + ':' + this.port + "/index/" + path)
+                .build();
+
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onFailure(@NotNull Call call, @NotNull IOException e) {
+                e.printStackTrace();
+            }
+
+            @Override
+            public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
+                try {
+                    callBackFunc.done(new CallBackFunArg(true, null, com.alibaba.fastjson.JSON.parseArray(response.body().string())));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+    }
+
+    public void getFileDetails(int fileId, CallBackFunc callBackFunc) throws Exception {
+        final MediaType JSON = MediaType.parse("application/json");
+        Request request = new Request.Builder()
+                .url(this.url + ':' + this.port + "/files/" + fileId)
+                .build();
+
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onFailure(@NotNull Call call, @NotNull IOException e) {
+                e.printStackTrace();
+            }
+
+            @Override
+            public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
+                try {
+                    callBackFunc.done(new CallBackFunArg(false, JSONObject.parseObject(response.body().string()), null));
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
         });
     }
 
-    public boolean upload(File file) throws Exception {
-        try {
+    public void delFile(int fileId, CallBackFunc callBackFunc) throws Exception {
+        final MediaType JSON = MediaType.parse("application/json");
+        Request request = new Request.Builder()
+                .url(this.url + ':' + this.port + "/files/" + fileId)
+                .delete(new FormBody.Builder().build())
+                .build();
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onFailure(@NotNull Call call, @NotNull IOException e) {
+                e.printStackTrace();
+            }
+
+            @Override
+            public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
+                try {
+                    callBackFunc.done(new CallBackFunArg(response.code() == 200, null, null));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+    }
+
+    public void download(int fileId, CallBackFunc callBackFunc) throws Exception {
+        Request request = new Request.Builder()
+                .url(this.url + ':' + this.port + "/download/" + fileId)
+                .build();
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onFailure(@NotNull Call call, @NotNull IOException e) {
+                e.printStackTrace();
+            }
+
+            @Override
+            public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
+                try {
+                    callBackFunc.done(new CallBackFunArg(false, null, JSON.parseArray(response.body().string())));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
+
+    public void upload(File file, CallBackFunc callBackFunc) throws Exception {
             Magic parser = new Magic();
             MagicMatch match = parser.getMagicMatch(file, false);
             String fileType = match.getMimeType() ;
@@ -141,25 +234,20 @@ public class ClientEnd extends Thread {
                     .build();
 
             client.newCall(request).enqueue(new Callback() {
-
                 @Override
-                public void onFailure(final Call call, final IOException e) {
-                    // Handle the error
+                public void onFailure(@NotNull Call call, @NotNull IOException e) {
+                    e.printStackTrace();
                 }
 
                 @Override
-                public void onResponse(final Call call, final Response response) throws IOException {
-                    if (!response.isSuccessful()) {
-                        // Handle the error
+                public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
+                    try {
+                        callBackFunc.done(new CallBackFunArg(true, null, null));
+                    } catch (Exception e) {
+                        e.printStackTrace();
                     }
-                    // Upload successful
                 }
             });
 
-            return true;
-        } catch (Exception ex) {
-            // Handle the error
-        }
-        return false;
     }
 }

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="net.sf.jmimemagic:jmimemagic:0.1.5" type="repository">
+    <properties maven-id="net.sf.jmimemagic:jmimemagic:0.1.5" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/jmimemagic-0.1.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-logging-1.0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-io-2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/log4j-1.2.8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
