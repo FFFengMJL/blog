@@ -1,4 +1,4 @@
 *.zip
 *.7z
 *.rar
-**/node_modules/*
+**/node_modules/
