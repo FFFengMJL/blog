@@ -135,3 +135,13 @@ let server = app.listen(8000, () => {
     db.initialDB();
     // console.log('server ready');
 });
+
+function t() {
+    let ans = "";
+    for (let i = 4; i <= 6; i++) {
+        for (let j = 1; j <= 4; j++) {
+            ans += `"scene_evt170531_cp${i}_q${j}_s10":"活动剧情/お子様ランチdeOHMYリュミエ~ル♪/scene_evt170531_cp${i}_q${j}_s10.csv"`;
+        }
+    }
+    console.log(ans);
+};
