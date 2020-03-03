@@ -10,6 +10,44 @@
 
 4. <a href="004(forlab15">没那么硬核的 Ubuntu 18.04 虚拟机安装指引</a>
 
+## Matrix 入门相关
+
+1. Web入门：`2020-3-3`
+  - [X] [第一个网页](./work/matrix/001/tmnt.html)
+2. 学习HTML：`2020-3-5`
+  - [X] [标记信件](./work/matrix/002/start/letter.html)
+  - [ ] [构建出有内容的网页](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)
+  - [ ] [Mozilla 醒目页面](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)
+  - [ ] [构建行星数据](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Tables/Structuring_planet_data)
+  - [ ] [仿制中山大学 APP / 中山大学微信企业号提供的学生健康申报表单中“个人基本信息”部分的 HTML 结构]()
+     1. 不使用外部 CSS 库和 UI 库；可按需引入 JavaScript 库。
+     2. 不要求仿制界面样式，自己看着办~
+     3. 原表单中固定的表单项（如姓名、学院等）改为适合的可输入组件。
+     4. 表单项“填报人联系方式”、“紧急联系人手机号”加入适当的验证（按中国内地手机号码匹配）。
+     5. 表单项“培养层次”改为使用下拉框，或者在原基础上加入自动建议功能。参考值为本科生、研究生和博士生。
+     6. 表单项“籍贯”仅实现单选框部分，不需要实现省市区选择。
+     7. 加入表单项“曾到访省份”，使用复选框实现，可选值包括 广东省、湖北省、浙江省、河南省 这四个。
+     8. 每个表单项均设置合理的 name 和 value。
+3. 学习CSS：`2020-3-7`
+  - [ ] [CSS first steps: Using your new knowledge](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
+  - [ ] [CSS building blocks: CSS 基本了解](https://wiki.developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension)
+  - [ ] [CSS building blocks: 设计漂亮的信头信笺](https://wiki.developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper)
+  - [ ] [CSS building blocks: 一个炫酷的盒子](https://wiki.developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/A_cool_looking_box)
+  - [ ] [排版社区大学首页](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/%E4%B8%BA%E6%96%87%E6%9C%AC%E6%B7%BB%E5%8A%A0%E6%A0%B7%E5%BC%8F/Typesetting_a_homepage)
+  - [ ] [Fundamental layout comprehension](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)
+4. 学习JS：`2020-3-9`
+  - [ ] [傻瓜故事产生器](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/First_steps/Silly_story_generator)
+  - [ ] [图库](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Building_blocks/Image_gallery)
+  - [ ] [为弹跳球展示新增功能](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)
+  - [ ] [使用星球大战 API（https://swapi.co/）制作一个搜索 Widget](https://swapi.co/api/people/)
+     1. 页面上需要有一个文本框 / 搜索框
+     2. CSS 库可按需引入，不可引入 JS 库
+     3. 当用户在文本框中键入时，读取文本框中用户输入的内容，向 `https://swapi.co/api/people/?search=xxxx` 发送请求，其中 xxxx 需要替换为文本框内容
+     4. 使用 Promise / async await 来处理发送请求与读取响应内容的逻辑
+     5. 服务器将返回一个 json，具体格式见 `https://swapi.co/api/people`
+     6. 在收到服务器响应后，根据响应内容，在文本框下方展示一个自动完成列表（使用 name 来填充）
+     7. 为了避免向服务器过度请求，你需要 debounce（防抖）500ms ——也就是在用户键入之后的 500ms 内，如果用户没有再次键入，才发送请求
+
 ## 当我无聊的时候我在干什么
 
 - [我的记忆](data/000) 更新至2020.1.20
