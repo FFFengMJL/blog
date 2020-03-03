@@ -25,7 +25,7 @@
 
 body {
     /* 设置背景灯相关元素，同时 padding 和 margin 为0 */
-    background-image: url("http://hcp.sysu.edu.cn/wiki/download/attachments/32833570/background.png?version=1&modificationDate=1268939512000&api=v2");
+    background-image: url("./bg.png");
     background-repeat: repeat;
     background-attachment: fixed;
     font-size: 8pt;
@@ -45,12 +45,13 @@ h1 {
 
 /* banner 设置背景 */
 #HeadBanner {
-    background-image: url(http://hcp.sysu.edu.cn/wiki/download/attachments/32833570/bannerbackground.png?version=1&modificationDate=1268939512000&api=v2);
+    background-color: rgb(100, 121, 45);
     background-repeat: repeat-x;
     height: 50px;
 }
 /* 图片居中 */
 #HeadBanner img {
+    /* background-color: white; */
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -58,6 +59,7 @@ h1 {
 
 /* 居中，宽度固定，设置边框 */
 #MainBody {
+    background-color: rgb(132, 143, 103);
     width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -89,7 +91,7 @@ dt{
 }
 /* 32%的背景 */
 #rating {
-    background-image: url(http://hcp.sysu.edu.cn/wiki/download/attachments/32833570/rottenbackground.png?version=1&modificationDate=1268939585000&api=v2);
+    /* background-image: url(http://hcp.sysu.edu.cn/wiki/download/attachments/32833570/rottenbackground.png?version=1&modificationDate=1268939585000&api=v2); */
     background-repeat: repeat-x;
     height: 83px;
 }
