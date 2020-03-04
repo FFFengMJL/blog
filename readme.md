@@ -15,8 +15,8 @@
 1. Web入门：`2020-3-3`
   - [X] [第一个网页](./work/matrix/001/tmnt.html)
 2. 学习HTML：`2020-3-5`
-  - [X] [标记信件](./work/matrix/002/start/letter.html)
-  - [X] [构建出有内容的网页](./work/matrix/002/start(1)/index.html)
+  - [X] [标记信件](./work/matrix/002/001/letter.html)
+  - [X] [构建出有内容的网页](./work/matrix/002/002/index.html)
   - [X] [Mozilla 醒目页面](./work/matrix/002/003/index.html)
   - [X] [构建行星数据](./work/matrix/002/004/blank-template.html)
   - [ ] [仿制中山大学 APP / 中山大学微信企业号提供的学生健康申报表单中“个人基本信息”部分的 HTML 结构]()
