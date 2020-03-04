@@ -16,7 +16,7 @@
   - [X] [第一个网页](./work/matrix/001/tmnt.html)
 2. 学习HTML：`2020-3-5`
   - [X] [标记信件](./work/matrix/002/start/letter.html)
-  - [ ] [构建出有内容的网页](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)
+  - [X] [构建出有内容的网页](./work/matrix/002/start(1)/index.html)
   - [ ] [Mozilla 醒目页面](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)
   - [ ] [构建行星数据](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Tables/Structuring_planet_data)
   - [ ] [仿制中山大学 APP / 中山大学微信企业号提供的学生健康申报表单中“个人基本信息”部分的 HTML 结构]()
