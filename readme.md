@@ -19,7 +19,7 @@
   - [X] [构建出有内容的网页](./work/matrix/002/002/index.html)
   - [X] [Mozilla 醒目页面](./work/matrix/002/003/index.html)
   - [X] [构建行星数据](./work/matrix/002/004/blank-template.html)
-  - [ ] [仿制中山大学 APP / 中山大学微信企业号提供的学生健康申报表单中“个人基本信息”部分的 HTML 结构]()
+  - [X] [仿制中山大学 APP / 中山大学微信企业号提供的学生健康申报表单中“个人基本信息”部分的 HTML 结构](./work/matrix/002/005/index.html)
      1. 不使用外部 CSS 库和 UI 库；可按需引入 JavaScript 库。
      2. 不要求仿制界面样式，自己看着办~
      3. 原表单中固定的表单项（如姓名、学院等）改为适合的可输入组件。
