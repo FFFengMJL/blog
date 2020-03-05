@@ -1,0 +1,39 @@
+main {
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    background: white;
+    border-radius: 20px;
+}
+
+body {
+    background-image: url("./bg.png");
+    background-attachment: fixed;
+}
+
+.must {
+    color: red;
+}
+
+input:invalid {
+    border: 2px dashed red;
+}
+
+#basic-info, #pre-info, #pre-out, #get-thro, #button {
+    width: 550px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    width: 550px;
+    background-color: gray;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+

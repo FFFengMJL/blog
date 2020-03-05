@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./index.css">
+    <title>仿制</title>
+</head>
+<body>
+    <main>
+        <h1>
+            学生健康状况申报
+        </h1>
+        <form action="https://985211.com">
+            <div id="basic-info">
+                <h2>个人基本信息</h2>
+                <p>申报日期：<time datetime="2020-03-05">2020-03-05</time></p>
+                <p>
+                    <label for="name">
+                        <strong>申报人姓名 <span class="must">*</span></strong>
+                        <input type="text" id="name" name="name" required>
+                    </label>
+                </p>
+                <p>
+                    <label for="stuId">
+                        <strong>填报人学号 <span class="must">*</span></strong>
+                        <input type="text" id="stuId" name="stuId" required>
+                    </label>
+                </p>
+                <p>
+                    <label for="phone">
+                        <strong>填报人练习方式 <span class="must">*</span></strong>
+                        <input type="tel" id="phone" name="phone" required pattern="[0-9]{11}">
+                    </label>
+                </p>
+                <p>
+                    <label for="sdcs">
+                        <strong>所在院系 <span class="must">*</span></strong>
+                        <input type="text" id="sdcs" name="sdcs" required>
+                    </label>
+                </p>
+                <p>
+                    <label for="grade">
+                        <strong>所在院系 <span class="must">*</span></strong>
+                        <select name="grade" id="grade">
+                            <option value="本科生">本科生</option>
+                            <option value="研究生">研究生</option>
+                            <option value="博士生">博士生</option>
+                        </select>
+                    </label>
+                </p>
+                <p>
+                    <label for="from">
+                        <strong>籍贯 <span class="must">*</span></strong>
+                        <div>
+                            <div>
+                                <input type="radio" name="from" id="from1" value="内地">    
+                                <label for="from1">内地</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="from" id="from2" value="港澳外籍">
+                                <label for="from2">港澳外籍</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="from" id="from3" value="外籍">
+                                <label for="from3">外籍</label>
+                            </div>
+                            <input type="text" required name="from" id="fromDet" placeholder="具体位置">    
+                        </div>
+                    </label>
+                </p>
+            </div>
+            <div id="pre-info">
+                <h2>当前身体状况</h2>
+                <p>
+                    <label for="now">
+                        <div>
+                            <input type="radio" name="now" id="now1" checked>
+                            <label for="now1">正常</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="now" id="now2">
+                            <label for="now2">不适</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="now" id="now3">
+                            <label for="now3">隔离</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="now" id="now4">
+                            <label for="now4">疑似</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="now" id="now5">
+                            <label for="now5">确诊</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="now" id="now6">
+                            <label for="now6">治愈</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="now" id="now7">
+                            <label for="now7">疑似转排除</label>
+                        </div>
+                    </label>
+                </p>
+                <p>
+                    <label for="otherDel">
+                        <strong>其他情况说明</strong>
+                        <div>
+                            <textarea name="otherDel" id="otherDel" cols="50" rows="2"></textarea>
+                        </div>
+                    </label>
+                </p>
+            </div>
+            <div id="pre-out">
+                <h2>当前出行情况</h2>
+                <label for="nowIn">
+                    <strong>目前所在地 <span class="must">*</span></strong>
+                    <div>
+                        <input type="radio" name="nowIn" id="nowIn1" value="在家" checked>
+                        <label for="now1">在家</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="nowIn" id="nowIn2" value="在校">
+                        <label for="now1">在校</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="nowIn" id="nowIn3" value="在外地">
+                        <label for="now1">在外地</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="nowIn" id="nowIn4" value="返校途中">
+                        <label for="now1">返校途中</label>
+                    </div>
+                    <p>
+                        家庭住址
+                        <div>
+                            <input type="text" name="nowIn" id="nowIn">
+                        </div>
+                    </p>
+                </label>
+            </div>
+            <div id="get-thro">
+                <h2>疫情经历</h2>
+                <label for="test1">
+                    <strong>test1</strong>
+                    <div>
+                        <input type="radio" name="test1" id="test11" checked>
+                        <label for="test11">yes</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="test1" id="test12">
+                        <label for="test12">no</label>
+                    </div>
+                </label>
+                <label for="test2">
+                    <strong>test2</strong>
+                    <div>
+                        <input type="radio" name="test2" id="test21" checked>
+                        <label for="test11">yes</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="test2" id="test22">
+                        <label for="test22">no</label>
+                    </div>
+                </label>
+                <label for="test3">
+                    <strong>test3</strong>
+                    <div>
+                        <input type="radio" name="test3" id="test31" checked>
+                        <label for="test31">yes</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="test3" id="test32">
+                        <label for="test32"></label>
+                    </div>
+                </label>
+                <label for="test4">
+                    <strong>test4</strong>
+                    <div>
+                        <input type="radio" name="test4" id="test41" checked>
+                        <label for="test41">yes</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="test4" id="test42">
+                        <label for="test42"></label>
+                    </div>
+                </label>
+            </div>
+            <div id="button">
+                <button type="submit">提交</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
