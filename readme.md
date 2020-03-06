@@ -31,7 +31,7 @@
 3. 学习CSS：`2020-3-7`
   - [X] [CSS first steps: Using your new knowledge](./work/matrix/003/001/index.html)
   - [X] [CSS building blocks: CSS 基本了解](./work/matrix/003/002/index.html)
-  - [ ] [CSS building blocks: 设计漂亮的信头信笺](https://wiki.developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper)
+  - [X] [CSS building blocks: 设计漂亮的信头信笺](./work/matrix/003/003/index.html)
   - [X] [CSS building blocks: 一个炫酷的盒子](./work/matrix/003/004/index.html)
   - [ ] [排版社区大学首页](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/%E4%B8%BA%E6%96%87%E6%9C%AC%E6%B7%BB%E5%8A%A0%E6%A0%B7%E5%BC%8F/Typesetting_a_homepage)
   - [ ] [Fundamental layout comprehension](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)
