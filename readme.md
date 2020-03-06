@@ -33,7 +33,7 @@
   - [X] [CSS building blocks: CSS 基本了解](./work/matrix/003/002/index.html)
   - [X] [CSS building blocks: 设计漂亮的信头信笺](./work/matrix/003/003/index.html)
   - [X] [CSS building blocks: 一个炫酷的盒子](./work/matrix/003/004/index.html)
-  - [ ] [排版社区大学首页](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/%E4%B8%BA%E6%96%87%E6%9C%AC%E6%B7%BB%E5%8A%A0%E6%A0%B7%E5%BC%8F/Typesetting_a_homepage)
+  - [X] [排版社区大学首页](./work/matrrix/003/../../matrix/002/005/index.html)
   - [ ] [Fundamental layout comprehension](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)
 4. 学习JS：`2020-3-9`
   - [ ] [傻瓜故事产生器](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/First_steps/Silly_story_generator)
