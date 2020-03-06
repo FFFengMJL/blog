@@ -29,7 +29,7 @@
      7. 加入表单项“曾到访省份”，使用复选框实现，可选值包括 广东省、湖北省、浙江省、河南省 这四个。
      8. 每个表单项均设置合理的 name 和 value。
 3. 学习CSS：`2020-3-7`
-  - [ ] [CSS first steps: Using your new knowledge](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
+  - [X] [CSS first steps: Using your new knowledge](./work/matrix/003/001/index.html)
   - [ ] [CSS building blocks: CSS 基本了解](https://wiki.developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension)
   - [ ] [CSS building blocks: 设计漂亮的信头信笺](https://wiki.developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper)
   - [ ] [CSS building blocks: 一个炫酷的盒子](https://wiki.developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/A_cool_looking_box)
