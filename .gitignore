@@ -2,3 +2,4 @@
 *.7z
 *.rar
 **/node_modules/
+*.vdi
