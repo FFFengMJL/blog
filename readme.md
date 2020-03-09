@@ -38,7 +38,7 @@
 4. 学习JS：`2020-3-9`
   - [X] [傻瓜故事产生器](./work/matrix/004/001/index.html)
   - [X] [图库](./work/matrix/004/002/index.html)
-  - [ ] [为弹跳球展示新增功能](https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)
+  - [X] [为弹跳球展示新增功能](./work/matrix/004/003/index.html)
   - [ ] [使用星球大战 API（https://swapi.co/）制作一个搜索 Widget](https://swapi.co/api/people/)
      1. 页面上需要有一个文本框 / 搜索框
      2. CSS 库可按需引入，不可引入 JS 库
