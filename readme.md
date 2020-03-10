@@ -39,7 +39,7 @@
   - [X] [傻瓜故事产生器](./work/matrix/004/001/index.html)
   - [X] [图库](./work/matrix/004/002/index.html)
   - [X] [为弹跳球展示新增功能](./work/matrix/004/003/index.html)
-  - [ ] [使用星球大战 API（https://swapi.co/）制作一个搜索 Widget](https://swapi.co/api/people/)
+  - [X] [使用星球大战 API（https://swapi.co/）制作一个搜索 Widget](./work/matrix/004/004/index.html)
      1. 页面上需要有一个文本框 / 搜索框
      2. CSS 库可按需引入，不可引入 JS 库
      3. 当用户在文本框中键入时，读取文本框中用户输入的内容，向 `https://swapi.co/api/people/?search=xxxx` 发送请求，其中 xxxx 需要替换为文本框内容
