@@ -3,3 +3,4 @@
 *.rar
 **/node_modules/
 *.vdi
+my-app/
