@@ -10,6 +10,10 @@
 
 4. <a href="004(forlab15">没那么硬核的 Ubuntu 18.04 虚拟机安装指引</a>
 
+## 小玩意儿
+
+1. [av 号与 BV 互转](./AvToBv/atb.html)
+
 ## Matrix 入门相关
 
 1. Web入门：`2020-3-3`
