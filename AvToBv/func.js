@@ -48,8 +48,10 @@ function main() {
         let av = $(this).val();
         if (!$(this).val()) return;
         else if (!avRule.test(av)) { // 第一种情况
-            if (!avRuleWithAV.test(av)) // 第二种情况
+            if (!avRuleWithAV.test(av)) { // 第二种情况
                 $("#bv").val("请输入正确的av号");
+                return;
+            }
             av = av.substr(2);
         }
         console.log(av);
@@ -61,6 +63,7 @@ function main() {
         if (!$(this).val()) return;
         else if (!bvRule.test($(this).val())) {
             $('#av').val('请输入正确的bv号');
+            return ;
         }
         let bv = $(this).val();
         $('#av').val(`av${dec(bv)}`);
