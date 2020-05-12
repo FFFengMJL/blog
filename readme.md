@@ -19,13 +19,13 @@
 [Matrix 线上分享：Web入门基础](./work/matrix/share_online/web入门基础)
 
 1. Web入门：`2020-3-3`
-  - [X] [第一个网页](./work/matrix/001/tmnt.html)
+  - [X] [第一个网页](./work/matrix/step1/001/tmnt.html)
 2. 学习HTML：`2020-3-5`
-  - [X] [标记信件](./work/matrix/002/001/letter.html)
-  - [X] [构建出有内容的网页](./work/matrix/002/002/index.html)
-  - [X] [Mozilla 醒目页面](./work/matrix/002/003/index.html)
-  - [X] [构建行星数据](./work/matrix/002/004/blank-template.html)
-  - [X] [仿制中山大学 APP / 中山大学微信企业号提供的学生健康申报表单中“个人基本信息”部分的 HTML 结构](./work/matrix/002/005/index.html)
+  - [X] [标记信件](./work/matrix/step1/002/001/letter.html)
+  - [X] [构建出有内容的网页](./work/matrix/step1/002/002/index.html)
+  - [X] [Mozilla 醒目页面](./work/matrix/step1/002/003/index.html)
+  - [X] [构建行星数据](./work/matrix/step1/002/004/blank-template.html)
+  - [X] [仿制中山大学 APP / 中山大学微信企业号提供的学生健康申报表单中“个人基本信息”部分的 HTML 结构](./work/matrix/step1/002/005/index.html)
      1. 不使用外部 CSS 库和 UI 库；可按需引入 JavaScript 库。
      2. 不要求仿制界面样式，自己看着办~
      3. 原表单中固定的表单项（如姓名、学院等）改为适合的可输入组件。
@@ -35,17 +35,17 @@
      7. 加入表单项“曾到访省份”，使用复选框实现，可选值包括 广东省、湖北省、浙江省、河南省 这四个。
      8. 每个表单项均设置合理的 name 和 value。
 3. 学习CSS：`2020-3-7`
-  - [X] [CSS first steps: Using your new knowledge](./work/matrix/003/001/index.html)
-  - [X] [CSS building blocks: CSS 基本了解](./work/matrix/003/002/index.html)
-  - [X] [CSS building blocks: 设计漂亮的信头信笺](./work/matrix/003/003/index.html)
-  - [X] [CSS building blocks: 一个炫酷的盒子](./work/matrix/003/004/index.html)
-  - [X] [排版社区大学首页](./work/matrix/002/005/index.html)
-  - [X] [Fundamental layout comprehension](./work/matrix/003/006/index.html)
+  - [X] [CSS first steps: Using your new knowledge](./work/matrix/step1/003/001/index.html)
+  - [X] [CSS building blocks: CSS 基本了解](./work/matrix/step1/003/002/index.html)
+  - [X] [CSS building blocks: 设计漂亮的信头信笺](./work/matrix/step1/003/003/index.html)
+  - [X] [CSS building blocks: 一个炫酷的盒子](./work/matrix/step1/003/004/index.html)
+  - [X] [排版社区大学首页](./work/matrix/step1/002/005/index.html)
+  - [X] [Fundamental layout comprehension](./work/matrix/step1/003/006/index.html)
 4. 学习JS：`2020-3-9`
-  - [X] [傻瓜故事产生器](./work/matrix/004/001/index.html)
-  - [X] [图库](./work/matrix/004/002/index.html)
-  - [X] [为弹跳球展示新增功能](./work/matrix/004/003/index.html)
-  - [X] [使用星球大战 API（https://swapi.co/）制作一个搜索 Widget](./work/matrix/004/004/index.html)
+  - [X] [傻瓜故事产生器](./work/matrix/step1/004/001/index.html)
+  - [X] [图库](./work/matrix/step1/004/002/index.html)
+  - [X] [为弹跳球展示新增功能](./work/matrix/step1/004/003/index.html)
+  - [X] [使用星球大战 API（https://swapi.co/）制作一个搜索 Widget](./work/matrix/step1/004/004/index.html)
      1. 页面上需要有一个文本框 / 搜索框
      2. CSS 库可按需引入，不可引入 JS 库
      3. 当用户在文本框中键入时，读取文本框中用户输入的内容，向 `https://swapi.co/api/people/?search=xxxx` 发送请求，其中 xxxx 需要替换为文本框内容
