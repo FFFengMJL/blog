@@ -16,7 +16,7 @@
 
 ## Matrix 入门相关
 
-[Matrix 线上分享：Web入门基础](./work/matrix/share_online/web入门基础)
+[Matrix 线上分享：Web入门基础](./work/matrix/share_online/web入门基础.md)
 
 1. Web入门：`2020-3-3`
   - [X] [第一个网页](./work/matrix/step1/001/tmnt.html)
@@ -64,7 +64,7 @@
 
 ### 信号与系统
 
-- [作业列表](./work/信号系统/作业列表)
+- [作业列表](./work/信号系统/作业列表.md)
 - [2020.4.25：第一周作业](./work/信号系统/第一周作业)
 
 ### Web 2.0
