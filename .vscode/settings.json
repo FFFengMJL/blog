@@ -1,6 +1,7 @@
 {
     "files.associations": {
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "set": "cpp"
     },
     "python.pythonPath": "/usr/bin/python3"
 }
