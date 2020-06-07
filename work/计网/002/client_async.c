@@ -9,19 +9,17 @@
 #include <arpa/inet.h>
 #include <signal.h>
 
-int MAX_LINE = 4096;                 // 默认缓冲区大小
-char server[] = "112.124.24.191";    // 默认地址
-int port = 443;                      // 默认端口
-int send_times = 100;                // 默认发包次数
-static volatile int keeprunning = 1; // 与处理 ctrl + c 信号相关，用于维持循环
+int MAX_LINE = 4096;
+char server[] = "112.124.24.191";
+int port = 443;
+int send_times = 100;
+static volatile int keeprunning = 1;
 
-// 处理 ctrl + c 信号
 void handler(int num)
 {
   keeprunning = 0;
 }
 
-// 发送信息
 int send_msg(int socket, struct sockaddr *dst, int send_times)
 {
   struct sockaddr_in src;
@@ -37,6 +35,11 @@ int send_msg(int socket, struct sockaddr *dst, int send_times)
   // 设置中断信号
   signal(SIGINT, handler);
 
+  if (connect(socket, dst, sizeof(*dst)) != 0)
+  {
+    printf("connect error: %s(errno: %d)", strerror(errno), errno);
+  }
+
   for (int i = 0; i < send_times && keeprunning; i++)
   {
     char send_buff[MAX_LINE]; // 发送缓冲区
@@ -51,7 +54,7 @@ int send_msg(int socket, struct sockaddr *dst, int send_times)
     // 发送消息给 server
     printf("sending: %s", send_buff);
     // sendto(socket, send_buff, MAX_LINE, 0, dst, len);
-    if (sendto(socket, send_buff, MAX_LINE, 0, dst, dst_len) <= 0)
+    if (send(socket, send_buff, MAX_LINE, 0) <= 0)
     {
       printf("send msg error: %s(errno: %d)\n\n", strerror(errno), errno);
       continue;
@@ -62,7 +65,7 @@ int send_msg(int socket, struct sockaddr *dst, int send_times)
     // 接受来自 server 的消息
     memset(recv_buff, 0, MAX_LINE);
     printf("waiting for server response\n");
-    if (recvfrom(socket, recv_buff, MAX_LINE, 0, (struct sockaddr *)&src, &src_len) <= 0)
+    if (recv(socket, recv_buff, MAX_LINE, 0) <= 0)
     {
       printf("receive msg from server error: %s(errno: %d)\n\n", strerror(errno), errno);
       // continue;

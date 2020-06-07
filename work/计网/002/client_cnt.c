@@ -1,3 +1,5 @@
+// 带连接的 UDP
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <sys/socket.h>
@@ -9,24 +11,23 @@
 #include <arpa/inet.h>
 #include <signal.h>
 
-int MAX_LINE = 4096;                 // 默认缓冲区大小
-char server[] = "112.124.24.191";    // 默认地址
-int port = 443;                      // 默认端口
-int send_times = 100;                // 默认发包次数
-static volatile int keeprunning = 1; // 与处理 ctrl + c 信号相关，用于维持循环
+int MAX_LINE = 4096;
+char server[] = "112.124.24.191";
+int port = 443;
+int send_times = 100;
+static volatile int keeprunning = 1;
 
-// 处理 ctrl + c 信号
 void handler(int num)
 {
   keeprunning = 0;
 }
 
-// 发送信息
 int send_msg(int socket, struct sockaddr *dst, int send_times)
 {
+  socklen_t dst_len, src_len;
+  int cntSocket;
   struct sockaddr_in src;
   int count = 0, sum = 0;
-  socklen_t dst_len, src_len;
 
   // 设置超时时间
   struct timeval tv;
@@ -37,11 +38,16 @@ int send_msg(int socket, struct sockaddr *dst, int send_times)
   // 设置中断信号
   signal(SIGINT, handler);
 
+  char send_buff[MAX_LINE]; // 发送缓冲区
+  char recv_buff[MAX_LINE]; // 接受缓冲区
+
+  if ((cntSocket = connect(socket, dst, sizeof(*dst))) != 0)
+  {
+    printf("connect error: %s(errno: %d)", strerror(errno), errno);
+  }
+
   for (int i = 0; i < send_times && keeprunning; i++)
   {
-    char send_buff[MAX_LINE]; // 发送缓冲区
-    char recv_buff[MAX_LINE]; // 接受缓冲区
-
     dst_len = sizeof(*dst);
     src_len = sizeof(src);
 
