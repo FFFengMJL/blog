@@ -1,11 +1,10 @@
 #include <iostream>
+#include <regex>
+#include <string>
 using namespace std;
 
 int main()
 {
-    float a = 1.0 / 0.0;
-    float b = a;
-    cout << a << '\t' << b << endl;
-    printf("%d\n", a == b);
-    return 0;
+  string test = "test\0";
+  cout << test.size() << '\t' << test.length() << endl;
 }
