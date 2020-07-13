@@ -24,8 +24,8 @@ const int maxn = 21;
 vector<string> map;                // 地图
 int n, m;                          // 地图的行，列
 const string MOVE_ACTION = "NSWE"; // 运动的操作
-string H_way = "";                 // 表示 H 的路线
-int res[maxn][maxn][maxn][maxn];
+string H_way = "";                 // 表示 H 的运动
+int res[maxn][maxn][maxn][maxn];   // 记录当前位置的状态
 
 struct Node
 {
@@ -94,6 +94,7 @@ void FindLocation(int &Px, int &Py, int &Hx, int &Hy, int n, int m)
   }
 }
 
+// 初始化储存状态的四维数组
 void init()
 {
   for (int i = 0; i < maxn; i++)

@@ -4,12 +4,12 @@
 
 using namespace std;
 
-const int maxt = 24;
-double tarX, tarY; // 代表目标位置
-const double fourFive = sqrt(2) / 2;
+const int maxt = 24;                                                                                                                                 // 好像没什么用
+double tarX, tarY;                                                                                                                                   // 代表目标位置
+double betweenMin;                                                                                                                                   // 结果
+const double fourFive = sqrt(2) / 2;                                                                                                                 // 45度计算用
 const double angles[][2] = {{0, 1}, {fourFive, fourFive}, {1, 0}, {fourFive, -fourFive}, {0, -1}, {-fourFive, fourFive}, {-1, 0}, {-1, fourFive}};   // 定义角度，0~7
-const double angles_opt[][4] = {{0, 1, 0, 0}, {0, 0, 1, 0}, {1, 0, 0, 0}, {0, 0, 0, -1}, {0, -1, 0, 0}, {0, 0, -1, 0}, {-1, 0, 0, 0}, {0, 0, 0, 1}}; // 定义角度，0~7
-double betweenMin;
+const double angles_opt[][4] = {{0, 1, 0, 0}, {0, 0, 1, 0}, {1, 0, 0, 0}, {0, 0, 0, -1}, {0, -1, 0, 0}, {0, 0, -1, 0}, {-1, 0, 0, 0}, {0, 0, 0, 1}}; // 定义角度，0~7 优化后
 
 void prop(double x, double y, int angle, int leftTime)
 {
@@ -35,8 +35,8 @@ void prop_opt(double x, double y, int a, int b, int angle, int leftTime)
 {
   if (leftTime == 0)
   {
-    double finalX = (x + (a - b) * fourFive) * 10;
-    double finalY = (y + (b + a) * fourFive) * 10;
+    double finalX = (x + (a - b) * fourFive) * 10; // 最终的横坐标
+    double finalY = (y + (b + a) * fourFive) * 10; // 最终的纵坐标
     double res = sqrt(pow(abs(finalX - tarX), 2) + pow(abs(finalY - tarY), 2));
     betweenMin = betweenMin < res ? betweenMin : res;
   }
