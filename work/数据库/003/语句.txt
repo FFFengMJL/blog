@@ -1,0 +1,146 @@
+# 数据库第三次作业
+
+米家龙 18342075
+
+1. 编写一个函数，函数名为 get_rand_phone_num ，无接收参数，返回一 个随机的电话号码，长度11位，电话号码以'132'或 '137'或 '189'或 '135'开头，要求任意满足该要求的电话号码能等概率生成。
+
+```postgresql
+CREATE OR REPLACE FUNCTION get_rand_phone_num()
+RETURNS TEXT AS $$
+  DECLARE
+    head INTEGER[] = '{132, 135, 137, 189}';
+    tmp INTEGER;
+    ans INTEGER;
+    ans_t TEXT;
+  BEGIN
+    tmp := TRUNC(RANDOM() * 4 + 1)::INT; -- 获取头
+    ans_t := head[tmp]::TEXT;
+    tmp := 0;
+    WHILE tmp < 8 LOOP
+      ans := TRUNC(RANDOM() * 10)::INT;
+      ans_t := ans_t || ans::TEXT;
+      tmp = tmp + 1;
+    END LOOP;
+    RETURN ans_t;
+  END
+$$ LANGUAGE PLPGSQL STRICT;
+
+-- 测试用
+-- SELECT get_rand_phone_num();
+```
+
+2. 编写一个函数，函数名为 get_rand_date ，无接收参数，返回一个随机 的日期，日期格式为'yyyy-mm-dd'。要求返回的日期区间为[1990-01-01, 2000-01-01)，所有满足要求的日期能被等概率返回。
+
+```postgresql
+CREATE OR REPLACE FUNCTION get_rand_date()
+RETURNS DATE as $$
+  DECLARE
+    down_limit DATE = '1990-01-01';
+    up_limit DATE = '2000-01-01';
+    range INT = up_limit - down_limit;
+    tmp INT;
+  BEGIN
+    tmp := TRUNC(RANDOM() * range)::INT;
+    RETURN down_limit + tmp;
+  END;
+$$ LANGUAGE PLPGSQL STRICT;
+
+-- 测试用
+-- SELECT get_rand_date();
+```
+
+3. 编写一个函数，函数名为 create_table_test1，无接收参数。在该函数 中，新建一个数据表test1，该数据表拥有3个字段，分别是id, rand_phone, rand_date，其中id为自增的序列，从1开始自增，且为 主键；然后，往该数据表新增10条记录，这10条记录中，rand_phone 和rand_date使用上述自己编写的函数随机生成。最后返回该表。该函 数理应可以连续调用多次，每次生成并返回的表都不一样。
+
+```postgresql
+CREATE TABLE test1 (
+  id SERIAL PRIMARY KEY,
+  rand_phone TEXT,
+  rand_date DATE
+);
+
+
+CREATE OR REPLACE FUNCTION create_table_test1()
+RETURNS SETOF test1 AS $$
+DECLARE
+  num INT = 1;
+  res RECORD;
+BEGIN
+  IF (TO_REGCLASS('test1') IS NOT NULL) THEN
+    TRUNCATE TABLE test1;
+  ELSE
+    CREATE TABLE test1 (
+      id SERIAL PRIMARY KEY,
+      rand_phone TEXT,
+      rand_date DATE
+    );
+  END IF;
+
+  WHILE (num <= 10) LOOP
+    INSERT INTO test1 VALUES (num, get_rand_phone_num(), get_rand_date());
+    num = num + 1;
+  END LOOP;
+  FOR res IN SELECT * FROM test1 LOOP
+    RETURN NEXT res;
+  END LOOP;
+  RETURN; 
+END;
+$$ LANGUAGE PLPGSQL STRICT;
+
+-- 测试用
+-- SELECT * FROM create_table_test1();
+```
+
+4. 编写一个函数，函数名为 create_table_test2，无接收参数。在该函数 中，新建一个数据表test2，该数据表拥有2个字段，分别是id和info， 其中id类型为整数，同时为主键，info为json格式数据；然后，把 test1中的所有记录首先转换为如下的json格式： {rand_phone:'rand_pnhone', rand_date:'rand_date'}，即拥有2个键值 对，键分别是rand_phone和rand_date，值为test1表中对应的值；最 后，把test1的数据生成json格式的记录插入test2中。test2的id与 test1对应的id相同。最后返回该表。该函数理应可以连续调用多次， 每次生成并返回的表和test1一样，即不重复调用create_table_test1的 情况下，多次调用create_table_test2返回的表应该是相同的。
+
+```postgresql
+CREATE TABLE test2 (
+  id INT PRIMARY KEY,
+  info JSON
+);
+
+CREATE OR REPLACE FUNCTION create_table_test2()
+RETURNS SETOF test2 AS $$
+DECLARE
+  res RECORD;
+  num INT = 1;
+  t1_date DATE;
+  t1_phone TEXT;
+BEGIN
+  IF (TO_REGCLASS('test2') IS NOT NULL) THEN
+    TRUNCATE TABLE test2;
+  ELSE
+    CREATE TABLE test2 (
+      id INT PRIMARY KEY,
+      info JSON
+    );
+  END IF;
+
+  WHILE (num <= 10) LOOP
+    t1_date = (SELECT rand_date FROM test1 WHERE id = num);
+    t1_phone = (SELECT rand_phone FROM test1 WHERE id = num);
+
+    INSERT INTO test2 VALUES (num, JSON_BUILD_OBJECT(
+      'rand_phone', t1_phone,
+      'rand_date', t1_date
+    ));
+    num = num + 1;
+  END LOOP;
+
+  FOR res IN SELECT * FROM test2 LOOP
+    RETURN NEXT res;
+  END LOOP;
+
+END;
+$$ LANGUAGE PLPGSQL STRICT;
+
+-- 测试用
+-- SELECT * FROM create_table_test2();
+```
+
+5. 查询：使用test2表，找出所有日期在1999年3月20日（包括这一天） 之后的记录的电话号码。
+
+```postgresql
+SELECT info->'rand_phone' FROM test2
+  WHERE
+    TO_DATE(info::JSON->>'rand_date', 'YYYY-MM-DD') > date '1999-03-20';
+```
