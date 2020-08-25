@@ -17,7 +17,7 @@ void *run(void *arg)
     fib[0] = 0;
     fib[1] = 1;
 
-    for (int i = 2; i < upper; i++)
+    for (int i = 2; i <= upper; i++)
       fib[i] = fib[i - 1] + fib[i - 2];
   }
 
@@ -47,7 +47,7 @@ int main(int argc, char **argv[])
 
   pthread_join(tid, NULL); // 等待结束
 
-  for (int i = 0; i < parem; i++)
+  for (int i = 1; i <= parem; i++)
     printf("第%d位为%ld\n", i, fib[i]);
   // printf("%d is %d\n", i, fib[i]);
 
