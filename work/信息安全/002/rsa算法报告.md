@@ -38,6 +38,11 @@
 
 具体的变量和函数声明如下：
 ```cpp
+#include <stdio.h>
+#include <gmp.h>
+#include <string.h>
+#include <stdlib.h>
+
 mpz_t p, q;                        // 两个素数
 mpz_t n;                           // n = p * q
 mpz_t phiN;                        // phi(n) = (p - 1) * (q - 1)
@@ -96,8 +101,9 @@ void OS2IP(mpz_t dst, char src[], unsigned long length);
  * 将大数装换为字符串
  * @param src mpz_t 源大数
  * @param dst char* 目标字符串
+ * @param length int 长度，一般用 k 来作为参数
 */
-void I2OSP(char dst[], mpz_t src);
+void I2OSP(char dst[], mpz_t src, unsigned long length);
 
 /**
  * 解密函数
@@ -133,7 +139,6 @@ void encryption(char publicKeyFilePath[], char privateKeyFilePath[],
 */
 void decryption(char privateKeyFilePath[], char encryptedFilePath[],
                 char decryptedFilePath[]);
-
 ```
 
 ## 密钥生成
@@ -266,13 +271,13 @@ void getEM()
   - 要求明文 message 字节数 $mLen < k - 11$
   - 根据解编码的规则，获得 EM 
 - OS2IP：
-  - 对于长度为 k 的 EM 存在如下格式$X_{0} \ X_{1} + \ \cdots \ + X_{k - 1}$
-  - 得到明文大数 $M = X_{0} + X_{1}*256 + X_{2}*256^{2} + \ \cdots \ + X_{k - 2}*256^{k - 2} + X_{k - 1}*256^{k - 1}$
+  - 对于长度为 k 的 EM 存在如下格式$X_{0} \ X_{1}  \ \cdots \  X_{k - 1}$
+  - 得到明文大数 $M = X_{0}*256^{k - 1} + X_{1}*256^{k - 2} + X_{2}*256^{k - 3} + \ \cdots \ + X_{k - 2}*256 + X_{k - 1}$
 - 加密：
   - $C = M^{e} \ {\bf mod} \ n$
 - I2OSP：
-  - 根据编码过程和加密后的大数 $C = X_{0} + X_{1}*256 + X_{2}*256^{2} + \ \cdots \ + X_{k - 2}*256^{k - 2} + X_{k - 1}*256^{k - 1}$
-  - 逆向得到长度为 k 的 cryptedText $X_{0} \ X_{1} + \ \cdots \ + X_{k - 1}$
+  - 根据编码过程和加密后的大数 $C = X_{0}*256^{k - 1} + X_{1}*256^{k - 2} + X_{2}*256^{k - 3} + \ \cdots \ + X_{k - 2}*256 + X_{k - 1}$
+  - 逆向得到长度为 k 的 cryptedText $X_{0} \ X_{1} \ \cdots \ X_{k - 1}$
   - 输出密文 cryptedText
 
 具体代码如下：
@@ -283,7 +288,7 @@ void encode()
   getEM();
   OS2IP(M, EM, k);
   mpz_powm(C, M, e, n);
-  I2OSP(cryptedText, C);
+  I2OSP(cryptedText, C, k);
 }
 ```
 
@@ -301,31 +306,29 @@ void OS2IP(mpz_t dst, char src[], unsigned long length);
  * 将大数装换为字符串
  * @param src mpz_t 源大数
  * @param dst char* 目标字符串
+ * @param length int 长度，一般用 k 来作为参数
 */
-void I2OSP(char dst[], mpz_t src);
+void I2OSP(char dst[], mpz_t src, unsigned long length);
 
 void OS2IP(mpz_t dst, char src[], unsigned long length)
 {
   mpz_init(dst);
-  for (int i = length - 1; i >= 0; i--)
+  for (int i = 0; i < length; i++)
   {
     mpz_mul_ui(dst, dst, 256);
     mpz_add_ui(dst, dst, src[i] & 0x0000ff);
   }
-  // src[length] = 0;
 }
 
-void I2OSP(char dst[], mpz_t src)
+void I2OSP(char dst[], mpz_t src, unsigned long length)
 {
-  unsigned long long size = mpz_sizeinbase(src, 2);
-  int xLen = size / 8 + (size % 8 ? 1 : 0);
   free(dst);
-  dst = (char *)malloc(xLen + 1);
+  dst = (char *)malloc(length + 1);
   mpz_t tmp, copy;
   mpz_init_set(copy, src);
 
   // 循环生成字符串
-  for (int i = 0; i < xLen; i++)
+  for (int i = length - 1; i >= 0; i--)
   {
     mpz_init(tmp);
     mpz_mod_ui(tmp, copy, 256);
@@ -355,7 +358,9 @@ void decode()
   OS2IP(C, cryptedText, k);
   mpz_init(M2);
   mpz_powm(M2, C, d, n);
-  I2OSP(Message2, M2);
+  unsigned long long size = mpz_sizeinbase(n, 2);
+  k = size / 8 + (size % 8 ? 1 : 0);
+  I2OSP(Message2, M2, k);
 }
 ```
 
@@ -426,8 +431,9 @@ void OS2IP(mpz_t dst, char src[], unsigned long length);
  * 将大数装换为字符串
  * @param src mpz_t 源大数
  * @param dst char* 目标字符串
+ * @param length int 长度，一般用 k 来作为参数
 */
-void I2OSP(char dst[], mpz_t src);
+void I2OSP(char dst[], mpz_t src, unsigned long length);
 
 /**
  * 解密函数
@@ -570,7 +576,9 @@ void decode()
   OS2IP(C, cryptedText, k);
   mpz_init(M2);
   mpz_powm(M2, C, d, n);
-  I2OSP(Message2, M2);
+  unsigned long long size = mpz_sizeinbase(n, 2);
+  k = size / 8 + (size % 8 ? 1 : 0);
+  I2OSP(Message2, M2, k);
 }
 
 void encode()
@@ -579,7 +587,7 @@ void encode()
   getEM();
   OS2IP(M, EM, k);
   mpz_powm(C, M, e, n);
-  I2OSP(cryptedText, C);
+  I2OSP(cryptedText, C, k);
 }
 
 void initString()
@@ -600,24 +608,22 @@ void initString()
 void OS2IP(mpz_t dst, char src[], unsigned long length)
 {
   mpz_init(dst);
-  for (int i = length - 1; i >= 0; i--)
+  for (int i = 0; i < length; i++)
   {
     mpz_mul_ui(dst, dst, 256);
     mpz_add_ui(dst, dst, src[i] & 0x0000ff);
   }
 }
 
-void I2OSP(char dst[], mpz_t src)
+void I2OSP(char dst[], mpz_t src, unsigned long length)
 {
-  unsigned long long size = mpz_sizeinbase(src, 2);
-  int xLen = size / 8 + (size % 8 ? 1 : 0);
   free(dst);
-  dst = (char *)malloc(xLen + 1);
+  dst = (char *)malloc(length + 1);
   mpz_t tmp, copy;
   mpz_init_set(copy, src);
 
   // 循环生成字符串
-  for (int i = 0; i < xLen; i++)
+  for (int i = length - 1; i >= 0; i--)
   {
     mpz_init(tmp);
     mpz_mod_ui(tmp, copy, 256);
@@ -759,7 +765,7 @@ DEC := dec # 解密
 TEST := test # 测试
 
 # 执行文件
-a.out: ./rsa.c
+a.out: ${SOURCE}
 	@${GCC} ${SOURCE} -o $@ -l${GMP}
 
 # 加密

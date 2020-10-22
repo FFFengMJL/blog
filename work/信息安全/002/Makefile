@@ -13,7 +13,7 @@ DEC := dec # 解密
 TEST := test # 测试
 
 # 执行文件
-a.out: ./rsa.c
+a.out: ${SOURCE}
 	@${GCC} ${SOURCE} -o $@ -l${GMP}
 
 # 加密
