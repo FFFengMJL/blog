@@ -217,7 +217,7 @@ void generateKey(int bit)
 > 根据公私钥中的 n ，获得 n 的字节数 k
 
 - 构建 PS ，长度为 k - mLen - 3，其中每个字节都是值都是 1 ~ 255 的随机数
-- 构建 EM = 0x00 || 0x22 || PS || 0x00 || message
+- 构建 EM = 0x00 || 0x02 || PS || 0x00 || message
 
 具体源代码如下：
 ```cpp
