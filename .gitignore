@@ -9,6 +9,7 @@ my-app/
 ssh_config
 lab*/
 hmac_md5
+hmac-md5
 hmac
 md5
 *.o
