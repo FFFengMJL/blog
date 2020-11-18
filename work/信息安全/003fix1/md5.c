@@ -166,7 +166,7 @@ void padMessage(char *originMessage, unsigned long messageLength)
 
   messagePaddingTmp[messageLength] = 0x80; // 结束的第一位为1
 
-  MessagePadded = malloc(blockLength * 16);
+  MessagePadded = (unsigned int *)malloc(blockLength * 16 * sizeof(unsigned int) / sizeof(char));
   MD5_Decode(messagePaddingTmp, MessagePadded, blockLength * 64);
   unsigned int front32 = ((messageLength * 8) >> 32) & 0x00000000ffffffff; // 前32位，但是需要倒序放在最后
   unsigned int behind32 = (messageLength * 8) & 0x00000000ffffffff;        // 后32位，倒序放在最前
@@ -204,13 +204,6 @@ unsigned int *MD5_Decode(unsigned char *src, unsigned int *dst, unsigned long ch
 
 void H_MD5(int *Y, unsigned int res[4])
 {
-  // printf("Y:\n");
-  // for (int i = 0; i < 16; i++)
-  // {
-  //   printf("%08x\n", Y[i]);
-  // }
-  // putchar('\n');
-
   unsigned int thisCV[4];
   unsigned int nextCV[4];
 
@@ -223,16 +216,6 @@ void H_MD5(int *Y, unsigned int res[4])
   {
     for (int i = 0; i < 16; i++)
     {
-      // if ((j * 16 + i) == 0)
-      // {
-      //   printf("迭代：%d\n", j * 16 + i);
-      //   for (int i = 0; i < 4; i++)
-      //   {
-      //     printf("%08x\n", thisCV[i]);
-      //   }
-      //   putchar('\n');
-      // }
-
       // 每次迭代的参数都有变化
       switch (j)
       {

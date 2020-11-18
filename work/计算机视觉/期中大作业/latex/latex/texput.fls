@@ -1,0 +1,5 @@
+PWD d:/blog/work/¼ÆËã»úÊÓ¾õ/ÆÚÖÐ´ó×÷Òµ/latex/latex
+INPUT d:/texlive/2020/texmf.cnf
+INPUT d:/texlive/2020/texmf-dist/web2c/texmf.cnf
+INPUT d:/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt
+OUTPUT d:/blog/work/è®¡ç®—æœºè§†è§‰/æœŸä¸­å¤§ä½œä¸š/latex/latex/texput.log
