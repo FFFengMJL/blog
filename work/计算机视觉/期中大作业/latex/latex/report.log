@@ -1,0 +1,728 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.11.18)  27 NOV 2020 18:11
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**report.tex
+(./report.tex
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-03-06>
+(d:/texlive/2020/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+(d:/texlive/2020/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@section=\count168
+\c@subsection=\count169
+\c@subsubsection=\count170
+\c@paragraph=\count171
+\c@subparagraph=\count172
+\c@figure=\count173
+\c@table=\count174
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+) (./cvpr.sty
+(./eso-pic.sty
+Package: eso-pic 2002/11/16 v1.1b eso-pic (RN)
+ (./cvpr_eso.sty
+
+LaTeX Warning: You have requested package `eso-pic',
+               but the package provides `everyshi'.
+
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+) (d:/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+))
+(d:/texlive/2020/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+CVPR 8.5 x 11-Inch Proceedings Style `cvpr.sty'.
+\@ctmp=\skip49
+\@figindent=\skip50
+\cvprrulerbox=\box45
+\cvprrulercount=\count175
+\cvprruleroffset=\dimen135
+\cv@lineheight=\dimen136
+\cv@boxheight=\dimen137
+\cv@tmpbox=\box46
+\cv@refno=\count176
+\cv@tot=\count177
+\cv@tmpc@=\count178
+\cv@tmpc=\count179
+) (d:/texlive/2020/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+)
+(d:/texlive/2020/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 2017/06/25 v1.7b (e)psfig emulation (SPQR)
+
+(d:/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(d:/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+(d:/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(d:/texlive/2020/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(d:/texlive/2020/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen138
+\Gin@req@width=\dimen139
+)
+\epsfxsize=\dimen140
+\epsfysize=\dimen141
+)
+(d:/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip51
+
+For additional information on amsmath, use the `?' option.
+(d:/texlive/2020/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(d:/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen142
+))
+(d:/texlive/2020/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen143
+)
+(d:/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count180
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count181
+\leftroot@=\count182
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count183
+\DOTSCASE@=\count184
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box47
+\strutbox@=\box48
+\big@size=\dimen144
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count185
+\c@MaxMatrixCols=\count186
+\dotsspace@=\muskip16
+\c@parentequation=\count187
+\dspbrk@lvl=\count188
+\tag@help=\toks17
+\row@=\count189
+\column@=\count190
+\maxfields@=\count191
+\andhelp@=\toks18
+\eqnshift@=\dimen145
+\alignsep@=\dimen146
+\tagshift@=\dimen147
+\tagwidth@=\dimen148
+\totwidth@=\dimen149
+\lineht@=\dimen150
+\@envbody=\toks19
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+)
+(d:/texlive/2020/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(d:/texlive/2020/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(d:/texlive/2020/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip54
+\enit@outerparindent=\dimen151
+\enit@toks=\toks21
+\enit@inbox=\box49
+\enit@count@id=\count192
+\enitdp@description=\count193
+)
+(d:/texlive/2020/texmf-dist/tex/latex/blindtext/blindtext.sty
+Package: blindtext 2012/01/06 V2.0 blindtext-Package
+\c@blindtext=\count194
+\c@Blindtext=\count195
+\c@blind@countparstart=\count196
+\blind@countxx=\count197
+\blindtext@numBlindtext=\count198
+\blind@countyy=\count199
+\c@blindlist=\count266
+\c@blindlistlevel=\count267
+\c@blindlist@level=\count268
+\blind@listitem=\count269
+\c@blind@listcount=\count270
+\c@blind@levelcount=\count271
+\blind@mathformula=\count272
+\blind@Mathformula=\count273
+\c@blind@randomcount=\count274
+\c@blind@randommax=\count275
+\c@blind@pangramcount=\count276
+\c@blind@pangrammax=\count277
+)
+(d:/texlive/2020/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(d:/texlive/2020/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count278
+\float@exts=\toks22
+\float@box=\box50
+\@float@everytoks=\toks23
+\@floatcapt=\box51
+)
+(d:/texlive/2020/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks24
+\c@algorithm=\count279
+)
+(d:/texlive/2020/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count280
+\c@ALG@rem=\count281
+\c@ALG@nested=\count282
+\ALG@tlm=\skip55
+\ALG@thistlm=\skip56
+\c@ALG@Lnr=\count283
+\c@ALG@blocknr=\count284
+\c@ALG@storecount=\count285
+\c@ALG@tmpcounter=\count286
+\ALG@tmplength=\skip57
+) (d:/texlive/2020/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (d:/texlive/2020/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
+
+(d:/texlive/2020/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+)
+(d:/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+)
+(d:/texlive/2020/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(d:/texlive/2020/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(d:/texlive/2020/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)
+(d:/texlive/2020/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(d:/texlive/2020/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(d:/texlive/2020/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(d:/texlive/2020/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(d:/texlive/2020/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(d:/texlive/2020/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+)
+\@linkdim=\dimen152
+\Hy@linkcounter=\count287
+\Hy@pagecounter=\count288
+
+(d:/texlive/2020/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2020/01/14 v7.00d Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(d:/texlive/2020/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(d:/texlive/2020/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count289
+Package hyperref Info: Option `breaklinks' set `true' on input line 4421.
+Package hyperref Info: Option `bookmarks' set `false' on input line 4421.
+Package hyperref Info: Hyper figures OFF on input line 4547.
+Package hyperref Info: Link nesting OFF on input line 4552.
+Package hyperref Info: Hyper index ON on input line 4555.
+Package hyperref Info: Plain pages OFF on input line 4562.
+Package hyperref Info: Backreferencing OFF on input line 4567.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks OFF on input line 4806.
+\c@Hy@tempcnt=\count290
+
+(d:/texlive/2020/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5159.
+\XeTeXLinkMargin=\dimen153
+
+(d:/texlive/2020/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(d:/texlive/2020/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count291
+\Field@Width=\dimen154
+\Fld@charsize=\dimen155
+Package hyperref Info: Hyper figures OFF on input line 6430.
+Package hyperref Info: Link nesting OFF on input line 6435.
+Package hyperref Info: Hyper index ON on input line 6438.
+Package hyperref Info: backreferencing OFF on input line 6445.
+Package hyperref Info: Link coloring OFF on input line 6450.
+Package hyperref Info: Link coloring with OCG OFF on input line 6455.
+Package hyperref Info: PDF/A mode OFF on input line 6460.
+LaTeX Info: Redefining \ref on input line 6500.
+LaTeX Info: Redefining \pageref on input line 6504.
+
+(d:/texlive/2020/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+)
+\Hy@abspage=\count292
+\c@Item=\count293
+\c@Hfootnote=\count294
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(d:/texlive/2020/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2020/01/14 v7.00d Hyperref driver for pdfTeX
+
+(d:/texlive/2020/texmf-dist/tex/latex/atveryend/atveryend.sty
+Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+)
+\Fld@listcount=\count295
+\c@bookmark@seq@number=\count296
+
+(d:/texlive/2020/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(d:/texlive/2020/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip58
+)
+(d:/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count297
+\l__pdf_internal_box=\box52
+)
+(./report.aux
+
+LaTeX Warning: Label `fig:long' multiply defined.
+
+
+LaTeX Warning: Label `fig:onecol' multiply defined.
+
+
+LaTeX Warning: Label `fig:long' multiply defined.
+
+
+LaTeX Warning: Label `fig:onecol' multiply defined.
+
+
+LaTeX Warning: Label `fig:long' multiply defined.
+
+
+LaTeX Warning: Label `fig:onecol' multiply defined.
+
+
+LaTeX Warning: Label `fig:long' multiply defined.
+
+
+LaTeX Warning: Label `fig:long' multiply defined.
+
+
+LaTeX Warning: Label `fig:long' multiply defined.
+
+
+LaTeX Warning: Label `fig:long' multiply defined.
+
+)
+\openout1 = `report.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 3
+0.
+ (d:/texlive/2020/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+ABD: EveryShipout initializing macros
+(d:/texlive/2020/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2019/11/23 v1.2a Standard LaTeX Color (DPC)
+
+(d:/texlive/2020/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+(d:/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count298
+\scratchdimen=\dimen156
+\scratchbox=\box53
+\nofMPsegments=\count299
+\nofMParguments=\count300
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count301
+\MPscratchDim=\dimen157
+\MPnumerator=\count302
+\makeMPintoPDFobject=\count303
+\everyMPtoPDFconversion=\toks26
+) (d:/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(d:/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\AtBeginShipoutBox=\box54
+Package atbegshi Info: Package `everyshi' patched.
+Package hyperref Info: Link coloring OFF on input line 30.
+
+(d:/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+
+(d:/texlive/2020/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(d:/texlive/2020/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count304
+)
+LaTeX Info: Redefining \ref on input line 30.
+LaTeX Info: Redefining \pageref on input line 30.
+LaTeX Info: Redefining \nameref on input line 30.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 47.
+
+
+(d:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 47.
+
+
+(d:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 4
+7.
+
+(d:/texlive/2020/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 9
+2.
+
+(d:/texlive/2020/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+Underfull \hbox (badness 2495) in paragraph at lines 132--136
+[]\OT1/ptm/m/n/10 The zero-crossing based meth-ods search for zero-
+ []
+
+[1{d:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+
+]
+<../../code/tree.png, id=28, 377.41pt x 357.335pt>
+File: ../../code/tree.png Graphic file (type png)
+<use ../../code/tree.png>
+Package pdftex.def Info: ../../code/tree.png  used on input line 171.
+(pdftex.def)             Requested size: 189.70947pt x 179.61578pt.
+<../../code/cannyTree.png, id=30, 377.41pt x 357.335pt>
+File: ../../code/cannyTree.png Graphic file (type png)
+<use ../../code/cannyTree.png>
+Package pdftex.def Info: ../../code/cannyTree.png  used on input line 180.
+(pdftex.def)             Requested size: 189.70947pt x 179.61578pt.
+<../../code/cannyTree1.png, id=31, 377.41pt x 357.335pt>
+File: ../../code/cannyTree1.png Graphic file (type png)
+<use ../../code/cannyTree1.png>
+Package pdftex.def Info: ../../code/cannyTree1.png  used on input line 189.
+(pdftex.def)             Requested size: 189.70947pt x 179.61578pt.
+<../../code/cannyTree2.png, id=32, 377.41pt x 357.335pt>
+File: ../../code/cannyTree2.png Graphic file (type png)
+<use ../../code/cannyTree2.png>
+Package pdftex.def Info: ../../code/cannyTree2.png  used on input line 198.
+(pdftex.def)             Requested size: 189.70947pt x 179.61578pt.
+
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 248.
+
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 248.
+
+Missing character: There is no ˆ in font cmr10!
+[2 <../../code/tree.png> <../../code/cannyTree.png (PNG copy)> <../../code/cann
+yTree1.png (PNG copy)>]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 265.
+
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 370.
+
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 370.
+
+Missing character: There is no ˆ in font cmr10!
+[3 <../../code/cannyTree2.png (PNG copy)>]
+<../../code/Lenna.jpg, id=66, 317.185pt x 317.185pt>
+File: ../../code/Lenna.jpg Graphic file (type jpg)
+<use ../../code/Lenna.jpg>
+Package pdftex.def Info: ../../code/Lenna.jpg  used on input line 425.
+(pdftex.def)             Requested size: 112.167pt x 112.16829pt.
+<../../code/lenaSobelX.png, id=67, 317.185pt x 317.185pt>
+File: ../../code/lenaSobelX.png Graphic file (type png)
+<use ../../code/lenaSobelX.png>
+Package pdftex.def Info: ../../code/lenaSobelX.png  used on input line 426.
+(pdftex.def)             Requested size: 112.167pt x 112.16829pt.
+<../../code/lenaSobelY.png, id=68, 317.185pt x 317.185pt>
+File: ../../code/lenaSobelY.png Graphic file (type png)
+<use ../../code/lenaSobelY.png>
+Package pdftex.def Info: ../../code/lenaSobelY.png  used on input line 429.
+(pdftex.def)             Requested size: 112.167pt x 112.16829pt.
+<../../code/lenaSobel.png, id=69, 317.185pt x 317.185pt>
+File: ../../code/lenaSobel.png Graphic file (type png)
+<use ../../code/lenaSobel.png>
+Package pdftex.def Info: ../../code/lenaSobel.png  used on input line 430.
+(pdftex.def)             Requested size: 112.167pt x 112.16829pt.
+File: ../../code/Lenna.jpg Graphic file (type jpg)
+<use ../../code/Lenna.jpg>
+Package pdftex.def Info: ../../code/Lenna.jpg  used on input line 439.
+(pdftex.def)             Requested size: 112.167pt x 112.16829pt.
+<../../code/lenaScharrX.png, id=70, 317.185pt x 317.185pt>
+File: ../../code/lenaScharrX.png Graphic file (type png)
+<use ../../code/lenaScharrX.png>
+Package pdftex.def Info: ../../code/lenaScharrX.png  used on input line 440.
+(pdftex.def)             Requested size: 112.167pt x 112.16829pt.
+<../../code/lenaScharrY.png, id=71, 317.185pt x 317.185pt>
+File: ../../code/lenaScharrY.png Graphic file (type png)
+<use ../../code/lenaScharrY.png>
+Package pdftex.def Info: ../../code/lenaScharrY.png  used on input line 443.
+(pdftex.def)             Requested size: 112.167pt x 112.16829pt.
+<../../code/lenaScharr.png, id=72, 317.185pt x 317.185pt>
+File: ../../code/lenaScharr.png Graphic file (type png)
+<use ../../code/lenaScharr.png>
+Package pdftex.def Info: ../../code/lenaScharr.png  used on input line 444.
+(pdftex.def)             Requested size: 112.167pt x 112.16829pt.
+
+Underfull \hbox (badness 1137) in paragraph at lines 453--457
+\OT1/ptm/m/n/10 tion which op-ti-mizes a given func-tional - cal-cu-lus of
+ []
+
+[4 <../../code/Lenna.jpg> <../../code/lenaSobelX.png (PNG copy)> <../../code/le
+naSobelY.png (PNG copy)> <../../code/lenaSobel.png (PNG copy)>] [5 <../../code/
+lenaScharrX.png (PNG copy)> <../../code/lenaScharrY.png (PNG copy)> <../../code
+/lenaScharr.png (PNG copy)>]
+File: ../../code/Lenna.jpg Graphic file (type jpg)
+<use ../../code/Lenna.jpg>
+Package pdftex.def Info: ../../code/Lenna.jpg  used on input line 635.
+(pdftex.def)             Requested size: 237.13594pt x 237.1428pt.
+<../../code/cannyGuassianLena.png, id=111, 317.185pt x 317.185pt>
+File: ../../code/cannyGuassianLena.png Graphic file (type png)
+<use ../../code/cannyGuassianLena.png>
+Package pdftex.def Info: ../../code/cannyGuassianLena.png  used on input line 6
+37.
+(pdftex.def)             Requested size: 112.167pt x 112.16829pt.
+<../../code/cannySobelLena.png, id=112, 317.185pt x 317.185pt>
+File: ../../code/cannySobelLena.png Graphic file (type png)
+<use ../../code/cannySobelLena.png>
+Package pdftex.def Info: ../../code/cannySobelLena.png  used on input line 638.
+
+(pdftex.def)             Requested size: 112.167pt x 112.16829pt.
+<../../code/cannySuppressionPaperLena.png, id=113, 317.185pt x 317.185pt>
+File: ../../code/cannySuppressionPaperLena.png Graphic file (type png)
+<use ../../code/cannySuppressionPaperLena.png>
+Package pdftex.def Info: ../../code/cannySuppressionPaperLena.png  used on inpu
+t line 641.
+(pdftex.def)             Requested size: 112.167pt x 112.16829pt.
+<../../code/cannySuppressionInterpolationLena.png, id=114, 317.185pt x 317.185p
+t>
+File: ../../code/cannySuppressionInterpolationLena.png Graphic file (type png)
+<use ../../code/cannySuppressionInterpolationLena.png>
+Package pdftex.def Info: ../../code/cannySuppressionInterpolationLena.png  used
+ on input line 642.
+(pdftex.def)             Requested size: 112.167pt x 112.16829pt.
+<../../code/cannyThresholdPaperLena.png, id=115, 317.185pt x 317.185pt>
+File: ../../code/cannyThresholdPaperLena.png Graphic file (type png)
+<use ../../code/cannyThresholdPaperLena.png>
+Package pdftex.def Info: ../../code/cannyThresholdPaperLena.png  used on input 
+line 645.
+(pdftex.def)             Requested size: 112.167pt x 112.16829pt.
+<../../code/cannyThresholdInterpolationLena.png, id=116, 317.185pt x 317.185pt>
+
+File: ../../code/cannyThresholdInterpolationLena.png Graphic file (type png)
+<use ../../code/cannyThresholdInterpolationLena.png>
+Package pdftex.def Info: ../../code/cannyThresholdInterpolationLena.png  used o
+n input line 646.
+(pdftex.def)             Requested size: 112.167pt x 112.16829pt.
+
+
+LaTeX Warning: Float too large for page by 66.04514pt on input line 651.
+
+File: ../../code/tree.png Graphic file (type png)
+<use ../../code/tree.png>
+Package pdftex.def Info: ../../code/tree.png  used on input line 655.
+(pdftex.def)             Requested size: 237.13594pt x 224.52246pt.
+<../../code/cannyGuassianTree.png, id=117, 377.41pt x 357.335pt>
+File: ../../code/cannyGuassianTree.png Graphic file (type png)
+<use ../../code/cannyGuassianTree.png>
+Package pdftex.def Info: ../../code/cannyGuassianTree.png  used on input line 6
+57.
+(pdftex.def)             Requested size: 112.167pt x 106.19806pt.
+<../../code/cannySobelTree.png, id=118, 377.41pt x 357.335pt>
+File: ../../code/cannySobelTree.png Graphic file (type png)
+<use ../../code/cannySobelTree.png>
+Package pdftex.def Info: ../../code/cannySobelTree.png  used on input line 658.
+
+(pdftex.def)             Requested size: 112.167pt x 106.19806pt.
+<../../code/cannySuppressionPaperTree.png, id=119, 377.41pt x 357.335pt>
+File: ../../code/cannySuppressionPaperTree.png Graphic file (type png)
+<use ../../code/cannySuppressionPaperTree.png>
+Package pdftex.def Info: ../../code/cannySuppressionPaperTree.png  used on inpu
+t line 661.
+(pdftex.def)             Requested size: 112.167pt x 106.19806pt.
+<../../code/cannySuppressionInterpolationTree.png, id=120, 377.41pt x 357.335pt
+>
+File: ../../code/cannySuppressionInterpolationTree.png Graphic file (type png)
+<use ../../code/cannySuppressionInterpolationTree.png>
+Package pdftex.def Info: ../../code/cannySuppressionInterpolationTree.png  used
+ on input line 662.
+(pdftex.def)             Requested size: 112.167pt x 106.19806pt.
+<../../code/cannyThresholdPaperTree.png, id=121, 377.41pt x 357.335pt>
+File: ../../code/cannyThresholdPaperTree.png Graphic file (type png)
+<use ../../code/cannyThresholdPaperTree.png>
+Package pdftex.def Info: ../../code/cannyThresholdPaperTree.png  used on input 
+line 665.
+(pdftex.def)             Requested size: 112.167pt x 106.19806pt.
+<../../code/cannyThresholdInterpolationTree.png, id=122, 377.41pt x 357.335pt>
+File: ../../code/cannyThresholdInterpolationTree.png Graphic file (type png)
+<use ../../code/cannyThresholdInterpolationTree.png>
+Package pdftex.def Info: ../../code/cannyThresholdInterpolationTree.png  used o
+n input line 666.
+(pdftex.def)             Requested size: 112.167pt x 106.19806pt.
+
+LaTeX Warning: Float too large for page by 35.5141pt on input line 671.
+
+[6 <../../code/cannyGuassianLena.png (PNG copy)> <../../code/cannySobelLena.png
+ (PNG copy)> <../../code/cannySuppressionPaperLena.png (PNG copy)> <../../code/
+cannySuppressionInterpolationLena.png (PNG copy)> <../../code/cannyThresholdPap
+erLena.png (PNG copy)> <../../code/cannyThresholdInterpolationLena.png (PNG cop
+y)>] [7 <../../code/cannyGuassianTree.png (PNG copy)> <../../code/cannySobelTre
+e.png (PNG copy)> <../../code/cannySuppressionPaperTree.png (PNG copy)> <../../
+code/cannySuppressionInterpolationTree.png (PNG copy)> <../../code/cannyThresho
+ldPaperTree.png (PNG copy)> <../../code/cannyThresholdInterpolationTree.png (PN
+G copy)>]
+Underfull \hbox (badness 1253) in paragraph at lines 757--760
+\OT1/ptm/m/n/10 Edge Gra-di-ent Ap-pli-ca-tion". Ad-vances in Me-te-o-
+ []
+
+
+Underfull \hbox (badness 2644) in paragraph at lines 765--768
+[]\OT1/ptm/m/n/10 A. Neubeck and L. Van Gool, "Ef-fi-cient Non-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 771--773
+[]\OT1/ptm/m/n/10 MarkMoHR, Awesome-Edge-Detection-Papers(
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 771--773
+[]$\OT1/pcr/m/n/10 https : / / github . com / MarkMoHR /
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 780.
+[8]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 780.
+ (./report.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 780.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 780.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 780.
+ ) 
+Here is how much of TeX's memory you used:
+ 8003 strings out of 480608
+ 119379 string characters out of 5907535
+ 394012 words of memory out of 5000000
+ 23604 multiletter control sequences out of 15000+600000
+ 559161 words of font info for 85 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 38i,13n,31p,222b,453s stack positions out of 5000i,500n,10000p,200000b,80000s
+{d:/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}<d:/texlive/2020/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/texlive/2020/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi10.pfb><d:/texlive/2020/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi7.pfb><d:/texlive/2020/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr10.pfb><d:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr7.pfb><d:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+<d:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><d:/texliv
+e/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><d:/texlive/2020/tex
+mf-dist/fonts/type1/urw/courier/ucrr8a.pfb><d:/texlive/2020/texmf-dist/fonts/ty
+pe1/urw/times/utmb8a.pfb><d:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr
+8a.pfb><d:/texlive/2020/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on report.pdf (8 pages, 1639285 bytes).
+PDF statistics:
+ 232 PDF objects out of 1000 (max. 8388607)
+ 184 compressed objects within 2 object streams
+ 88 named destinations out of 1000 (max. 500000)
+ 116 words of extra memory for PDF output out of 10000 (max. 10000000)
+
