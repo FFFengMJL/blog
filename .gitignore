@@ -14,3 +14,5 @@ hmac
 md5
 *.o
 *.exe
+install.sh
+.vscode/
