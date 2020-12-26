@@ -28,7 +28,7 @@
 
 视频：
 
-<iframe src="//player.bilibili.com/player.html?aid=970802314&bvid=BV1wp4y1B7Lt&cid=271292359&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe src="//player.bilibili.com/player.html?aid=970802314&bvid=BV1wp4y1B7Lt&cid=271292359&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" align="middle" width="720" height="600"> </iframe>
 
 ## 配置 gns3
 
