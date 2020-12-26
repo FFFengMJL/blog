@@ -98,7 +98,7 @@ cd ~/ && touch Dockerfile
 ```
 
 在 Dockerfile 中写入如下：
-```docker
+```Dockerfile
 FROM ubuntu:20.04
 RUN echo 'start to build\n' \
 # 设置镜像源为清华源
