@@ -5,12 +5,12 @@
   - [配置 gns3](#配置-gns3)
   - [配置相关软件](#配置相关软件)
     - [1. 端口映射](#1-端口映射)
-      - [2. 构建 docker](#2-构建-docker)
-        - [1. 修改 dockerhub 源](#1-修改-dockerhub-源)
-        - [2. 创建 Dockerfile 文件](#2-创建-dockerfile-文件)
-        - [3. 构建容器](#3-构建容器)
-        - [4. 导入到 gns3 中](#4-导入到-gns3-中)
-    - [其他](#其他)
+    - [2. 构建 docker](#2-构建-docker)
+      - [1. 修改 dockerhub 源](#1-修改-dockerhub-源)
+      - [2. 创建 Dockerfile 文件](#2-创建-dockerfile-文件)
+      - [3. 构建容器](#3-构建容器)
+      - [4. 导入到 gns3 中](#4-导入到-gns3-中)
+    - [3. 其他](#3-其他)
       - [1. ubuntu docker 的相关配置文件](#1-ubuntu-docker-的相关配置文件)
       - [2. 两个路由器配置](#2-两个路由器配置)
       - [3. arpspoof 的使用](#3-arpspoof-的使用)
@@ -70,7 +70,7 @@ ssh gns3@127.0.0.1 -p 55022
 > 我这边是自己配了个 zsh ，所以之后就会使用 zsh 来替代原有的 bash ，但是操作都一样，所以没啥问题。  
 > ![zsh](./img/zsh.png)
 
-#### 2. 构建 docker
+### 2. 构建 docker
 
 > 为什么需要构建 docker ？
 > 1. docker 是什么，自己查。我也没弄懂，但是能用就行。
@@ -78,7 +78,7 @@ ssh gns3@127.0.0.1 -p 55022
 > 3. 如果使用完整的虚拟机的话，先不说 .iso 文件都要2G多，安装过程不得麻烦死（虽然但是，我没试过，我云的，我瞎猜的），太浪费时间了。而 docker 容器则是已经配置好对应的环境了，可以直接用。
 > 4. gns3 虚拟机中已经配置好了 docker 相关软件了，因此我们只需要改一下 dockerHub 源和写一下 `Dockerfile` 就可以构建了。
 
-##### 1. 修改 dockerhub 源
+#### 1. 修改 dockerhub 源
 
 > 参考[docker 设置国内镜像源](https://blog.csdn.net/whatday/article/details/86770609)
 
@@ -94,7 +94,7 @@ ssh gns3@127.0.0.1 -p 55022
 > 2. 使用其他客户端通过 ssh 连接虚拟机的好处之一：能够在主机复制黏贴到对应的终端。
 > 3. 上面修改后的镜像源是中科大的。（比 matrix 的好，应该？）
 
-##### 2. 创建 Dockerfile 文件
+#### 2. 创建 Dockerfile 文件
 
 在用户根目录下创建 `Dockerfile` ：
 ```bash
@@ -133,7 +133,7 @@ RUN echo 'start to build\n' \
 && apt-get install -y ssh nano tmux
 ```
 
-##### 3. 构建容器
+#### 3. 构建容器
 
 使用如下命令构建容器：
 ```bash
@@ -156,7 +156,7 @@ docker build -t t/ubuntu .
 
 ![创建成功](./img/buildSuccess.png)
 
-##### 4. 导入到 gns3 中
+#### 4. 导入到 gns3 中
 
 > 自己搜一下 gns3 导入创建好的 docker ，很简单的。
 
@@ -166,7 +166,7 @@ docker build -t t/ubuntu .
 
 > 除了图中这个地方需要选择之外，其他地方基本可以无脑 `Next`。
 
-### 其他
+### 3. 其他
 
 > 上面的东西配置完之后，就是拖东西，配置东西
 
