@@ -29,7 +29,7 @@
 视频：
 
 <div style="position: relative; padding: 30% 45%;">
-  <iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=970802314&bvid=BV1wp4y1B7Lt&cid=271292359&page=1&as_wide=1&high_quality=1&danmaku=0" frameborder="no" scrolling="no"></iframe>
+  <iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=970802314&bvid=BV1wp4y1B7Lt&cid=271292359&page=1&as_wide=1&high_quality=1&danmaku=0" frameborder="no" scrolling="no" allowfullscreen="true"></iframe>
 </div>
 
 ## 配置 gns3
