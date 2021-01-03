@@ -30,6 +30,10 @@
 
 <iframe src="//player.bilibili.com/player.html?aid=970802314&bvid=BV1wp4y1B7Lt&cid=271292359&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" align="middle" width="720" height="600"> </iframe>
 
+<div style="position: relative; padding: 30% 45%;">
+  <iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?aid=970802314&bvid=BV1wp4y1B7Lt&cid=271292359&page=1&as_wide=1&high_quality=1&danmaku=0" frameborder="no" scrolling="no"></iframe>
+</div>
+
 ## 配置 gns3
 
 1. 安装 gns3 （安装过程中 wireshark 和对应的虚拟机可以看自己需要是否下载，我这里是安装过了有现成的所以不用，剩余的东西都是之前安装过的 gns3 剩下的，所以不安装，你们自己取舍）。
