@@ -93,6 +93,7 @@ ssh gns3@127.0.0.1 -p 55022
 > 1. 这个虚拟机应该是带有 nano 或者 vi 的，适应一下这种编辑器吧。
 > 2. 使用其他客户端通过 ssh 连接虚拟机的好处之一：能够在主机复制黏贴到对应的终端。
 > 3. 上面修改后的镜像源是中科大的。（比 matrix 的好，应该？）
+> 4. 换源之后重启一下 docker （`sudo systemctl daemon-reload` 和 `sudo systemctl restart docker`）或者虚拟机，不然**可能**源还是原来的
 
 #### 2. 创建 Dockerfile 文件
 
