@@ -46,7 +46,7 @@
         "typeinfo": "cpp",
         "regex": "cpp"
     },
-    "python.pythonPath": "C:\\Users\\m7811\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe",
+    "python.pythonPath": "C:\\Anaconda\\python.exe",
     "python.linting.banditEnabled": false,
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true
