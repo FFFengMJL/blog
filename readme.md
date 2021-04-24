@@ -7,6 +7,7 @@
 3. <a href="003(forlab10">硬核安装 Python 以及 numpy 和 sympy 中的常用函数</a>
 4. <a href="004(forlab15">没那么硬核的 Ubuntu 18.04 虚拟机安装指引</a>
 5. [信息安全第七次作业相关摸索](work/信息安全/007/guide.md)
+6. [WSL1 升级 WSL2 记录](./005/005.md)
 
 ## 小玩意儿
 
