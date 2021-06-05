@@ -8,10 +8,10 @@
 4. [没那么硬核的 Ubuntu 18.04 虚拟机安装指引](004(forlab15.md))
 5. [信息安全第七次作业相关摸索](work/信息安全/007/guide.md)
 6. [WSL1 升级 WSL2 记录](./005/005.md)
-7. [Windows 完全激活指南](https://kufr6z0d17.feishu.cn/docs/doccnp7QM95RIWFVkVrpP1S9h0b)
-8. [在树莓派4上尝试部署獭獭的记录](https://kufr6z0d17.feishu.cn/docs/doccnjbYKuKrWofcEPU2OMcxTUh)
-9. [一次电脑修复记录](https://kufr6z0d17.feishu.cn/docs/doccn7fDPzptGyBa7qadLfj76Cb)
-10. [常用 bt 资源](https://kufr6z0d17.feishu.cn/docs/doccn8lZfqSUCDwJGYyUWWhLmEg)
+7. [Windows 完全激活指南[飞书云文档]](https://kufr6z0d17.feishu.cn/docs/doccnp7QM95RIWFVkVrpP1S9h0b)
+8. [在树莓派4上尝试部署獭獭的记录[飞书云文档]](https://kufr6z0d17.feishu.cn/docs/doccnjbYKuKrWofcEPU2OMcxTUh)
+9. [一次电脑修复记录[飞书云文档]](https://kufr6z0d17.feishu.cn/docs/doccn7fDPzptGyBa7qadLfj76Cb)
+10. [常用 bt 资源[飞书云文档]](https://kufr6z0d17.feishu.cn/docs/doccn8lZfqSUCDwJGYyUWWhLmEg)
 
 ## 小玩意儿
 
