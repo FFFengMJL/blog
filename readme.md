@@ -17,6 +17,7 @@
 
 1. [av 号与 BV 互转](./AvToBv/atb.html)
 2. [Google File System 论文阅读笔记](./work/云计算概论/001/18342075_米家龙_作业1.md)
+3. [Bigtable 论文阅读笔记](./work/云计算概论/002/18342075_米家龙_作业2.md)
 
 ## Matrix 新人任务
 
