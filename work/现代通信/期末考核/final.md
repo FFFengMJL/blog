@@ -24,9 +24,106 @@
 
 已知：
 
+MIMO 系统可以表示为：
+
+$$
+y = H x + n
+$$
+
+由于题目要求为四条平行的子信道，那么 $H$ 为：
+
+$$
+\begin{aligned}
+  H & = \begin{bmatrix}
+    h_{11} & 0 & 0 & 0 \\
+    0 & h_{22} & 0 & 0 \\
+    0 & 0 & h_{33} & 0 \\
+    0 & 0 & 0 & h_{44} \\
+  \end{bmatrix} \\
+  & = U \times \begin{bmatrix}
+    a_1 & 0 & 0 & 0 \\
+    0 & a_2 & 0 & 0 \\
+    0 & 0 & a_3 & 0 \\
+    0 & 0 & 0 & a_4 \\
+  \end{bmatrix} \times V^T \\
+    & = \begin{bmatrix}
+    X_1 \\
+    X_2 \\
+    X_3 \\
+    X_4 \\
+  \end{bmatrix}
+\end{aligned}
+$$
+
+协方差矩阵是半正定和对称的：
+
+$$
+\begin{aligned}
+  Q & = \begin{bmatrix}
+    (X - E[X])(X - E[X]^T)
+  \end{bmatrix}\\
+    & = \begin{bmatrix}
+    E[(X_1 - E[X_1])(X_1 - E[X_1])] & E[(X_1 - E[X_1])(X_2 - E[X_2])] & E[(X_1 - E[X_1])(X_3 - E[X_3])] & E[(X_1 - E[X_1])(X_4 - E[X_4])] \\
+    E[(X_2 - E[X_2])(X_1 - E[X_1])] & E[(X_2 - E[X_2])(X_2 - E[X_2])] & E[(X_2 - E[X_2])(X_3 - E[X_3])] & E[(X_2 - E[X_2])(X_4 - E[X_4])] \\
+    E[(X_3 - E[X_3])(X_1 - E[X_1])] & E[(X_3 - E[X_3])(X_2 - E[X_2])] & E[(X_3 - E[X_3])(X_3 - E[X_3])] & E[(X_3 - E[X_3])(X_4 - E[X_4])] \\
+    E[(X_4 - E[X_4])(X_1 - E[X_1])] & E[(X_4 - E[X_4])(X_2 - E[X_2])] & E[(X_4 - E[X_4])(X_3 - E[X_3])] & E[(X_4 - E[X_4])(X_4 - E[X_4])]
+  \end{bmatrix}
+\end{aligned}
+$$
+
+对于 $E[(X_i - E[X_i])(X_j - E[X_j])]$，可以得到：
+
+$$
+\begin{aligned}
+  E[(X_i - E[X_i])(X_j - E[X_j])] & = \frac{1}{4} \sum_{k = 1}^4 (x_{ik} - \mu_i)(x_{jk} - \mu_j) \\
+  & = E(X_i X_j) - \mu_i \mu_j
+\end{aligned}
+$$
+
+协方差矩阵可以写为下面公式，并且 $Q$ 为正规矩阵，即 $QQ^* = Q^*Q$：
+
+$$
+\begin{aligned}
+  Q & = \begin{bmatrix}
+    \frac{3}{16}h_{11}^2 & -\frac{1}{16}h_{11} h_{22} & -\frac{1}{16}h_{11} h_{33} & -\frac{1}{16}h_{11} h_{44} \\
+    -\frac{1}{16}h_{11} h_{22} & \frac{3}{16}h_{22}^2 & -\frac{1}{16}h_{22} h_{33} & -\frac{1}{16}h_{22} h_{44} \\
+    -\frac{1}{16}h_{11} h_{33} & -\frac{1}{16}h_{22} h_{33} & \frac{3}{16}h_{33}^2 & -\frac{1}{16}h_{33} h_{44} \\
+    -\frac{1}{16}h_{11} h_{44} & -\frac{1}{16}h_{22} h_{44} & -\frac{1}{16}h_{33} h_{44} & \frac{3}{16}h_{44}^2
+  \end{bmatrix} \\
+  & = SBS^T = (SB^{\frac{1}{2}})(SB^{\frac{1}{2}})^* \\
+  & = \begin{bmatrix}
+    s_{11} & s_{12} & s_{13} & s_{14} \\
+    s_{21} & s_{22} & s_{23} & s_{24} \\
+    s_{31} & s_{32} & s_{33} & s_{34} \\
+    s_{41} & s_{42} & s_{43} & s_{44} \\
+  \end{bmatrix} \times \begin{bmatrix}
+    b_1 & 0 & 0 & 0 \\
+    0 & b_2 & 0 & 0 \\
+    0 & 0 & b_3 & 0 \\
+    0 & 0 & 0 & b_4
+  \end{bmatrix} \times \begin{bmatrix}
+    s_{11} & s_{21} & s_{31} & s_{41} \\
+    s_{12} & s_{22} & s_{32} & s_{42} \\
+    s_{13} & s_{23} & s_{33} & s_{43} \\
+    s_{14} & s_{24} & s_{34} & s_{44} \\
+  \end{bmatrix}
+\end{aligned}
+$$
+
 $U$ 是 $n_R \times n_R$ 的矩阵，$V$ 是 $n_r \times n_r$ 的矩阵，$A$ 是 $n_R \times n_r$ 的矩阵；
 
 因此由题目可得，$r = R = 4$，并且 $U$ 和 $V$ 都是酉矩阵，$H$ 是 $4 \times 4$ 的矩阵
+
+$$
+\begin{aligned}
+  B & = \begin{bmatrix}
+    b_1 & 0 & 0 & 0 \\
+    0 & b_2 & 0 & 0 \\
+    0 & 0 & b_3 & 0 \\
+    0 & 0 & 0 & b_4 
+  \end{bmatrix}
+\end{aligned}
+$$
 
 $$
 \begin{aligned}
@@ -41,10 +138,10 @@ $$
 $$
 \begin{aligned}
   H & = \begin{bmatrix}
-    h_{11} & h_{12} & h_{13} & h_{14} \\
-    h_{21} & h_{22} & h_{23} & h_{24} \\
-    h_{31} & h_{32} & h_{33} & h_{34} \\
-    h_{41} & h_{42} & h_{43} & h_{44} \\
+    h_{11} & 0 & 0 & 0 \\
+    0 & h_{22} & 0 & 0 \\
+    0 & 0 & h_{33} & 0 \\
+    0 & 0 & 0 & h_{44} \\
   \end{bmatrix} \\
   & = U \times \begin{bmatrix}
     a_1 & 0 & 0 & 0 \\
@@ -82,13 +179,30 @@ $$
     v_{13} & v_{23} & v_{33} & v_{43} \\
     v_{14} & v_{24} & v_{34} & v_{44} \\
   \end{bmatrix} \\
+  & = \begin{bmatrix}
+    \sum_1^4 a_{i}u_{1i}v_{1i} & 0 & 0 & 0 \\
+    0 & \sum_1^4 a_{i}u_{2i}v_{2i} & 0 & 0 \\
+    0 & 0 & \sum_1^4 a_{i}u_{3i}v_{3i} & 0 \\
+    0 & 0 & 0 & \sum_1^4 a_{4}u_{4i}v_{4i}
+  \end{bmatrix}
 \end{aligned}
 $$
 
-发送协方差为：
+$$
+a_1 + a_2 + a_3 + a_4 = N_4 = 4 = \mu \\
+a_i = (\mu - \frac{1}{\lambda d_i^2})^+
+$$
 
 $$
-R_{xx} = E\{xx^H\}
+\begin{aligned}
+  Q & = SBS^T \\
+    & = \begin{bmatrix}
+    h_{11} & h_{12} & h_{13} & h_{14} \\
+    h_{21} & h_{22} & h_{23} & h_{24} \\
+    h_{31} & h_{32} & h_{33} & h_{34} \\
+    h_{41} & h_{42} & h_{43} & h_{44} \\
+  \end{bmatrix}
+\end{aligned}
 $$
 
 ### 2. 假设 $b_1 + b_2 + b_3 + b_4 = P$，且P为一个已知的非负常数。运用最优化理论（如拉格朗日乘子法）的知识，确定 $b_i$的表达式，使得信息速率 $R$ 最大

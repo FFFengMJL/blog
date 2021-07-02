@@ -2,10 +2,10 @@
 
 ## 技术相关的坑
 
-1. [用-乌龟git-更加简单地clone代码仓库](./001(forlab01.md))
-2. [使用vbox新建winXP来打开-辣个CPU模拟界面](./002(forlab07.md))
-3. [硬核安装 Python 以及 numpy 和 sympy 中的常用函数](./003(forlab10.md))
-4. [没那么硬核的 Ubuntu 18.04 虚拟机安装指引](004(forlab15.md))
+1. [用-乌龟git-更加简单地clone代码仓库](./001.md)
+2. [使用vbox新建winXP来打开-辣个CPU模拟界面](./002.md)
+3. [硬核安装 Python 以及 numpy 和 sympy 中的常用函数](./003.md)
+4. [没那么硬核的 Ubuntu 18.04 虚拟机安装指引](004.md)
 5. [信息安全第七次作业相关摸索](work/信息安全/007/guide.md)
 6. [WSL1 升级 WSL2 记录](./005/005.md)
 7. [Windows 完全激活指南[飞书云文档]](https://zzzpkf7m5x.feishu.cn/docs/doccnnIrb073w4o5Qljda5NpUEe)
