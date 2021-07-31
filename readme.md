@@ -8,11 +8,11 @@
 4. [基于个人经验的 Ubuntu 18.04 虚拟机安装指引](004.md)
 5. [信息安全第七次作业——ARP 测试与防御实验的相关摸索](https://fffengmjl.github.io/SYSU-InformationSecurity/007/guide.html)
 6. [WSL1 升级 WSL2 记录](./005/005.md)
-7. [Windows 完全激活指南[飞书云文档]](https://zzzpkf7m5x.feishu.cn/docs/doccnnIrb073w4o5Qljda5NpUEe)
-8. [在树莓派 4 上尝试部署獭獭的记录[飞书云文档]](https://zzzpkf7m5x.feishu.cn/docs/doccn5XbuZOuAaabIAws9JV5H9e)
-9. [一次电脑修复记录[飞书云文档]](https://zzzpkf7m5x.feishu.cn/docs/doccnZPicUERhLFPT9q1WHEve7f)
-10. [常用 bt 资源[飞书云文档]](https://zzzpkf7m5x.feishu.cn/docs/doccnd8gdvxPBpCufWXiQszx7Qb)
-11. [Win11 升级过程[飞书云文档]](https://zzzpkf7m5x.feishu.cn/docs/doccnJjDXNu6g8lY5QA0uz2rkpd)
+7. [[飞书云文档]Windows 完全激活指南](https://zzzpkf7m5x.feishu.cn/docs/doccnnIrb073w4o5Qljda5NpUEe)
+8. [[飞书云文档]在树莓派 4 上尝试部署獭獭机器人的记录](https://zzzpkf7m5x.feishu.cn/docs/doccn5XbuZOuAaabIAws9JV5H9e)
+9. [[飞书云文档]一次电脑修复记录](https://zzzpkf7m5x.feishu.cn/docs/doccnZPicUERhLFPT9q1WHEve7f)
+10. [[飞书云文档]Bt 相关](https://zzzpkf7m5x.feishu.cn/docs/doccnd8gdvxPBpCufWXiQszx7Qb)
+11. [[飞书云文档]Win11 升级过程](https://zzzpkf7m5x.feishu.cn/docs/doccnJjDXNu6g8lY5QA0uz2rkpd)
 
 ## 其他
 
