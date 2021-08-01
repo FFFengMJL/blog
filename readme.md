@@ -13,6 +13,7 @@
 9. [[飞书云文档]一次电脑修复记录](https://zzzpkf7m5x.feishu.cn/docs/doccnZPicUERhLFPT9q1WHEve7f)
 10. [[飞书云文档]Bt 相关](https://zzzpkf7m5x.feishu.cn/docs/doccnd8gdvxPBpCufWXiQszx7Qb)
 11. [[飞书云文档]Win11 升级过程](https://zzzpkf7m5x.feishu.cn/docs/doccnJjDXNu6g8lY5QA0uz2rkpd)
+12. [（翻译）你应该关闭你密码管理器中的自动填充功能](./007/007.md)
 
 ## 其他
 
@@ -22,7 +23,6 @@
 4. [Google File System 论文阅读笔记](./work/云计算概论/001/18342075_米家龙_作业1.md)
 5. [Bigtable 论文阅读笔记](./work/云计算概论/002/18342075_米家龙_作业2.md)
 6. [从 GFS、HDFS、Ceph、Tachyon 看分布式储存（文件系统）的发展](./work/云计算概论/003/18342075_米家龙_期末报告.md)
-7. [（翻译）你应该关闭你密码管理器中的自动填充功能](./007/007.md)
 
 ## 笔记相关
 
