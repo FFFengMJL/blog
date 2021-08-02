@@ -14,6 +14,7 @@
 10. [[飞书云文档]Bt 相关](https://zzzpkf7m5x.feishu.cn/docs/doccnd8gdvxPBpCufWXiQszx7Qb)
 11. [[飞书云文档]Win11 升级过程](https://zzzpkf7m5x.feishu.cn/docs/doccnJjDXNu6g8lY5QA0uz2rkpd)
 12. [（翻译）你应该关闭你密码管理器中的自动填充功能](./007/007.md)
+13. [（翻译）软件工程师在加入新团队时应该问的 20 个问题](008/20-questions-for-new-software-team.md)
 
 ## 其他
 
