@@ -15,6 +15,7 @@
 11. [[飞书云文档]Win11 升级过程](https://zzzpkf7m5x.feishu.cn/docs/doccnJjDXNu6g8lY5QA0uz2rkpd)
 12. [（翻译）你应该关闭你密码管理器中的自动填充功能](./007/007.md)
 13. [（翻译）软件工程师在加入新团队时应该问的 20 个问题](008/20-questions-for-new-software-team.md)
+14. [[飞书云文档]家庭网络优化实践记录](https://zzzpkf7m5x.feishu.cn/docs/doccn0RP6sEX9WVVyxgzN2bHsdc)
 
 ## 其他
 
@@ -24,6 +25,7 @@
 4. [Google File System 论文阅读笔记](./work/云计算概论/001/18342075_米家龙_作业1.md)
 5. [Bigtable 论文阅读笔记](./work/云计算概论/002/18342075_米家龙_作业2.md)
 6. [从 GFS、HDFS、Ceph、Tachyon 看分布式储存（文件系统）的发展](./work/云计算概论/003/18342075_米家龙_期末报告.md)
+7. [[飞书云文档]个人常用软件清单（包含 windows 和 安卓）](https://zzzpkf7m5x.feishu.cn/docs/doccnlSWm4mclH9jnLCzMaoU8Ld)
 
 ## 笔记相关
 
